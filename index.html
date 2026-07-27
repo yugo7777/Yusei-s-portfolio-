@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yusei | Game Design Portfolio</title>
+  <meta name="description" content="ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="index.html">YUSEI</a>
+      <button class="nav-toggle" aria-label="メニューを開く">≡</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= Hero ================= -->
+    <section class="hero container">
+      <span class="hero-eyebrow">Game Design Portfolio</span>
+      <h1>遊びを設計する。<br />アイディアを、遊べる形にする。</h1>
+      <!-- ★編集ポイント: 自己紹介のキャッチコピーに書き換えてください -->
+      <p>
+        ゲームデザインを専攻する学生です。企画書・アイディア書・試作書の作成から、
+        Unityでのプロトタイプ実装、プレイテストによる改善まで一貫して行っています。
+        このサイトでは制作したゲームの資料・Play映像・実際に遊べるビルドを公開しています。
+      </p>
+      <div class="btn-row">
+        <a href="#works" class="btn btn-primary">作品を見る</a>
+        <a href="#contact" class="btn btn-outline">連絡する</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= About ================= -->
+    <section id="about" class="container">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>自己紹介</h2>
+        <!-- ★編集ポイント: 学校名・学年・専攻の詳細などに書き換えてください -->
+        <p>専門学校 / 大学名 ゲームデザイン専攻 ○年。企画・レベルデザイン・UI/UX・Unity実装を中心に活動しています。</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="prose">
+          <h3>制作スタンス</h3>
+          <p>
+            <!-- ★編集ポイント: 自分の制作に対する考え方・強みを書いてください -->
+            「なぜ面白いのか」を言語化してから作ることを大切にしています。
+            企画書・アイディア書の段階でコアループと課題を明確にし、
+            試作(プロトタイプ)を通じて仮説を検証しながらゲームを磨き上げます。
+          </p>
+          <h3>使用ツール</h3>
+          <ul class="tag-list">
+            <li class="tag">Unity</li>
+            <li class="tag">C#</li>
+            <li class="tag">Figma</li>
+            <li class="tag">Miro</li>
+            <li class="tag">Photoshop</li>
+            <!-- ★編集ポイント: 使用ツールを追加・変更してください -->
+          </ul>
+        </div>
+
+        <div>
+          <ul class="info-list">
+            <li><span class="label">所属</span><span><!-- ★学校名 --></span></li>
+            <li><span class="label">専攻</span><span>ゲームデザイン</span></li>
+            <li><span class="label">得意分野</span><span>企画 / レベルデザイン / プロトタイピング</span></li>
+            <li><span class="label">使用ツール</span><span>Unity, C#</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Works ================= -->
+    <section id="works" class="container">
+      <div class="section-head">
+        <span class="eyebrow">Works</span>
+        <h2>制作物一覧</h2>
+        <p>
+          各作品ページでは、企画書・アイディア書・試作書などの資料、Play映像、
+          実際に遊べるUnity WebGLビルドを掲載しています。
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <!-- ★編集ポイント: 作品ごとにこのカードをコピーして増やしてください -->
+        <a class="work-card" href="projects/project-01.html">
+          <div class="work-thumb thumb-a">Project 01</div>
+          <div class="work-body">
+            <h3>作品タイトル A(サンプル)</h3>
+            <p>一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <div class="work-tags">
+              <span class="tag">パズル</span>
+              <span class="tag">個人制作</span>
+              <span class="tag">Unity</span>
+            </div>
+            <span class="work-link">詳細を見る →</span>
+          </div>
+        </a>
+
+        <a class="work-card" href="projects/project-02.html">
+          <div class="work-thumb thumb-b">Project 02</div>
+          <div class="work-body">
+            <h3>作品タイトル B(サンプル)</h3>
+            <p>一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <div class="work-tags">
+              <span class="tag">アクション</span>
+              <span class="tag">チーム制作(4人)</span>
+              <span class="tag">Unity</span>
+            </div>
+            <span class="work-link">詳細を見る →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Contact ================= -->
+    <section id="contact" class="container">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>お問い合わせ</h2>
+        <p>ポートフォリオへのご感想やお仕事のご相談は、以下からお気軽にご連絡ください。</p>
+      </div>
+      <div class="contact-links">
+        <!-- ★編集ポイント: 実際の連絡先に書き換えてください -->
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="https://x.com/your_account">X (Twitter)</a>
+        <a href="https://your-name.itch.io">itch.io</a>
+        <a href="https://github.com/your-account">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yusei. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

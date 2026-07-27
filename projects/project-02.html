@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>作品タイトル B | Yusei Game Design Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI</a>
+      <button class="nav-toggle" aria-label="メニューを開く">≡</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#works">Works</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">← 作品一覧に戻る</a>
+
+    <!-- ================= Hero / 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <h1>作品タイトル B(サンプル)</h1>
+      <p class="project-pitch">
+        この作品の「一言ピッチ」を書きます。どんな体験を届けたいゲームなのか、
+        コンセプトを1〜2文で表現してください。
+      </p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt>ジャンル</dt>
+          <dd><!-- 例: 2Dアクション --></dd>
+        </div>
+        <div>
+          <dt>制作期間</dt>
+          <dd><!-- 例: 2025/06 - 2025/09(4ヶ月) --></dd>
+        </div>
+        <div>
+          <dt>制作人数</dt>
+          <dd><!-- 例: チーム4人(企画/デザイン担当) --></dd>
+        </div>
+        <div>
+          <dt>担当</dt>
+          <dd><!-- 例: 企画, レベルデザイン --></dd>
+        </div>
+        <div>
+          <dt>使用ツール</dt>
+          <dd><!-- 例: Unity, C#, Miro --></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ================= Play映像 ================= -->
+    <section id="video">
+      <div class="section-head">
+        <span class="eyebrow">Play Movie</span>
+        <h2>Play映像</h2>
+        <p>実際のプレイの様子を収めた動画です。</p>
+      </div>
+
+      <div class="media-frame">
+        <!--
+          ★編集ポイント: 下記のいずれかに差し替えてください
+
+          [A] YouTube / Vimeo にアップロードした場合:
+          <iframe src="https://www.youtube.com/embed/動画ID"
+                  title="Play映像" allowfullscreen></iframe>
+
+          [B] 動画ファイルを assets/videos/project-02/ に置く場合:
+          <video controls poster="../assets/images/project-02/thumbnail.jpg">
+            <source src="../assets/videos/project-02/play.mp4" type="video/mp4">
+          </video>
+        -->
+        <div class="media-placeholder">
+          <strong>ここにPlay映像が表示されます</strong>
+          <span>
+            YouTube動画を埋め込むか、動画ファイルを
+            <code>assets/videos/project-02/</code> に配置してください。
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Unity WebGL ビルド ================= -->
+    <section id="build">
+      <div class="section-head">
+        <span class="eyebrow">Playable Build</span>
+        <h2>Unity WebGLビルド</h2>
+        <p>ブラウザ上で実際に遊べるビルドです。</p>
+      </div>
+
+      <div class="media-frame">
+        <!--
+          ★編集ポイント: Unity で File > Build Settings > WebGL でビルドし、
+          出力フォルダ一式を assets/unity-builds/project-02/ に配置したら
+          下記コメントを外してiframeを有効化してください。
+
+          <iframe src="../assets/unity-builds/project-02/index.html"
+                  title="Unity WebGL Build" allowfullscreen></iframe>
+        -->
+        <div class="media-placeholder">
+          <strong>ここにUnity WebGLビルドが表示されます</strong>
+          <span>
+            書き出したビルド一式を <code>assets/unity-builds/project-02/</code>
+            に配置してください(詳細は該当フォルダのREADME参照)。
+          </span>
+        </div>
+      </div>
+
+      <div class="build-actions">
+        <a class="btn btn-outline" href="../assets/unity-builds/project-02/index.html" target="_blank" rel="noopener">
+          新しいタブでプレイ
+        </a>
+        <a class="btn btn-outline" href="#">itch.io で見る</a>
+      </div>
+      <p class="note">
+        ※ WebGLビルドは容量が大きくなりがちです。GitHub Pagesで公開しにくい場合は
+        itch.io などにアップロードし、上のボタンからリンクする方法もおすすめです。
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 資料(企画書・アイディア書・試作書) ================= -->
+    <section id="docs">
+      <div class="section-head">
+        <span class="eyebrow">Documents</span>
+        <h2>資料</h2>
+        <p>企画書・アイディア書・試作書などの制作資料です。PDFで公開しています。</p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="doc-kind">アイディア書</span>
+          <h4>初期アイディアシート</h4>
+          <p>コンセプトの種となったアイディアや、参考にした既存ゲームとの違いをまとめた資料です。</p>
+          <a class="work-link" href="../assets/docs/project-02/idea.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind">企画書</span>
+          <h4>ゲーム企画書</h4>
+          <p>ゲームの目的・コアループ・ターゲット・世界観などをまとめた企画書です。</p>
+          <a class="work-link" href="../assets/docs/project-02/planning.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind">試作書</span>
+          <h4>プロトタイプ検証レポート</h4>
+          <p>試作(プロトタイプ)で検証した内容と、プレイテストで得たフィードバック・改善点です。</p>
+          <a class="work-link" href="../assets/docs/project-02/prototype.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 制作の背景・工夫点 ================= -->
+    <section id="detail" class="prose">
+      <div class="section-head">
+        <span class="eyebrow">Behind the Scenes</span>
+        <h2>制作の背景・工夫した点</h2>
+      </div>
+
+      <h3>企画の背景</h3>
+      <p><!-- ★編集ポイント: なぜこの企画に取り組んだのか、課題意識を書く --></p>
+
+      <h3>工夫した点</h3>
+      <p><!-- ★編集ポイント: ゲームデザイン/実装上でこだわった点を書く --></p>
+
+      <h3>チームでの役割</h3>
+      <p><!-- ★編集ポイント: チーム制作の場合、自分の役割・貢献を明確に書く --></p>
+
+      <h3>学んだこと・今後の課題</h3>
+      <p><!-- ★編集ポイント: プレイテストを通じて得た学び、改善したい点を書く --></p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= スクリーンショット ================= -->
+    <section id="gallery">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2>スクリーンショット</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">screenshot-01.png</div>
+        <div class="gallery-item">screenshot-02.png</div>
+        <div class="gallery-item">screenshot-03.png</div>
+      </div>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-01.html">← 前の作品を見る</a>
+      <a href="../index.html#works">作品一覧に戻る →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yusei. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
