@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yusei | Game Design Portfolio</title>
   <meta name="description" content="ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
+  <meta property="og:title" content="Yusei | Game Design Portfolio" />
+  <meta property="og:description" content="ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,6 +19,7 @@
       <button class="nav-toggle" aria-label="メニューを開く">≡</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#featured">代表作</a></li>
         <li><a href="#works">Works</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -25,6 +30,8 @@
     <!-- ================= Hero ================= -->
     <section class="hero container">
       <span class="hero-eyebrow">Game Design Portfolio</span>
+      <!-- ★編集ポイント: 自分が目指す専門分野に書き換えてください(例: レベルデザイナー / パズルデザイナー) -->
+      <div class="specialty-badge"><span class="dot"></span>パズル・レベルデザイン志望</div>
       <h1>遊びを設計する。<br />アイディアを、遊べる形にする。</h1>
       <!-- ★編集ポイント: 自己紹介のキャッチコピーに書き換えてください -->
       <p>
@@ -82,6 +89,33 @@
 
     <hr class="divider" />
 
+    <!-- ================= Featured Work ================= -->
+    <!-- ★編集ポイント: 一番見てほしい代表作をここに置いてください。採用担当が最初に見るのはこのカードです -->
+    <section id="featured" class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured</span>
+        <h2>代表作</h2>
+        <p>最初に見てほしい一作です。企画意図から試作、プレイテストまでの流れを詳細ページで紹介しています。</p>
+      </div>
+
+      <a class="featured-card" href="projects/project-01.html">
+        <div class="featured-thumb thumb-a">Project 01</div>
+        <div class="featured-body">
+          <span class="featured-kicker">代表作 / Best Work</span>
+          <h3>作品タイトル A(サンプル)</h3>
+          <p>一言でどんなゲームかを説明する文章がここに入ります。何を狙って作り、何が評価されたのかを書くと伝わりやすくなります。</p>
+          <div class="work-tags">
+            <span class="tag">パズル</span>
+            <span class="tag">個人制作</span>
+            <span class="tag">Unity</span>
+          </div>
+          <span class="btn btn-primary" style="margin-top:8px;width:fit-content;">詳細を見る →</span>
+        </div>
+      </a>
+    </section>
+
+    <hr class="divider" />
+
     <!-- ================= Works ================= -->
     <section id="works" class="container">
       <div class="section-head">
@@ -93,9 +127,16 @@
         </p>
       </div>
 
+      <!-- ★編集ポイント: ジャンルを追加する場合はボタンとdata-filterを増やし、work-cardのdata-genreも合わせて設定してください -->
+      <div class="filter-bar" role="group" aria-label="ジャンルで絞り込み">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="パズル">パズル</button>
+        <button class="filter-btn" data-filter="アクション">アクション</button>
+      </div>
+
       <div class="work-grid">
         <!-- ★編集ポイント: 作品ごとにこのカードをコピーして増やしてください -->
-        <a class="work-card" href="projects/project-01.html">
+        <a class="work-card" href="projects/project-01.html" data-genre="パズル">
           <div class="work-thumb thumb-a">Project 01</div>
           <div class="work-body">
             <h3>作品タイトル A(サンプル)</h3>
@@ -109,7 +150,7 @@
           </div>
         </a>
 
-        <a class="work-card" href="projects/project-02.html">
+        <a class="work-card" href="projects/project-02.html" data-genre="アクション">
           <div class="work-thumb thumb-b">Project 02</div>
           <div class="work-body">
             <h3>作品タイトル B(サンプル)</h3>
