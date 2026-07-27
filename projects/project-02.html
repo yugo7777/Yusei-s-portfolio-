@@ -2,56 +2,75 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>作品タイトル B | Yusei Game Design Portfolio</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+<body data-title-ja="作品タイトル B | Yusei Game Design Portfolio" data-title-en="Project Title B (Sample) | Yusei Game Design Portfolio">
 
   <header class="site-header">
     <nav class="nav">
       <a class="nav-logo" href="../index.html">YUSEI</a>
-      <button class="nav-toggle" aria-label="メニューを開く">≡</button>
-      <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#works">Works</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JA</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
     </nav>
   </header>
 
   <main class="container">
-    <a class="back-link" href="../index.html#works">← 作品一覧に戻る</a>
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
 
     <!-- ================= Hero / 概要 ================= -->
     <section class="project-hero" style="padding-top:0;">
-      <h1>作品タイトル B(サンプル)</h1>
-      <p class="project-pitch">
+      <h1><span class="lang-ja">作品タイトル B(サンプル)</span><span class="lang-en">Project Title B (Sample)</span></h1>
+      <p class="project-pitch lang-ja">
         この作品の「一言ピッチ」を書きます。どんな体験を届けたいゲームなのか、
         コンセプトを1〜2文で表現してください。
+      </p>
+      <p class="project-pitch lang-en">
+        Write the one-line pitch for this project here. Express in one or two
+        sentences what kind of experience the game is meant to deliver.
       </p>
 
       <dl class="meta-grid">
         <div>
-          <dt>ジャンル</dt>
-          <dd><!-- 例: 2Dアクション --></dd>
+          <dt><span class="lang-ja">ジャンル</span><span class="lang-en">Genre</span></dt>
+          <dd><!-- 例 / e.g.: 2D Action --></dd>
         </div>
         <div>
-          <dt>制作期間</dt>
-          <dd><!-- 例: 2025/06 - 2025/09(4ヶ月) --></dd>
+          <dt><span class="lang-ja">制作期間</span><span class="lang-en">Duration</span></dt>
+          <dd><!-- 例 / e.g.: Jun 2025 - Sep 2025 (4 months) --></dd>
         </div>
         <div>
-          <dt>制作人数</dt>
-          <dd><!-- 例: チーム4人(企画/デザイン担当) --></dd>
+          <dt><span class="lang-ja">制作人数</span><span class="lang-en">Team Size</span></dt>
+          <dd><!-- 例 / e.g.: Team of 4 (Planning/Design) --></dd>
         </div>
         <div>
-          <dt>担当</dt>
-          <dd><!-- 例: 企画, レベルデザイン --></dd>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">Role</span></dt>
+          <dd><!-- 例 / e.g.: Planning, Level Design --></dd>
         </div>
         <div>
-          <dt>使用ツール</dt>
-          <dd><!-- 例: Unity, C#, Miro --></dd>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd><!-- 例 / e.g.: Unity, C#, Miro --></dd>
         </div>
       </dl>
     </section>
@@ -60,34 +79,39 @@
     <section id="process">
       <div class="section-head">
         <span class="eyebrow">Design Process</span>
-        <h2>制作プロセス</h2>
-        <p>アイディアから完成までの流れです。各ステップの詳しい資料は「資料」セクションからご覧いただけます。</p>
+        <h2><span class="lang-ja">制作プロセス</span><span class="lang-en">Design Process</span></h2>
+        <p class="lang-ja">アイディアから完成までの流れです。各ステップの詳しい資料は「資料」セクションからご覧いただけます。</p>
+        <p class="lang-en">The flow from idea to finished game. Detailed materials for each step are available in the Documents section below.</p>
       </div>
 
       <ol class="process-timeline">
         <li>
           <span class="process-step">01</span>
-          <h4>アイディア</h4>
-          <p>コンセプトの種を発想し、既存ゲームとの違いを整理しました。</p>
-          <a href="#docs">アイディア書を見る →</a>
+          <h4><span class="lang-ja">アイディア</span><span class="lang-en">Idea</span></h4>
+          <p class="lang-ja">コンセプトの種を発想し、既存ゲームとの違いを整理しました。</p>
+          <p class="lang-en">Brainstormed the seed of the concept and clarified how it differs from existing games.</p>
+          <a href="#docs"><span class="lang-ja">アイディア書を見る →</span><span class="lang-en">View Idea Sheet →</span></a>
         </li>
         <li>
           <span class="process-step">02</span>
-          <h4>企画</h4>
-          <p>コアループ・ターゲット・世界観を企画書としてまとめました。</p>
-          <a href="#docs">企画書を見る →</a>
+          <h4><span class="lang-ja">企画</span><span class="lang-en">Planning</span></h4>
+          <p class="lang-ja">コアループ・ターゲット・世界観を企画書としてまとめました。</p>
+          <p class="lang-en">Documented the core loop, target audience, and world/setting as a planning document.</p>
+          <a href="#docs"><span class="lang-ja">企画書を見る →</span><span class="lang-en">View Planning Doc →</span></a>
         </li>
         <li>
           <span class="process-step">03</span>
-          <h4>試作・検証</h4>
-          <p>Unityでプロトタイプを実装し、プレイテストで仮説を検証しました。</p>
-          <a href="#docs">試作書を見る →</a>
+          <h4><span class="lang-ja">試作・検証</span><span class="lang-en">Prototype &amp; Testing</span></h4>
+          <p class="lang-ja">Unityでプロトタイプを実装し、プレイテストで仮説を検証しました。</p>
+          <p class="lang-en">Implemented a prototype in Unity and validated hypotheses through playtesting.</p>
+          <a href="#docs"><span class="lang-ja">試作書を見る →</span><span class="lang-en">View Prototype Report →</span></a>
         </li>
         <li>
           <span class="process-step">04</span>
-          <h4>完成</h4>
-          <p>フィードバックをもとに磨き上げ、Play映像とビルドを公開しました。</p>
-          <a href="#video">Play映像を見る →</a>
+          <h4><span class="lang-ja">完成</span><span class="lang-en">Ship</span></h4>
+          <p class="lang-ja">フィードバックをもとに磨き上げ、Play映像とビルドを公開しました。</p>
+          <p class="lang-en">Polished the game based on feedback and published a play video and playable build.</p>
+          <a href="#video"><span class="lang-ja">Play映像を見る →</span><span class="lang-en">Watch Play Video →</span></a>
         </li>
       </ol>
     </section>
@@ -98,13 +122,14 @@
     <section id="video">
       <div class="section-head">
         <span class="eyebrow">Play Movie</span>
-        <h2>Play映像</h2>
-        <p>実際のプレイの様子を収めた動画です。</p>
+        <h2><span class="lang-ja">Play映像</span><span class="lang-en">Play Video</span></h2>
+        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
+        <p class="lang-en">A video of actual gameplay.</p>
       </div>
 
       <div class="media-frame">
         <!--
-          ★編集ポイント: 下記のいずれかに差し替えてください
+          ★編集ポイント / EDIT: 下記のいずれかに差し替えてください
 
           [A] YouTube / Vimeo にアップロードした場合:
           <iframe src="https://www.youtube.com/embed/動画ID"
@@ -116,10 +141,15 @@
           </video>
         -->
         <div class="media-placeholder">
-          <strong>ここにPlay映像が表示されます</strong>
-          <span>
+          <strong class="lang-ja">ここにPlay映像が表示されます</strong>
+          <strong class="lang-en">Your play video will appear here</strong>
+          <span class="lang-ja">
             YouTube動画を埋め込むか、動画ファイルを
             <code>assets/videos/project-02/</code> に配置してください。
+          </span>
+          <span class="lang-en">
+            Embed a YouTube video, or place a video file in
+            <code>assets/videos/project-02/</code>.
           </span>
         </div>
       </div>
@@ -131,13 +161,14 @@
     <section id="build">
       <div class="section-head">
         <span class="eyebrow">Playable Build</span>
-        <h2>Unity WebGLビルド</h2>
-        <p>ブラウザ上で実際に遊べるビルドです。</p>
+        <h2><span class="lang-ja">Unity WebGLビルド</span><span class="lang-en">Unity WebGL Build</span></h2>
+        <p class="lang-ja">ブラウザ上で実際に遊べるビルドです。</p>
+        <p class="lang-en">A playable build you can try right in the browser.</p>
       </div>
 
       <div class="media-frame">
         <!--
-          ★編集ポイント: Unity で File > Build Settings > WebGL でビルドし、
+          ★編集ポイント / EDIT: Unity で File > Build Settings > WebGL でビルドし、
           出力フォルダ一式を assets/unity-builds/project-02/ に配置したら
           下記コメントを外してiframeを有効化してください。
 
@@ -145,23 +176,34 @@
                   title="Unity WebGL Build" allowfullscreen></iframe>
         -->
         <div class="media-placeholder">
-          <strong>ここにUnity WebGLビルドが表示されます</strong>
-          <span>
+          <strong class="lang-ja">ここにUnity WebGLビルドが表示されます</strong>
+          <strong class="lang-en">Your Unity WebGL build will appear here</strong>
+          <span class="lang-ja">
             書き出したビルド一式を <code>assets/unity-builds/project-02/</code>
             に配置してください(詳細は該当フォルダのREADME参照)。
+          </span>
+          <span class="lang-en">
+            Place the exported build files in <code>assets/unity-builds/project-02/</code>
+            (see the README in that folder for details).
           </span>
         </div>
       </div>
 
       <div class="build-actions">
         <a class="btn btn-outline" href="../assets/unity-builds/project-02/index.html" target="_blank" rel="noopener">
-          新しいタブでプレイ
+          <span class="lang-ja">新しいタブでプレイ</span><span class="lang-en">Play in New Tab</span>
         </a>
-        <a class="btn btn-outline" href="#">itch.io で見る</a>
+        <a class="btn btn-outline" href="#">
+          <span class="lang-ja">itch.io で見る</span><span class="lang-en">View on itch.io</span>
+        </a>
       </div>
-      <p class="note">
+      <p class="note lang-ja">
         ※ WebGLビルドは容量が大きくなりがちです。GitHub Pagesで公開しにくい場合は
         itch.io などにアップロードし、上のボタンからリンクする方法もおすすめです。
+      </p>
+      <p class="note lang-en">
+        Note: WebGL builds tend to be large. If GitHub Pages isn't a good fit, uploading
+        to itch.io and linking it from the button above is a great alternative.
       </p>
     </section>
 
@@ -171,30 +213,43 @@
     <section id="docs">
       <div class="section-head">
         <span class="eyebrow">Documents</span>
-        <h2>資料</h2>
-        <p>企画書・アイディア書・試作書などの制作資料です。PDFで公開しています。</p>
+        <h2><span class="lang-ja">資料</span><span class="lang-en">Documents</span></h2>
+        <p class="lang-ja">企画書・アイディア書・試作書などの制作資料です。PDFで公開しています。</p>
+        <p class="lang-en">Planning documents, idea sheets, and prototype reports, published as PDFs.</p>
       </div>
 
       <div class="doc-grid">
         <div class="doc-card">
-          <span class="doc-kind">アイディア書</span>
-          <h4>初期アイディアシート</h4>
-          <p>コンセプトの種となったアイディアや、参考にした既存ゲームとの違いをまとめた資料です。</p>
-          <a class="work-link" href="../assets/docs/project-02/idea.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+          <span class="doc-kind lang-ja">アイディア書</span>
+          <span class="doc-kind lang-en">Idea Sheet</span>
+          <h4><span class="lang-ja">初期アイディアシート</span><span class="lang-en">Initial Idea Sheet</span></h4>
+          <p class="lang-ja">コンセプトの種となったアイディアや、参考にした既存ゲームとの違いをまとめた資料です。</p>
+          <p class="lang-en">Covers the seed idea behind the concept and how it differs from existing games it draws on.</p>
+          <a class="work-link" href="../assets/docs/project-02/idea.pdf" target="_blank" rel="noopener">
+            <span class="lang-ja">PDFを開く →</span><span class="lang-en">Open PDF →</span>
+          </a>
         </div>
 
         <div class="doc-card">
-          <span class="doc-kind">企画書</span>
-          <h4>ゲーム企画書</h4>
-          <p>ゲームの目的・コアループ・ターゲット・世界観などをまとめた企画書です。</p>
-          <a class="work-link" href="../assets/docs/project-02/planning.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+          <span class="doc-kind lang-ja">企画書</span>
+          <span class="doc-kind lang-en">Planning Doc</span>
+          <h4><span class="lang-ja">ゲーム企画書</span><span class="lang-en">Game Planning Document</span></h4>
+          <p class="lang-ja">ゲームの目的・コアループ・ターゲット・世界観などをまとめた企画書です。</p>
+          <p class="lang-en">Outlines the game's goals, core loop, target audience, and world/setting.</p>
+          <a class="work-link" href="../assets/docs/project-02/planning.pdf" target="_blank" rel="noopener">
+            <span class="lang-ja">PDFを開く →</span><span class="lang-en">Open PDF →</span>
+          </a>
         </div>
 
         <div class="doc-card">
-          <span class="doc-kind">試作書</span>
-          <h4>プロトタイプ検証レポート</h4>
-          <p>試作(プロトタイプ)で検証した内容と、プレイテストで得たフィードバック・改善点です。</p>
-          <a class="work-link" href="../assets/docs/project-02/prototype.pdf" target="_blank" rel="noopener">PDFを開く →</a>
+          <span class="doc-kind lang-ja">試作書</span>
+          <span class="doc-kind lang-en">Prototype Report</span>
+          <h4><span class="lang-ja">プロトタイプ検証レポート</span><span class="lang-en">Prototype Validation Report</span></h4>
+          <p class="lang-ja">試作(プロトタイプ)で検証した内容と、プレイテストで得たフィードバック・改善点です。</p>
+          <p class="lang-en">Details what was tested in the prototype and the feedback and improvements gathered from playtesting.</p>
+          <a class="work-link" href="../assets/docs/project-02/prototype.pdf" target="_blank" rel="noopener">
+            <span class="lang-ja">PDFを開く →</span><span class="lang-en">Open PDF →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -205,20 +260,20 @@
     <section id="detail" class="prose">
       <div class="section-head">
         <span class="eyebrow">Behind the Scenes</span>
-        <h2>制作の背景・工夫した点</h2>
+        <h2><span class="lang-ja">制作の背景・工夫した点</span><span class="lang-en">Background &amp; Design Decisions</span></h2>
       </div>
 
-      <h3>企画の背景</h3>
-      <p><!-- ★編集ポイント: なぜこの企画に取り組んだのか、課題意識を書く --></p>
+      <h3><span class="lang-ja">企画の背景</span><span class="lang-en">Project Background</span></h3>
+      <p><!-- ★編集ポイント / EDIT: なぜこの企画に取り組んだのか、課題意識を書く / Why did you take this on? What problem were you addressing? --></p>
 
-      <h3>工夫した点</h3>
-      <p><!-- ★編集ポイント: ゲームデザイン/実装上でこだわった点を書く --></p>
+      <h3><span class="lang-ja">工夫した点</span><span class="lang-en">Design Decisions</span></h3>
+      <p><!-- ★編集ポイント / EDIT: ゲームデザイン/実装上でこだわった点を書く / What design or implementation choices are you proud of? --></p>
 
-      <h3>チームでの役割</h3>
-      <p><!-- ★編集ポイント: チーム制作の場合、自分の役割・貢献を明確に書く --></p>
+      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">Team Role</span></h3>
+      <p><!-- ★編集ポイント / EDIT: チーム制作の場合、自分の役割・貢献を明確に書く / For team projects, clarify your specific role and contribution --></p>
 
-      <h3>学んだこと・今後の課題</h3>
-      <p><!-- ★編集ポイント: プレイテストを通じて得た学び、改善したい点を書く --></p>
+      <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
+      <p><!-- ★編集ポイント / EDIT: プレイテストを通じて得た学び、改善したい点を書く / What did playtesting teach you, and what would you improve? --></p>
     </section>
 
     <hr class="divider" />
@@ -227,7 +282,7 @@
     <section id="gallery">
       <div class="section-head">
         <span class="eyebrow">Gallery</span>
-        <h2>スクリーンショット</h2>
+        <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">screenshot-01.png</div>
@@ -237,8 +292,8 @@
     </section>
 
     <div class="project-nav">
-      <a href="project-01.html">← 前の作品を見る</a>
-      <a href="../index.html#works">作品一覧に戻る →</a>
+      <a href="project-01.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
     </div>
   </main>
 
