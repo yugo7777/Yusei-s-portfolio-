@@ -59,6 +59,43 @@ a:hover {
   padding: 0 24px;
 }
 
+/* ---------- Language toggle ---------- */
+/* Default (no data-lang, or data-lang="ja") shows Japanese; data-lang="en" shows English. */
+
+html:not([data-lang="en"]) .lang-en {
+  display: none;
+}
+
+html[data-lang="en"] .lang-ja {
+  display: none;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.lang-switch button {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-switch button.active {
+  background: var(--accent-btn);
+  color: #ffffff;
+}
+
 /* ---------- Header / Nav ---------- */
 
 .site-header {
@@ -77,6 +114,12 @@ a:hover {
   padding: 16px 24px;
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-logo {

@@ -45,6 +45,24 @@ assets/
   `assets/unity-builds/project-XX/` に出力一式を配置して `<iframe>` で埋め込む。
   容量が大きい場合は [itch.io](https://itch.io/) にアップロードしてリンクする方法がおすすめ
 
+## 日本語/英語の切り替え(ローカライズ)
+
+サイト右上の「JA / EN」ボタンで表示言語を切り替えられます(選択はブラウザに保存され、
+別のページに移動しても保持されます)。実装は1つのHTMLファイルの中に日本語・英語の両方を
+書いておき、CSSで表示/非表示を切り替える方式です。
+
+```html
+<h2>
+  <span class="lang-ja">自己紹介</span>
+  <span class="lang-en">About Me</span>
+</h2>
+```
+
+新しく文章を追加・編集するときは、上記のように `lang-ja` / `lang-en` を持つ要素を
+セットで用意してください(英語がまだ書けない場合は `lang-en` 側だけ後で埋めてもサイトは
+壊れません。日本語のみ表示され続けます)。ページのタイトルを切り替えたい場合は
+`<body>` タグに `data-title-ja` / `data-title-en` 属性を追加してください。
+
 ## GitHub Pagesでの公開方法
 
 1. GitHubリポジトリの `Settings > Pages` を開く

@@ -2,27 +2,40 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yusei | Game Design Portfolio</title>
-  <meta name="description" content="ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
+  <meta name="description" content="Game design student portfolio / ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
   <meta property="og:title" content="Yusei | Game Design Portfolio" />
-  <meta property="og:description" content="ゲームデザイン専攻の学生によるポートフォリオサイト。企画書・アイディア書・試作書・Play映像・Unityビルドを掲載。" />
+  <meta property="og:description" content="Game design student portfolio featuring planning documents, idea sheets, prototype reports, gameplay videos, and playable Unity builds." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-title-ja="Yusei | Game Design Portfolio" data-title-en="Yusei | Game Design Portfolio">
 
   <header class="site-header">
     <nav class="nav">
       <a class="nav-logo" href="index.html">YUSEI</a>
-      <button class="nav-toggle" aria-label="メニューを開く">≡</button>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#featured">代表作</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#featured"><span class="lang-ja">代表作</span><span class="lang-en">Featured</span></a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JA</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
     </nav>
   </header>
 
@@ -30,18 +43,31 @@
     <!-- ================= Hero ================= -->
     <section class="hero container">
       <span class="hero-eyebrow">Game Design Portfolio</span>
-      <!-- ★編集ポイント: 自分が目指す専門分野に書き換えてください(例: レベルデザイナー / パズルデザイナー) -->
-      <div class="specialty-badge"><span class="dot"></span>パズル・レベルデザイン志望</div>
-      <h1>遊びを設計する。<br />アイディアを、遊べる形にする。</h1>
-      <!-- ★編集ポイント: 自己紹介のキャッチコピーに書き換えてください -->
-      <p>
+      <!-- ★編集ポイント / EDIT: 自分が目指す専門分野に書き換えてください。lang-ja/lang-en両方を書き換えること -->
+      <div class="specialty-badge">
+        <span class="dot"></span>
+        <span class="lang-ja">パズル・レベルデザイン志望</span>
+        <span class="lang-en">Aspiring Puzzle &amp; Level Designer</span>
+      </div>
+      <h1>
+        <span class="lang-ja">遊びを設計する。<br />アイディアを、遊べる形にする。</span>
+        <span class="lang-en">Designing play.<br />Turning ideas into playable experiences.</span>
+      </h1>
+      <!-- ★編集ポイント / EDIT: 自己紹介のキャッチコピーに書き換えてください -->
+      <p class="lang-ja">
         ゲームデザインを専攻する学生です。企画書・アイディア書・試作書の作成から、
         Unityでのプロトタイプ実装、プレイテストによる改善まで一貫して行っています。
         このサイトでは制作したゲームの資料・Play映像・実際に遊べるビルドを公開しています。
       </p>
+      <p class="lang-en">
+        I'm a game design student. I handle everything from writing planning documents,
+        idea sheets, and prototype reports to implementing prototypes in Unity and
+        iterating through playtesting. This site showcases my design documents,
+        gameplay videos, and playable builds.
+      </p>
       <div class="btn-row">
-        <a href="#works" class="btn btn-primary">作品を見る</a>
-        <a href="#contact" class="btn btn-outline">連絡する</a>
+        <a href="#works" class="btn btn-primary"><span class="lang-ja">作品を見る</span><span class="lang-en">View Works</span></a>
+        <a href="#contact" class="btn btn-outline"><span class="lang-ja">連絡する</span><span class="lang-en">Contact Me</span></a>
       </div>
     </section>
 
@@ -51,37 +77,43 @@
     <section id="about" class="container">
       <div class="section-head">
         <span class="eyebrow">About</span>
-        <h2>自己紹介</h2>
-        <!-- ★編集ポイント: 学校名・学年・専攻の詳細などに書き換えてください -->
-        <p>専門学校 / 大学名 ゲームデザイン専攻 ○年。企画・レベルデザイン・UI/UX・Unity実装を中心に活動しています。</p>
+        <h2><span class="lang-ja">自己紹介</span><span class="lang-en">About Me</span></h2>
+        <!-- ★編集ポイント / EDIT: 学校名・学年・専攻の詳細などに書き換えてください -->
+        <p class="lang-ja">専門学校 / 大学名 ゲームデザイン専攻 ○年。企画・レベルデザイン・UI/UX・Unity実装を中心に活動しています。</p>
+        <p class="lang-en">Game Design student at [School Name], Year [X]. I focus on planning, level design, UI/UX, and Unity implementation.</p>
       </div>
 
       <div class="about-grid">
         <div class="prose">
-          <h3>制作スタンス</h3>
-          <p>
-            <!-- ★編集ポイント: 自分の制作に対する考え方・強みを書いてください -->
+          <h3><span class="lang-ja">制作スタンス</span><span class="lang-en">Design Philosophy</span></h3>
+          <!-- ★編集ポイント / EDIT: 自分の制作に対する考え方・強みを書いてください -->
+          <p class="lang-ja">
             「なぜ面白いのか」を言語化してから作ることを大切にしています。
             企画書・アイディア書の段階でコアループと課題を明確にし、
             試作(プロトタイプ)を通じて仮説を検証しながらゲームを磨き上げます。
           </p>
-          <h3>使用ツール</h3>
+          <p class="lang-en">
+            I make it a habit to put into words <em>why</em> something is fun before I start
+            building. I clarify the core loop and key challenges at the planning/idea stage,
+            then refine the game by testing hypotheses through prototypes.
+          </p>
+          <h3><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></h3>
           <ul class="tag-list">
             <li class="tag">Unity</li>
             <li class="tag">C#</li>
             <li class="tag">Figma</li>
             <li class="tag">Miro</li>
             <li class="tag">Photoshop</li>
-            <!-- ★編集ポイント: 使用ツールを追加・変更してください -->
+            <!-- ★編集ポイント / EDIT: 使用ツールを追加・変更してください -->
           </ul>
         </div>
 
         <div>
           <ul class="info-list">
-            <li><span class="label">所属</span><span><!-- ★学校名 --></span></li>
-            <li><span class="label">専攻</span><span>ゲームデザイン</span></li>
-            <li><span class="label">得意分野</span><span>企画 / レベルデザイン / プロトタイピング</span></li>
-            <li><span class="label">使用ツール</span><span>Unity, C#</span></li>
+            <li><span class="label lang-ja">所属</span><span class="label lang-en">Affiliation</span><span><!-- ★学校名 / school name --></span></li>
+            <li><span class="label lang-ja">専攻</span><span class="label lang-en">Major</span><span><span class="lang-ja">ゲームデザイン</span><span class="lang-en">Game Design</span></span></li>
+            <li><span class="label lang-ja">得意分野</span><span class="label lang-en">Focus Areas</span><span><span class="lang-ja">企画 / レベルデザイン / プロトタイピング</span><span class="lang-en">Planning / Level Design / Prototyping</span></span></li>
+            <li><span class="label lang-ja">使用ツール</span><span class="label lang-en">Tools</span><span>Unity, C#</span></li>
           </ul>
         </div>
       </div>
@@ -90,26 +122,28 @@
     <hr class="divider" />
 
     <!-- ================= Featured Work ================= -->
-    <!-- ★編集ポイント: 一番見てほしい代表作をここに置いてください。採用担当が最初に見るのはこのカードです -->
+    <!-- ★編集ポイント / EDIT: 一番見てほしい代表作をここに置いてください。採用担当が最初に見るのはこのカードです -->
     <section id="featured" class="container">
       <div class="section-head">
         <span class="eyebrow">Featured</span>
-        <h2>代表作</h2>
-        <p>最初に見てほしい一作です。企画意図から試作、プレイテストまでの流れを詳細ページで紹介しています。</p>
+        <h2><span class="lang-ja">代表作</span><span class="lang-en">Featured Work</span></h2>
+        <p class="lang-ja">最初に見てほしい一作です。企画意図から試作、プレイテストまでの流れを詳細ページで紹介しています。</p>
+        <p class="lang-en">The one project I most want you to see first. The detail page walks through the process from concept to prototype and playtesting.</p>
       </div>
 
       <a class="featured-card" href="projects/project-01.html">
         <div class="featured-thumb thumb-a">Project 01</div>
         <div class="featured-body">
-          <span class="featured-kicker">代表作 / Best Work</span>
-          <h3>作品タイトル A(サンプル)</h3>
-          <p>一言でどんなゲームかを説明する文章がここに入ります。何を狙って作り、何が評価されたのかを書くと伝わりやすくなります。</p>
+          <span class="featured-kicker"><span class="lang-ja">代表作</span><span class="lang-en">Best Work</span></span>
+          <h3><span class="lang-ja">作品タイトル A(サンプル)</span><span class="lang-en">Project Title A (Sample)</span></h3>
+          <p class="lang-ja">一言でどんなゲームかを説明する文章がここに入ります。何を狙って作り、何が評価されたのかを書くと伝わりやすくなります。</p>
+          <p class="lang-en">A one-line summary of the game goes here. Explaining what you aimed for and what was praised makes it easier to understand.</p>
           <div class="work-tags">
-            <span class="tag">パズル</span>
-            <span class="tag">個人制作</span>
+            <span class="tag"><span class="lang-ja">パズル</span><span class="lang-en">Puzzle</span></span>
+            <span class="tag"><span class="lang-ja">個人制作</span><span class="lang-en">Solo Project</span></span>
             <span class="tag">Unity</span>
           </div>
-          <span class="btn btn-primary" style="margin-top:8px;width:fit-content;">詳細を見る →</span>
+          <span class="btn btn-primary" style="margin-top:8px;width:fit-content;"><span class="lang-ja">詳細を見る →</span><span class="lang-en">View Details →</span></span>
         </div>
       </a>
     </section>
@@ -120,47 +154,53 @@
     <section id="works" class="container">
       <div class="section-head">
         <span class="eyebrow">Works</span>
-        <h2>制作物一覧</h2>
-        <p>
+        <h2><span class="lang-ja">制作物一覧</span><span class="lang-en">Selected Works</span></h2>
+        <p class="lang-ja">
           各作品ページでは、企画書・アイディア書・試作書などの資料、Play映像、
           実際に遊べるUnity WebGLビルドを掲載しています。
         </p>
+        <p class="lang-en">
+          Each project page includes planning documents, idea sheets, and prototype
+          reports, along with gameplay videos and playable Unity WebGL builds.
+        </p>
       </div>
 
-      <!-- ★編集ポイント: ジャンルを追加する場合はボタンとdata-filterを増やし、work-cardのdata-genreも合わせて設定してください -->
-      <div class="filter-bar" role="group" aria-label="ジャンルで絞り込み">
-        <button class="filter-btn active" data-filter="all">すべて</button>
-        <button class="filter-btn" data-filter="パズル">パズル</button>
-        <button class="filter-btn" data-filter="アクション">アクション</button>
+      <!-- ★編集ポイント / EDIT: ジャンルを追加する場合はボタンとdata-filterを増やし、work-cardのdata-genreも合わせて設定してください -->
+      <div class="filter-bar" role="group" aria-label="Filter by genre / ジャンルで絞り込み">
+        <button class="filter-btn active" data-filter="all"><span class="lang-ja">すべて</span><span class="lang-en">All</span></button>
+        <button class="filter-btn" data-filter="puzzle"><span class="lang-ja">パズル</span><span class="lang-en">Puzzle</span></button>
+        <button class="filter-btn" data-filter="action"><span class="lang-ja">アクション</span><span class="lang-en">Action</span></button>
       </div>
 
       <div class="work-grid">
-        <!-- ★編集ポイント: 作品ごとにこのカードをコピーして増やしてください -->
-        <a class="work-card" href="projects/project-01.html" data-genre="パズル">
+        <!-- ★編集ポイント / EDIT: 作品ごとにこのカードをコピーして増やしてください -->
+        <a class="work-card" href="projects/project-01.html" data-genre="puzzle">
           <div class="work-thumb thumb-a">Project 01</div>
           <div class="work-body">
-            <h3>作品タイトル A(サンプル)</h3>
-            <p>一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <h3><span class="lang-ja">作品タイトル A(サンプル)</span><span class="lang-en">Project Title A (Sample)</span></h3>
+            <p class="lang-ja">一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <p class="lang-en">A one-line summary of the game goes here. Keep the genre and concept concise.</p>
             <div class="work-tags">
-              <span class="tag">パズル</span>
-              <span class="tag">個人制作</span>
+              <span class="tag"><span class="lang-ja">パズル</span><span class="lang-en">Puzzle</span></span>
+              <span class="tag"><span class="lang-ja">個人制作</span><span class="lang-en">Solo Project</span></span>
               <span class="tag">Unity</span>
             </div>
-            <span class="work-link">詳細を見る →</span>
+            <span class="work-link"><span class="lang-ja">詳細を見る →</span><span class="lang-en">View Details →</span></span>
           </div>
         </a>
 
-        <a class="work-card" href="projects/project-02.html" data-genre="アクション">
+        <a class="work-card" href="projects/project-02.html" data-genre="action">
           <div class="work-thumb thumb-b">Project 02</div>
           <div class="work-body">
-            <h3>作品タイトル B(サンプル)</h3>
-            <p>一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <h3><span class="lang-ja">作品タイトル B(サンプル)</span><span class="lang-en">Project Title B (Sample)</span></h3>
+            <p class="lang-ja">一言でどんなゲームかを説明する文章がここに入ります。ジャンルやコンセプトを簡潔に。</p>
+            <p class="lang-en">A one-line summary of the game goes here. Keep the genre and concept concise.</p>
             <div class="work-tags">
-              <span class="tag">アクション</span>
-              <span class="tag">チーム制作(4人)</span>
+              <span class="tag"><span class="lang-ja">アクション</span><span class="lang-en">Action</span></span>
+              <span class="tag"><span class="lang-ja">チーム制作(4人)</span><span class="lang-en">Team of 4</span></span>
               <span class="tag">Unity</span>
             </div>
-            <span class="work-link">詳細を見る →</span>
+            <span class="work-link"><span class="lang-ja">詳細を見る →</span><span class="lang-en">View Details →</span></span>
           </div>
         </a>
       </div>
@@ -172,11 +212,12 @@
     <section id="contact" class="container">
       <div class="section-head">
         <span class="eyebrow">Contact</span>
-        <h2>お問い合わせ</h2>
-        <p>ポートフォリオへのご感想やお仕事のご相談は、以下からお気軽にご連絡ください。</p>
+        <h2><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></h2>
+        <p class="lang-ja">ポートフォリオへのご感想やお仕事のご相談は、以下からお気軽にご連絡ください。</p>
+        <p class="lang-en">Feel free to reach out below with feedback on this portfolio or work inquiries.</p>
       </div>
       <div class="contact-links">
-        <!-- ★編集ポイント: 実際の連絡先に書き換えてください -->
+        <!-- ★編集ポイント / EDIT: 実際の連絡先に書き換えてください -->
         <a href="mailto:your-email@example.com">Email</a>
         <a href="https://x.com/your_account">X (Twitter)</a>
         <a href="https://your-name.itch.io">itch.io</a>

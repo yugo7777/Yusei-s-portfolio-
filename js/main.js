@@ -29,4 +29,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  const langButtons = document.querySelectorAll("[data-lang-btn]");
+
+  if (langButtons.length) {
+    const applyLang = (lang) => {
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+      langButtons.forEach((b) => b.classList.toggle("active", b.dataset.langBtn === lang));
+
+      const title = document.body.getAttribute(`data-title-${lang}`);
+      if (title) document.title = title;
+    };
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.langBtn;
+        localStorage.setItem("lang", lang);
+        applyLang(lang);
+      });
+    });
+
+    // Sync button state / title with whatever the inline head script already applied.
+    applyLang(document.documentElement.getAttribute("data-lang") || "ja");
+  }
 });
