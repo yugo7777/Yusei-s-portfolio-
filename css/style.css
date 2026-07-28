@@ -104,6 +104,50 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #0f1215; }
 .work-card.is-hidden { display: none; }
 
+/* ---------- Project detail page ---------- */
+
+.project-hero h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0 0 14px; letter-spacing: -0.01em; }
+.project-pitch { color: var(--text-muted); font-size: 1.05rem; max-width: 720px; margin: 0 0 28px; }
+
+.meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 26px; }
+.meta-grid dt { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 4px; }
+.meta-grid dd { margin: 0; font-weight: 600; }
+
+/* ---------- Design process timeline ---------- */
+
+.process-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
+.process-timeline li { border-top: 3px solid var(--accent); padding-top: 14px; }
+.process-step { display: block; font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+.process-timeline h4 { font-family: var(--font-display); margin: 0 0 8px; font-size: 1.05rem; }
+.process-timeline p { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 8px; }
+.process-timeline a { font-weight: 600; font-size: 0.85rem; }
+
+/* ---------- Play video / Unity WebGL build ---------- */
+
+.media-frame { position: relative; width: 100%; aspect-ratio: 16/9; background: var(--bg-elevated); border: 1px dashed var(--border); border-radius: var(--radius); overflow: hidden; }
+.media-frame iframe, .media-frame video { width: 100%; height: 100%; border: 0; display: block; }
+.media-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 24px; color: var(--text-muted); }
+.media-placeholder strong { color: var(--text); font-size: 1rem; }
+.media-placeholder code { background: var(--bg-card); border: 1px solid var(--border-soft); padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; color: var(--accent-2); }
+
+.build-actions { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.note { font-size: 0.85rem; color: var(--text-muted); margin-top: 12px; }
+
+/* ---------- Documents ---------- */
+
+.doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.doc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--card-shadow); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.doc-card .doc-kind { color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.doc-card h4 { font-family: var(--font-display); margin: 0; font-size: 1.05rem; }
+.doc-card p { color: var(--text-muted); font-size: 0.88rem; margin: 0; flex: 1; }
+
+/* ---------- Gallery ---------- */
+
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.gallery-item { aspect-ratio: 4/3; border-radius: 10px; border: 1px dashed var(--border); background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85rem; text-align: center; padding: 12px; }
+
+.project-nav { display: flex; justify-content: space-between; padding-top: 32px; border-top: 1px solid var(--border); margin-top: 24px; }
+
 .contact-links { display: flex; gap: 14px; flex-wrap: wrap; }
 .contact-links a { background: var(--bg-elevated); border: 1px solid var(--border-soft); padding: 11px 20px; border-radius: 999px; color: var(--text); font-size: 0.9rem; font-weight: 500; }
 .contact-links a:hover { border-color: var(--accent); text-decoration: none; }
