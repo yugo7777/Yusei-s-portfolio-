@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Sync button state / title with whatever the inline head script already applied.
     applyLang(document.documentElement.getAttribute("data-lang") || "ja");
   }
 });
