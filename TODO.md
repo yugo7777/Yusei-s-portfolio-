@@ -73,7 +73,7 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 ---
 
-## projects/project-04.html(Demontide Cleansing)
+## projects/project-04.html(Hollowstead、企画名「Demontide Cleansing」)
 
 - [x] 新規プロジェクトとして追加済み(IGB100 Team 8のCycle 2ミニゲーム)
 - [x] タイトル・一言ピッチ・メタ情報(ジャンル/担当/使用ツール)を実際の内容に更新済み
@@ -88,6 +88,8 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 - [x] index.htmlのWorksに追加、フィルターに「Roguelite」を追加済み
 - [ ] Unity WebGLビルド:`assets/unity-builds/project-04/` にビルド一式を配置してiframeを有効化
       (現在は「準備中」表示。itch.ioを使う場合はそちらへのリンクに変更)
+- [ ] ギャラリー1枚目を実際の完成版タイトル画面(「HOLLOWSTEAD - SURVIVAL GAME」のピクセルアート画面)に差し替え
+      (画像ファイルをアップロードしてもらい次第、`assets/images/project-04/start-screen.jpg` を置き換え。現在は紙プロトタイプのMain/Start Menuスケッチのまま)
 
 ---
 
