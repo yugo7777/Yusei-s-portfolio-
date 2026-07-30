@@ -1,0 +1,63 @@
+/* Styling for converted design-document pages */
+
+.doc-page { padding-top: 48px; padding-bottom: 80px; }
+
+.doc-head { margin: 8px 0 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.doc-head .doc-kind {
+  display: inline-block; color: var(--accent-2); font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
+}
+.doc-head h1 {
+  font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em;
+}
+.doc-head .doc-meta { color: var(--text-faint); font-size: 0.88rem; margin: 0; }
+
+.doc-body { max-width: 760px; }
+.doc-body h1, .doc-body h2, .doc-body h3, .doc-body h4 {
+  font-family: var(--font-display); line-height: 1.35; margin: 2.2em 0 0.6em;
+  letter-spacing: -0.01em;
+}
+.doc-body h1 { font-size: 1.7rem; }
+.doc-body h2 {
+  font-size: 1.35rem; padding-top: 0.7em; border-top: 1px solid var(--border);
+}
+.doc-body h3 { font-size: 1.12rem; color: var(--accent); }
+.doc-body h4 { font-size: 1rem; color: var(--text-muted); }
+.doc-body > :first-child { margin-top: 0; }
+
+.doc-body { line-height: 1.7; }
+.doc-body p { color: var(--text-muted); margin: 0 0 0.75em; }
+.doc-body p:empty { display: none; }
+.doc-body strong { color: var(--text); }
+.doc-body ul, .doc-body ol { color: var(--text-muted); padding-left: 1.4em; margin: 0 0 1.3em; }
+.doc-body li { margin-bottom: 0.45em; }
+.doc-body li::marker { color: var(--text-faint); }
+
+.doc-body a { word-break: break-word; }
+
+.doc-body img {
+  width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border);
+  background: var(--bg-elevated); margin: 1.6em 0;
+}
+
+.doc-body table {
+  width: 100%; border-collapse: collapse; margin: 1.6em 0;
+  font-size: 0.92rem; color: var(--text-muted);
+}
+.doc-body th, .doc-body td {
+  border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top;
+}
+.doc-body th { background: var(--bg-elevated); color: var(--text); font-weight: 700; }
+
+.doc-body blockquote {
+  margin: 1.6em 0; padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--accent); color: var(--text-muted);
+}
+
+/* Wide content must scroll inside itself, never the page */
+.doc-body pre, .doc-body .table-scroll { overflow-x: auto; }
+
+@media (max-width: 720px) {
+  .doc-page { padding-top: 28px; }
+}
