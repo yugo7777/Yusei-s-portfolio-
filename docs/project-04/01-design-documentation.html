@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design Documentation | Demontide Cleansing | Yusei</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../doc.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="nav-logo" href="../../index.html">YUSEI</a>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="../../projects/project-04.html">Demontide Cleansing</a></li>
+        <li><a href="../../index.html#works">Works</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main class="container doc-page">
+  <a class="back-link" href="../../projects/project-04.html#docs">&larr; Back to Demontide Cleansing</a>
+  <header class="doc-head">
+    <span class="doc-kind">Game Design Document</span>
+    <h1>Demontide Cleansing &mdash; Cycle 2 Mini-Game Design Document</h1>
+    <p class="doc-meta">IGB100 &middot; Team 8 &middot; Feb&ndash;May 2025 &middot; Team-authored GDD (my contribution: charm/skill design and coding, detailed in the Scrum Progress document)</p>
+  </header>
+  <article class="doc-body">
+
+<p>This is a trimmed version of Team 8's Cycle 2 Mini-Game Design Document for <strong>Demontide Cleansing</strong>, written collaboratively by the full eight-person team. My own role on the project &mdash; charm/skill idea design and its coding implementation &mdash; is documented separately in the <a href="03-scrum-progress.html">Scrum Progress Reports</a>.</p>
+
+<h2>Game Overview</h2>
+<p>Demontide Cleansing is a 2D top-down, rogue-lite survival game set in a high-fantasy medieval world. The player must endure escalating waves of enemies through a high-action gameplay loop that rewards both skill, strategy and creative itemisation. Survival depends on the effective use of item combinations, charms, magical familiars, and stat-based upgrades. Enemies present a growing obstacle to the player's chance of victory: a myriad of enemies, each sporting distinct abilities and behaviours designed to challenge the player. As enemy strength increases over the length of the game, the player is given opportunities to grow in parallel, utilising a system of experience points, gold, a collection of charms and their trusty magical familiars to enhance their capabilities. The game builds toward a climactic encounter with a final boss and their powerful horde.</p>
+
+<h2>Gameplay and Core Mechanics</h2>
+<p><strong>Game objectives:</strong> the key objective is to eliminate enemy waves during the night, acquiring rewards such as gold, experience points and other boons through defeating enemies and completing side quests, in order to acquire upgrades &mdash; skills, equipment, and charms, collectively known as items &mdash; and progress to the next stage. Players fight during the night and rest during a grace period in the daytime, using a shop mechanic to prepare for the next battle.</p>
+<p>Enemy waves span three categories: <strong>common enemies</strong> (simple, strength in numbers), <strong>elite enemies</strong> (more durable, interspersed threats), and <strong>major enemies</strong> (boss-type enemies at the end of rounds or from side quests, offering a greater reward).</p>
+<p><strong>Core challenges:</strong> surviving to the end of each round using positioning, dodging, and mouse-aimed attacks, while avoiding being overwhelmed and keeping a path of escape &mdash; a familiar tension from the survivor genre, sharpened further once boss-type enemies are introduced.</p>
+<p><strong>Core mechanics available to the player:</strong></p>
+<ul>
+<li><strong>Main weapon</strong> &mdash; an always-active ability that attacks in the direction of the cursor. Damage and attack-speed stats scale its effectiveness; the first playable character has an area-of-effect slashing attack.</li>
+<li><strong>Movement</strong> &mdash; the player's freedom of movement on the map.</li>
+<li><strong>Upgrades</strong> &mdash; items and skills that increase stats or grant boon effects. Charms can be upgraded and evolved through specific combinations into new, stronger charms.</li>
+</ul>
+<p><strong>Rewards:</strong> coins (gold), spent in the day-phase shop to acquire new effects or stats, and Exp, which fills a bar to level the player up mid-combat, increasing stats and unlocking new upgrades at certain thresholds &mdash; reinforcing the &ldquo;power-fantasy&rdquo; player-experience goal.</p>
+<p><strong>Penalties:</strong> the player loses hit points on contact with enemies or their projectiles, then enters a brief invincibility window (&ldquo;I-frames&rdquo;). Reaching zero HP ends the run, with all gold, items, experience, and upgrades lost, and returns the player to a game-over screen.</p>
+
+<h3>Player Capabilities &amp; Game Objects</h3>
+<p>The player uses WASD to move and attacks automatically on a timer (attack speed) toward the cursor. The table below is an excerpt from the object/attribute balance sheet used to tune the Cycle 2 prototype.</p>
+<div class="table-scroll">
+<table>
+<tr><th>Object</th><th>Attribute</th><th>Value</th><th>Notes</th></tr>
+<tr><td>Player Character</td><td>Health</td><td>100</td><td>Moves freely with WASD</td></tr>
+<tr><td></td><td>Movement Speed</td><td>2</td><td>Increases up to 4 via upgrades</td></tr>
+<tr><td>Enemy (Goblin)</td><td>Health</td><td>50</td><td>Targets and follows the player</td></tr>
+<tr><td></td><td>Movement Speed</td><td>1</td><td></td></tr>
+<tr><td></td><td>Damage Dealt</td><td>5</td><td></td></tr>
+<tr><td>Player Weapon</td><td>Attack Speed</td><td>1.75</td><td>Decreases to 0.5 with level-ups</td></tr>
+<tr><td></td><td>Damage Dealt</td><td>30</td><td></td></tr>
+<tr><td>Enemy Spawner (Easy)</td><td>Spawn Rate</td><td>5</td><td></td></tr>
+</table>
+</div>
+
+<h2>Potential and Planned Game Designs</h2>
+<p>Planned enemy behaviours explored movement patterns beyond simple chasing: <strong>zigzagging</strong> (sharp diagonal, alternating direction), <strong>sine-wave</strong> (smooth wave-like gliding), and <strong>swirl</strong> (looping, circular paths) &mdash; each meant to test player timing and aim differently on elite/major-tier enemies.</p>
+<p>Planned player abilities included a <strong>Dash/Dodge</strong> (Shift, brief invincibility), a class-tied <strong>Basic Ability</strong> (E, cooldown-based), an <strong>Ultimate Ability</strong> (Q, high-impact, cooldown or combat-charged), and <strong>Active Items</strong> (number keys, mana-gated). <strong>Charms</strong> were planned around an evolution mechanic, combining sets of charms into stronger new ones. <strong>Familiars</strong> would assist the player with their own abilities and progression, selectable at the run's start. <strong>Side quests</strong> would reward optional objectives, and environmental <strong>locales</strong> (quest-giver, familiar-trainer, etc.) were discussed as future expansions of the day-phase shop.</p>
+<p>The player-experience goal balanced three pillars: <strong>power-fantasy</strong> (crushing waves of enemies once sufficiently upgraded), <strong>challenge</strong> (an escalating difficulty curve via enemy tiers), and <strong>creativity</strong> (crafting a rogue-lite build from the available charms). Simplifying the main-weapon input &mdash; an attack-speed timer instead of a click-to-attack &mdash; was a deliberate choice to let players focus on positioning and itemisation instead of input repetition.</p>
+
+<h2>Interface / Visual System Details</h2>
+<p>Two UI directions were prototyped: one prioritising <strong>information clarity</strong> (surfacing more of the game's mechanics on screen) and one prioritising <strong>visual clarity</strong> (minimal HUD, less clutter). Both were shown to playtesters to gather a preference and specific feedback on details like health-bar placement.</p>
+<p>The core UI included a numerical health bar (visually depleting on damage, without resizing as max HP grows), a round/night timer, a sidebar for details like active side quests, and a HUD showing cooldowns for class abilities and acquired items.</p>
+<p>Two menus were planned: a <strong>Main Menu</strong> (Start / Options / Quit) and a <strong>Pause Menu</strong> (Esc to open, fades the background, shows current score, offers Resume or Exit-to-Menu). Additional screens: an <strong>Inventory</strong> screen (I key), a <strong>Shop</strong> screen (opens automatically after each wave), a <strong>Level Up</strong> screen (opens on reaching max Exp, offering one free pick), a <strong>Results</strong> screen (on surviving all waves), and a <strong>Game Over</strong> screen (on reaching 0 HP) &mdash; both showing run stats and a return-to-menu option.</p>
+<figure><img src="media/storyboard-flow.jpg" alt="Full paper-prototype storyboard showing the flow between Main Menu, Character Select, Gameplay, Shop, Pause Menu, Result, and Game Over screens" /><figcaption>The full screen-flow storyboard &mdash; see the <a href="02-storyboard-prototype.html">Storyboard &amp; Paper Prototype</a> document for the individual screen sketches.</figcaption></figure>
+
+<h2>Glossary</h2>
+<ul>
+<li><strong>Charms</strong> &mdash; the game's vanilla upgrade item, granting a unique effect (e.g. a constant damaging area around the player) rather than a raw stat.</li>
+<li><strong>Equipment</strong> &mdash; equippable armour pieces (helmet, chest, legs, boots) that influence stats more directly than charms.</li>
+<li><strong>Familiars</strong> &mdash; magical pets that help defeat enemies, with their own upgrades and abilities, not directly controlled by the player.</li>
+<li><strong>Skills</strong> &mdash; activatable abilities. Class-tied skills are called abilities; Dash is a general skill always available regardless of class or item.</li>
+</ul>
+
+  </article>
+  <div class="project-nav">
+    <a href="../../projects/project-04.html#docs">&larr; Back to Documents</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container"><p>&copy; 2026 Yusei. All rights reserved.</p></div>
+</footer>
+</body>
+</html>
