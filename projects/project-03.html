@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepspace Cybercourt | Yusei Game Design Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-title-ja="Deepspace Cybercourt | Yusei Game Design Portfolio" data-title-en="Deepspace Cybercourt | Yusei Game Design Portfolio">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JP</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
+
+    <!-- ================= Hero / 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <h1><span class="lang-ja">Deepspace Cybercourt</span><span class="lang-en">Deepspace Cybercourt</span></h1>
+      <p class="project-pitch lang-ja">
+        座ったままラケットを振り、embodied rhythm(身体で刻むリズム)でAIと打ち合うVRスポーツです。当初は「HIT &amp; ROLL」という企画名で、車椅子を手で漕いで動くVRテニスとして提案されましたが、指導教員のフィードバックと3回のプレイテストを経て、テレポート・ジャンプ移動を持つSF産業アリーナ「Deepspace Cybercourt」へと進化しました。私はラケットのSFX・VFX・物理挙動・グリップ操作のコーディングを担当し、プレイテストのたびに「打った瞬間の手応え」を作り直しました。
+      </p>
+      <p class="project-pitch lang-en">
+        A seated VR sports game where players swing a racket and rally against an AI opponent through embodied rhythm. It began under the pitch name &ldquo;HIT &amp; ROLL,&rdquo; a wheelchair-controlled VR tennis concept, then evolved — through supervisor feedback and three rounds of playtesting — into Deepspace Cybercourt, a sci-fi industrial arena with teleport and jump-based movement. I owned the racket's SFX, VFX, physics, and grip-input coding, rebuilding the feel of every hit after each playtest round.
+      </p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt><span class="lang-ja">ジャンル</span><span class="lang-en">Genre</span></dt>
+          <dd><span class="lang-ja">VRスポーツ体験</span><span class="lang-en">VR Sports Experience</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作期間</span><span class="lang-en">Duration</span></dt>
+          <dd><span class="lang-ja">2026年2月〜5月(約4か月)</span><span class="lang-en">Feb–May 2026 (approx. 4 months)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作人数</span><span class="lang-en">Team Size</span></dt>
+          <dd><span class="lang-ja">4人</span><span class="lang-en">4 people</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">Role</span></dt>
+          <dd><span class="lang-ja">ラケットのSFX/VFX実装、物理挙動の調整、グリップ操作(持ち手)のコーディング</span><span class="lang-en">Racket SFX/VFX Implementation, Physics Tuning, and Grip-Input Coding</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd><span class="lang-ja">Unity 6、C#、Meta Quest 2、Meta Touch コントローラー</span><span class="lang-en">Unity 6, C#, Meta Quest 2, and Meta Touch Controllers</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ================= 制作プロセス ================= -->
+    <section id="process">
+      <div class="section-head">
+        <span class="eyebrow">Design Process</span>
+        <h2><span class="lang-ja">制作プロセス</span><span class="lang-en">Design Process</span></h2>
+        <p class="lang-ja">アイディアから完成までの流れです。各ステップの詳しい資料は「資料」セクションからご覧いただけます。</p>
+        <p class="lang-en">The flow from idea to finished game. Detailed materials for each step are available in the Documents section below.</p>
+      </div>
+
+      <ol class="process-timeline">
+        <li>
+          <span class="process-step">01</span>
+          <h4><span class="lang-ja">アイディア</span><span class="lang-en">Idea</span></h4>
+          <p class="lang-ja">最初の一枚企画書「Tennis Go Round」は、車椅子を両手で漕いで移動し、ラケットで打ち返すVRテニスでした。指導教員からは「移動と打つ動作を同時に要求すると初心者には負荷が高い」「車椅子を題材にする以上、ギミック扱いにせず競技として誠実に描くこと」という指摘を受け、移動モデルとNPCの役割を再設計する必要が見えてきました。</p>
+          <p class="lang-en">Our first one-page pitch, &ldquo;Tennis Go Round,&rdquo; had players hand-propel a wheelchair with both hands while swinging a racket. Supervisor feedback flagged that demanding movement and swinging at once would be a high coordination cost for novices, and — since the game used a real assistive device as its premise — warned us to treat it as a legitimate sport rather than a gimmick. That reshaped how we thought about the movement model and the NPC's role.</p>
+          <a href="#docs"><span class="lang-ja">企画フィードバックを見る →</span><span class="lang-en">Read the concept feedback →</span></a>
+        </li>
+        <li>
+          <span class="process-step">02</span>
+          <h4><span class="lang-ja">企画</span><span class="lang-en">Planning</span></h4>
+          <p class="lang-ja">車椅子の手動移動は技術的な難易度が高く、開発期間内での安定実装が難しいと判断し、テレポート・歩行・ジャンプを組み合わせた移動へ転換しました。舞台もテニスコートからSF産業アリーナへ変更し、ラケットは通常のテニスラケットとパドルラケットの2種類を選べるようにしました。NPCは「チュートリアル役」から「ラリーを続けるための相手」へと役割を絞り込んでいます。</p>
+          <p class="lang-en">We judged hand-propelled wheelchair locomotion too technically complex to implement reliably in the timeframe, and moved to a joystick/teleport/jump movement model instead. The setting shifted from a tennis court to a sci-fi industrial arena, and players could choose between two racket types — a conventional tennis racket and a paddle racket. The NPC's role was narrowed from tutorial guide to rally partner.</p>
+          <a href="#docs"><span class="lang-ja">GDDの企画転換を見る →</span><span class="lang-en">Read the pivot in the GDD →</span></a>
+        </li>
+        <li>
+          <span class="process-step">03</span>
+          <h4><span class="lang-ja">試作・検証</span><span class="lang-en">Prototype &amp; Testing</span></h4>
+          <p class="lang-ja">3回のプレイテストで、私はSFX/VFX担当としてセッションを主導しました。1回目は「全部同じエフェクトに見える」、2回目は「打った実感がない」、3回目では「手を動かしただけで足音が鳴る」というバグまで具体的に特定できました。イベントごとに専用の音と専用のエフェクトを1つずつ対応させる、というルールに落とし込み、ラケットの持ち手(グリップ)コーディングと物理挙動の調整もあわせて進めました。</p>
+          <p class="lang-en">Across three playtesting rounds I ran the sessions focused on SFX/VFX. Round 1 surfaced &ldquo;everything looks the same,&rdquo; round 2 surfaced &ldquo;there's no real sense of hitting the ball,&rdquo; and round 3 pinned down a specific bug: a footstep sound firing whenever a hand controller moved, even while standing still. I distilled this into one rule — one distinct sound and one distinct visual per event — and used it alongside grip-input coding and physics tuning on the racket.</p>
+          <a href="#docs"><span class="lang-ja">SFX/VFXプレイテスト記録を見る →</span><span class="lang-en">Read the SFX/VFX playtesting notes →</span></a>
+        </li>
+        <li>
+          <span class="process-step">04</span>
+          <h4><span class="lang-ja">完成</span><span class="lang-en">Ship</span></h4>
+          <p class="lang-ja">最終ビルドでは、ボールにトレイルVFXを追加して速度感を強調し、コントローラーからすぐにリスタートできる仕組みで再挑戦のテンポを上げました。Rocket League Heat Seekerを参考にコートを開けた設計にし、狭い車椅子コートから「打った瞬間が気持ちいい」ことを軸にしたVRスポーツへと仕上がりました。</p>
+          <p class="lang-en">The shipped build added a trail VFX to the ball to emphasise speed, and a restart accessible directly from the controller to keep replay tempo high. Referencing Rocket League's Heat Seeker mode, we opened up the court design — turning a cramped wheelchair-court pitch into a VR sports game built around one thing: making the moment of contact feel good.</p>
+          <a href="#video"><span class="lang-ja">Play映像を見る →</span><span class="lang-en">Watch Play Video →</span></a>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Play映像 ================= -->
+    <section id="video">
+      <div class="section-head">
+        <span class="eyebrow">Play Movie</span>
+        <h2><span class="lang-ja">Play映像</span><span class="lang-en">Play Video</span></h2>
+        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
+        <p class="lang-en">A video of actual gameplay.</p>
+      </div>
+
+      <div class="media-frame">
+        <iframe src="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/preview"
+                title="Deepspace Cybercourt — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <div class="build-actions">
+        <a class="btn btn-outline" href="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/view" target="_blank" rel="noopener">
+          <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Unity WebGL ビルド ================= -->
+    <section id="build">
+      <div class="section-head">
+        <span class="eyebrow">Playable Build</span>
+        <h2><span class="lang-ja">プレイアブルビルド</span><span class="lang-en">Playable Build</span></h2>
+        <p class="lang-ja">本作はMeta Quest 2向けのVRビルドのため、ブラウザ上のWebGL版は準備中です。公開までは、上のPlay映像でゲームプレイをご覧いただけます。</p>
+        <p class="lang-en">This is a Meta Quest 2 VR build, so a browser-playable WebGL version is being prepared. Until it is up, the gameplay video above shows the game in motion.</p>
+      </div>
+
+      <div class="media-frame">
+        <div class="media-placeholder">
+          <strong class="lang-ja">プレイアブルビルドは準備中です</strong>
+          <strong class="lang-en">Playable build coming soon</strong>
+          <span class="lang-ja">公開までは、上のPlay映像をご覧ください。</span>
+          <span class="lang-en">In the meantime, please see the gameplay video above.</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 資料 ================= -->
+    <section id="docs">
+      <div class="section-head">
+        <span class="eyebrow">Documents</span>
+        <h2><span class="lang-ja">資料</span><span class="lang-en">Documents</span></h2>
+        <p class="lang-ja">企画の出発点から、企画転換、プレイテストによる作り直しまでを、実際に使った資料でたどれます。</p>
+        <p class="lang-en">From the original pitch through the pivot and the playtest-driven rework, traced through the actual documents used at each stage.</p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">企画フィードバック</span>
+          <span class="doc-kind lang-en">Concept Feedback</span>
+          <h4><span class="lang-ja">企画フィードバック&amp;一枚企画書</span><span class="lang-en">Concept Feedback &amp; One-Pagers</span></h4>
+          <p class="lang-ja">「Tennis Go Round」の一枚企画書と、指導教員からの詳細なフィードバックです。移動モデルやNPCの役割を問う質問が、後の企画転換の出発点になりました。</p>
+          <p class="lang-en">The one-page &ldquo;Tennis Go Round&rdquo; pitch and the detailed supervisor feedback it received — the questions about the movement model and the NPC's role became the starting point for the later pivot.</p>
+          <a class="work-link" href="../docs/project-03/01-meeting-feedback.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">GDD</span>
+          <span class="doc-kind lang-en">GDD</span>
+          <h4><span class="lang-ja">Final Design Implementation Document</span><span class="lang-en">Final Design Implementation Document</span></h4>
+          <p class="lang-ja">最終提出したGDDです。プロトタイプの実装内容、企画転換の詳細な比較表、3回のプレイテストの総括、教員フィードバックへの対応をまとめています。</p>
+          <p class="lang-en">The final submitted GDD, covering the prototype implementation, a detailed comparison table of the concept pivot, a summary of all three playtesting rounds, and the team's response to staff feedback.</p>
+          <a class="work-link" href="../docs/project-03/02-final-gdd.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">プレイテスト</span>
+          <span class="doc-kind lang-en">Playtest</span>
+          <h4><span class="lang-ja">SFX/VFXプレイテスト記録</span><span class="lang-en">SFX/VFX Playtesting Notes</span></h4>
+          <p class="lang-ja">私が担当した3回分のプレイテスト記録です。エフェクトの使い回し、打った実感の不足、足音バグの特定と修正まで、実際の指摘とその対応をそのまま残しています。</p>
+          <p class="lang-en">My own playtesting reports across all three rounds — including the raw issue tables — from reused VFX, to the missing sense of contact, to identifying and fixing a footstep-sound bug.</p>
+          <a class="work-link" href="../docs/project-03/03-sfx-vfx-playtesting.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 制作の背景・工夫点 ================= -->
+    <section id="detail" class="prose">
+      <div class="section-head">
+        <span class="eyebrow">Behind the Scenes</span>
+        <h2><span class="lang-ja">制作の背景・工夫した点</span><span class="lang-en">Background &amp; Design Decisions</span></h2>
+      </div>
+
+      <h3><span class="lang-ja">企画の背景</span><span class="lang-en">Project Background</span></h3>
+      <p class="lang-ja">最初の企画は「車椅子で移動しながらテニスをする」という強いフックを持っていましたが、指導教員から「実在する競技を題材にする以上、車椅子を目新しさとして消費してはいけない」と釘を刺されました。この指摘は、単なる技術的な難易度の話ではなく、題材への向き合い方そのものを問うものでした。開発期間内に安定して動く移動システムを作れないという判断と合わせて、私たちは車椅子という要素そのものを手放し、embodied rhythm(身体を使う心地よさ)という核だけを残してSFアリーナへ舞台を移しました。</p>
+      <p class="lang-en">The original pitch had a strong hook — VR tennis played from a wheelchair — but our supervisor's feedback was direct: since the game was built around a real assistive device, we could not treat the chair as mere novelty. That wasn't only a technical note; it questioned how we were framing the subject itself. Combined with the judgement that we couldn't reliably ship a stable wheelchair-locomotion system in the timeframe, we let go of the wheelchair element entirely and kept only its core — the satisfaction of embodied rhythm — moving the setting to a sci-fi arena instead.</p>
+
+      <h3><span class="lang-ja">工夫した点</span><span class="lang-en">Design Decisions</span></h3>
+      <p class="lang-ja">私が繰り返し直面したのは「プレイヤーは打った瞬間を体感できているか」という一点でした。1回目のプレイテストでは全てのエフェクトが同じに見えると言われ、2回目では「打った実感がない」という一番重い指摘を受けました。そこで、音とエフェクトを1イベント=1表現に固定するというルールを立て、ヒット音を多層化し、ラケットのスイートスポットに光るVFXを追加し、コントローラーの振動も組み合わせました。3回目のプレイテストで見つかった「手を動かしただけで足音が鳴る」というバグは、足音のロジックがコントローラー入力ではなくプレイヤーの実移動(頭・体の並進)に紐づいていなかったことが原因で、スクリプトをメインカメラ側に移すことで解決しています。</p>
+      <p class="lang-en">The question I kept coming back to was simple: does the player actually feel the moment of contact? Round 1 playtesting found every effect looked the same; round 2 raised the heaviest note — no real sense of having hit the ball. I responded by fixing a rule: one sound and one visual per event, no reuse. I layered the impact SFX, added a sweet-spot VFX flash on the racket head, and combined it with controller vibration. A bug found in round 3 — footstep sounds firing from hand movement alone — turned out to be footstep logic driven by controller input rather than the player's actual head/body translation; moving the script onto the main camera fixed it.</p>
+
+      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">My Role on the Team</span></h3>
+      <p class="lang-ja">4人チーム(IGB388 Team 15)で、私はラケットのSFX/VFX実装、物理挙動の調整、グリップ(持ち手)操作のコーディングを担当しました。3回のプレイテストすべてで、SFX/VFXの観点からセッションを設計・実施し、結果を課題表としてまとめてチームにフィードバックする役割も担いました。</p>
+      <p class="lang-en">On a four-person team (IGB388 Team 15) I owned the racket's SFX/VFX implementation, physics tuning, and grip-input coding. Across all three playtesting rounds I also designed and ran the sessions from an SFX/VFX perspective, compiling the results into issue tables and feeding them back to the team.</p>
+
+      <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
+      <p class="lang-ja">最も学びが大きかったのは、フィードバックのバグではなく「実装のどこにバグがあるか」を仕様の観点から突き止める作業でした。足音が鳴る原因を「コントローラー入力に紐づいていたから」まで特定できたのは、SFXを単なる装飾ではなく、プレイヤーの状態を表すシステムとして設計していたからです。今後は、エフェクトの持続時間や強度を数値化し、プレイテストのたびに勘ではなく計測で調整できる仕組みを作りたいです。</p>
+      <p class="lang-en">The biggest lesson wasn't fixing a feedback bug so much as tracing it back to a specification-level cause. Being able to say precisely why the footstep sound fired — because it was wired to controller input rather than player state — only worked because I had designed SFX as a system representing player state, not as decoration. Next, I'd like to quantify effect duration and intensity so each playtesting round can be tuned by measurement rather than by feel.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= スクリーンショット ================= -->
+    <section id="gallery">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/final-screenshot.jpg" alt="In-headset screenshot of the finished Deepspace Cybercourt arena" loading="lazy" />
+          <figcaption><span class="lang-ja">最終ビルド:SFアリーナ「Deepspace Cybercourt」</span><span class="lang-en">Final build: the Deepspace Cybercourt sci-fi arena</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/pitch-infographic.jpg" alt="HIT & ROLL pitch infographic covering target experience, core loop, VR affordances, and team roles" loading="lazy" />
+          <figcaption><span class="lang-ja">最初の企画インフォグラフィック「HIT &amp; ROLL」</span><span class="lang-en">The original &ldquo;HIT &amp; ROLL&rdquo; pitch infographic</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/vfx-prototype.jpg" alt="Early whitebox Unity scene showing placeholder hit VFX with no ball trail" loading="lazy" />
+          <figcaption><span class="lang-ja">初期ホワイトボックス:プレースホルダーのヒットVFX</span><span class="lang-en">Early whitebox scene: placeholder hit VFX before the SFX/VFX rework</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/concept-sketch-01.jpg" alt="Early paper prototype sketch of the wheelchair tennis court and wheel/leg layout" loading="lazy" />
+          <figcaption><span class="lang-ja">紙プロトタイプ:車椅子テニスの初期スケッチ</span><span class="lang-en">Paper prototype: an early wheelchair-tennis sketch</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/concept-sketch-02.jpg" alt="Early paper sketch showing how to create the racket" loading="lazy" />
+          <figcaption><span class="lang-ja">紙プロトタイプ:ラケット制作のスケッチ</span><span class="lang-en">Paper prototype: the racket-creation sketch</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-03/concept-sketch-env.jpg" alt="Environment concept sketches exploring the court and arena shape" loading="lazy" />
+          <figcaption><span class="lang-ja">環境コンセプトスケッチ</span><span class="lang-en">Environment concept sketches</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-02.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yusei. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
