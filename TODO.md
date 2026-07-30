@@ -55,7 +55,7 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 ---
 
-## projects/project-03.html(HIT & ROLL / Deepspace Cybercourt)
+## projects/project-03.html(Deepspace Cybercourt、企画名「HIT & ROLL」)
 
 - [x] 新規プロジェクトとして追加済み(project-02とは別作品)
 - [x] タイトル・一言ピッチ・メタ情報(ジャンル/担当/使用ツール)を実際の内容に更新済み
