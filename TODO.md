@@ -15,7 +15,8 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 - [x] 専門分野バッジ、自己紹介、制作スタンス、使用ツール、所属、代表作カード、Works一覧カードA/B、ジャンルフィルターを実内容に更新済み
 - [x] Emailを実際のアドレスに変更済み
-- [ ] X (Twitter)・itch.io・GitHubのリンク先URLが未定(現在プレースホルダーのまま)。使う場合はURLを、使わない場合はリンクごと削除
+- [x] itch.io(https://yugo589.itch.io)のリンクを設定済み
+- [ ] X (Twitter)・GitHubのリンク先URLが未定(現在プレースホルダーのまま)。使う場合はURLを、使わない場合はリンクごと削除
 
 ---
 
@@ -68,8 +69,7 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 - [x] 資料3点を `docs/project-03/` にHTMLページとして公開済み
       (企画フィードバック/最終GDD/SFX・VFXプレイテスト記録)
 - [x] index.htmlのWorksに追加、フィルターに「VR Sports」を追加済み
-- [ ] Unity(Meta Quest 2)ビルド:VRヘッドセット向けのためブラウザWebGL版は「準備中」表示のまま
-      (公開する場合はitch.ioのVR対応ページか、動画のみの掲載を検討)
+- [x] Unity(Meta Quest 2)ビルド:itch.io(https://yugo589.itch.io/deepspace-cybercourt)へのリンクに変更済み
 
 ---
 
