@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demontide Cleansing | Yusei Game Design Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-title-ja="Demontide Cleansing | Yusei Game Design Portfolio" data-title-en="Demontide Cleansing | Yusei Game Design Portfolio">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JP</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
+
+    <!-- ================= Hero / 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <h1><span class="lang-ja">Demontide Cleansing</span><span class="lang-en">Demontide Cleansing</span></h1>
+      <p class="project-pitch lang-ja">
+        高ファンタジー世界を舞台にした2Dトップダウンのローグライト・サバイバルです。夜の間に押し寄せる敵の波を、チャーム(お守り)や使い魔、ステータス強化を組み合わせて生き延び、日中はショップで次の波に備えます。8人チームの中で私はチャーム/スキルのアイデア考案とそのC#実装を担当し、週次スプリントごとに新しいチャームを追加してショップ・通貨システムと統合していきました。
+      </p>
+      <p class="project-pitch lang-en">
+        A 2D top-down rogue-lite survival game set in a high-fantasy world. Players endure escalating nightly waves of enemies using charms, familiars, and stat upgrades, then prepare for the next wave at a daytime shop. On an eight-person team I owned the ideas behind each charm/skill and its C# implementation, adding new charms sprint by sprint and integrating them with the shop and currency systems.
+      </p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt><span class="lang-ja">ジャンル</span><span class="lang-en">Genre</span></dt>
+          <dd><span class="lang-ja">ローグライト・サバイバル</span><span class="lang-en">Rogue-lite Survival</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作期間</span><span class="lang-en">Duration</span></dt>
+          <dd><span class="lang-ja">2025年2月〜5月(約4か月)</span><span class="lang-en">Feb–May 2025 (approx. 4 months)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作人数</span><span class="lang-en">Team Size</span></dt>
+          <dd><span class="lang-ja">8人</span><span class="lang-en">8 people</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">Role</span></dt>
+          <dd><span class="lang-ja">チャーム/スキルのアイデア考案、コーディングでの実装</span><span class="lang-en">Charm/Skill Idea Design and Coding Implementation</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd><span class="lang-ja">Unity、C#</span><span class="lang-en">Unity, C#</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ================= 制作プロセス ================= -->
+    <section id="process">
+      <div class="section-head">
+        <span class="eyebrow">Design Process</span>
+        <h2><span class="lang-ja">制作プロセス</span><span class="lang-en">Design Process</span></h2>
+        <p class="lang-ja">アイディアから完成までの流れです。各ステップの詳しい資料は「資料」セクションからご覧いただけます。</p>
+        <p class="lang-en">The flow from idea to finished prototype. Detailed materials for each step are available in the Documents section below.</p>
+      </div>
+
+      <ol class="process-timeline">
+        <li>
+          <span class="process-step">01</span>
+          <h4><span class="lang-ja">アイディア</span><span class="lang-en">Idea</span></h4>
+          <p class="lang-ja">チームで一枚企画書を出し合い、夜の敵の波を生き延び、チャームや使い魔で強くなっていくローグライト・サバイバルを作ることに決めました。「パワーファンタジー」「歯応えのある難易度」「創造的なアイテム構成」の3本柱をプレイヤー体験の目標に据えています。</p>
+          <p class="lang-en">The team pitched one-page concepts and settled on a rogue-lite survival game: survive nightly enemy waves while growing stronger through charms and familiars. We set three player-experience pillars — power-fantasy, meaningful challenge, and creative itemisation.</p>
+          <a href="#docs"><span class="lang-ja">ゲームデザイン文書を見る →</span><span class="lang-en">Read the design document →</span></a>
+        </li>
+        <li>
+          <span class="process-step">02</span>
+          <h4><span class="lang-ja">ストーリーボード・紙プロトタイプ</span><span class="lang-en">Storyboard &amp; Prototype</span></h4>
+          <p class="lang-ja">Unityで作り始める前に、メインメニューからショップ、ポーズ、ゲームオーバーまでの画面遷移を紙に描き出しました。ショップ画面やレベルアップ画面のレイアウトは、この紙プロトタイプの時点でほぼ確定しています。</p>
+          <p class="lang-en">Before building anything in Unity, we sketched the entire screen flow on paper — from the main menu through the shop, pause menu, and game over screen. The shop and level-up screen layouts were largely locked in at this paper-prototyping stage.</p>
+          <a href="#docs"><span class="lang-ja">ストーリーボードを見る →</span><span class="lang-en">Read the storyboard →</span></a>
+        </li>
+        <li>
+          <span class="process-step">03</span>
+          <h4><span class="lang-ja">実装(週次スプリント)</span><span class="lang-en">Implementation (Weekly Sprints)</span></h4>
+          <p class="lang-ja">週11〜13にかけて、Fire Wall・Speed-boostといった最初のチャームから、EXPを元にした通貨システム、ショップとチャームの連携、Fire Pillar・Health Recovery・Damage Reduction・EXP Boosterまでスプリントごとに実装を進めました。チャームごとに独立したスクリプトを書き、共通のLevelフィールドで拡張できる構造にしています。</p>
+          <p class="lang-en">Across weeks 11–13 I implemented the first charms (Fire Wall, Speed-boost), an EXP-based currency system, the charm/shop integration, and then Fire Pillar, Health Recovery, Damage Reduction, and EXP Booster. Each charm is its own script with a shared Level field, so the roster can grow without touching the UI code.</p>
+          <a href="#docs"><span class="lang-ja">週次スクラム記録を見る →</span><span class="lang-en">Read the Scrum progress reports →</span></a>
+        </li>
+        <li>
+          <span class="process-step">04</span>
+          <h4><span class="lang-ja">仕上げ・今後の計画</span><span class="lang-en">Polish &amp; Cycle 3 Plans</span></h4>
+          <p class="lang-ja">プレイヤー・敵・武器のステータス表でバランスを調整し、UIは情報の見やすさと画面のすっきりさの2案をプレイテストで比較しました。Cycle 3では、チャームの進化合成やモンスターの移動パターン、使い魔システムなど、企画時点で構想していた要素をさらに深掘りする計画です。</p>
+          <p class="lang-en">We tuned Player/Enemy/Weapon stats via a balance table and playtested two competing UI directions — an information-dense HUD versus a minimal one. Cycle 3 plans call for deepening charm-evolution combinations, enemy movement patterns, and the familiar system envisioned in the original design document.</p>
+          <a href="#video"><span class="lang-ja">Play映像を見る →</span><span class="lang-en">Watch Play Video →</span></a>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Play映像 ================= -->
+    <section id="video">
+      <div class="section-head">
+        <span class="eyebrow">Play Movie</span>
+        <h2><span class="lang-ja">Play映像</span><span class="lang-en">Play Video</span></h2>
+        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
+        <p class="lang-en">A video of actual gameplay.</p>
+      </div>
+
+      <div class="media-frame">
+        <iframe src="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/preview"
+                title="Demontide Cleansing — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <div class="build-actions">
+        <a class="btn btn-outline" href="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/view" target="_blank" rel="noopener">
+          <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= Unity WebGL ビルド ================= -->
+    <section id="build">
+      <div class="section-head">
+        <span class="eyebrow">Playable Build</span>
+        <h2><span class="lang-ja">プレイアブルビルド</span><span class="lang-en">Playable Build</span></h2>
+        <p class="lang-ja">ブラウザで遊べるWebGL版は準備中です。公開までは、上のPlay映像でゲームプレイをご覧いただけます。</p>
+        <p class="lang-en">A browser-playable WebGL version is being prepared. Until it is up, the gameplay video above shows the game in motion.</p>
+      </div>
+
+      <div class="media-frame">
+        <div class="media-placeholder">
+          <strong class="lang-ja">プレイアブルビルドは準備中です</strong>
+          <strong class="lang-en">Playable build coming soon</strong>
+          <span class="lang-ja">公開までは、上のPlay映像をご覧ください。</span>
+          <span class="lang-en">In the meantime, please see the gameplay video above.</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 資料 ================= -->
+    <section id="docs">
+      <div class="section-head">
+        <span class="eyebrow">Documents</span>
+        <h2><span class="lang-ja">資料</span><span class="lang-en">Documents</span></h2>
+        <p class="lang-ja">チーム共通のゲームデザイン文書・紙プロトタイプから、私自身のコーディング担当パートを記録した週次スクラム報告までをご覧いただけます。</p>
+        <p class="lang-en">From the team's shared game design document and paper prototype through to my own weekly Scrum reports covering the coding work I owned.</p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">GDD</span>
+          <span class="doc-kind lang-en">GDD</span>
+          <h4><span class="lang-ja">ゲームデザイン文書</span><span class="lang-en">Game Design Document</span></h4>
+          <p class="lang-ja">8人チームで作成したCycle 2のミニゲーム・デザイン文書です。ゲーム概要、コアメカニクス、UIシステム、用語集をまとめています。</p>
+          <p class="lang-en">The Cycle 2 mini-game design document, written by the full eight-person team — game overview, core mechanics, UI system details, and glossary.</p>
+          <a class="work-link" href="../docs/project-04/01-design-documentation.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">ストーリーボード</span>
+          <span class="doc-kind lang-en">Storyboard</span>
+          <h4><span class="lang-ja">画面遷移ストーリーボード &amp; 紙プロトタイプ</span><span class="lang-en">Storyboard &amp; Paper Prototype</span></h4>
+          <p class="lang-ja">Unityで作り始める前に描いた画面遷移図と、ショップ・レベルアップ・ゲームオーバー各画面の紙プロトタイプです。</p>
+          <p class="lang-en">The screen-flow diagram and paper sketches for the shop, level-up, and game-over screens, drawn before any UI was built in Unity.</p>
+          <a class="work-link" href="../docs/project-04/02-storyboard-prototype.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">週次スクラム記録</span>
+          <span class="doc-kind lang-en">Scrum Progress</span>
+          <h4><span class="lang-ja">週次スクラム進捗報告(Week 11〜13)</span><span class="lang-en">Weekly Scrum Progress Reports (Week 11–13)</span></h4>
+          <p class="lang-ja">私自身が担当したチャーム/スキルのアイデアとコーディング実装を、週ごとの進捗として記録したものです。実装画面のスクリーンショット付き。</p>
+          <p class="lang-en">My own weekly progress on the charm/skill system I owned — idea design and coding implementation — with in-engine screenshots for each sprint.</p>
+          <a class="work-link" href="../docs/project-04/03-scrum-progress.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 制作の背景・工夫点 ================= -->
+    <section id="detail" class="prose">
+      <div class="section-head">
+        <span class="eyebrow">Behind the Scenes</span>
+        <h2><span class="lang-ja">制作の背景・工夫した点</span><span class="lang-en">Background &amp; Design Decisions</span></h2>
+      </div>
+
+      <h3><span class="lang-ja">企画の背景</span><span class="lang-en">Project Background</span></h3>
+      <p class="lang-ja">Demontide Cleansingは「パワーファンタジー」「歯応えのある難易度」「創造的なアイテム構成」という3つのプレイヤー体験を両立させることを目標に企画されました。common/elite/majorという3段階の敵ティアと、チャーム・使い魔・ステータス強化という複数の成長経路を用意することで、簡単な敵は圧倒しつつ強い敵には歯応えを感じ、かつ自分なりのビルドを組む楽しさを狙っています。</p>
+      <p class="lang-en">Demontide Cleansing was designed around three player-experience goals at once: power-fantasy, meaningful challenge, and creative itemisation. A three-tier enemy system (common/elite/major) paired with multiple growth paths — charms, familiars, and stat upgrades — was meant to let players steamroll easy enemies while still being tested by harder ones, all while building their own run.</p>
+
+      <h3><span class="lang-ja">工夫した点</span><span class="lang-en">Design Decisions</span></h3>
+      <p class="lang-ja">私が担当したのはチャーム/スキルのアイデア考案とその実装でした。週11でFire Wall・Happiness・Speed-boostという最初のチャームを作った時点では、まだ場当たり的な実装でしたが、週13でFire Pillar・Health Recovery・Damage Reduction・EXP Boosterを追加する際に、チャームごとに独立したスクリプトを書き、共通のLevelフィールドを持たせる構造に整理しました。この構造にしたことで、新しいチャーム(Lightningなど)を追加してもショップやレベルアップ画面のUIコードには一切手を入れずに済むようになっています。通貨システムも、新しい変数を増やすのではなく既存のEXP値を流用することで、既に動いているレベルアップの仕組みとの整合性を保ちました。</p>
+      <p class="lang-en">My part of the project was the charm/skill system — deciding what each charm should do, then building it. In Week 11, the first charms (Fire Wall, Happiness, Speed-boost) were implemented fairly ad hoc. By Week 13, adding Fire Pillar, Health Recovery, Damage Reduction, and EXP Booster pushed me to restructure: each charm became its own script sharing a common Level field. That structure meant a later charm like Lightning could be added without touching any shop or level-up UI code. The currency system reused the player's existing EXP value rather than introducing a new variable, keeping it consistent with the level-up logic that already worked.</p>
+
+      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">My Role on the Team</span></h3>
+      <p class="lang-ja">8人チーム(IGB100 SCRUM Team 8)の中で、私はチャーム/スキルのアイデア考案とそのC#実装を担当しました。週次のスクラムレポートで進捗をチームに共有しながら、ショップシステムや通貨システムを担当するメンバーと連携し、チャームを購入・取得できる形に統合していきました。</p>
+      <p class="lang-en">On an eight-person team (IGB100 SCRUM Team 8), I owned the charm/skill system's design and its C# implementation. I shared progress with the team through weekly Scrum reports and coordinated with the teammates working on the shop and currency systems to get charms purchasable and pickable in-game.</p>
+
+      <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
+      <p class="lang-ja">最初の3つのチャームをその場しのぎで実装したことで、後から機能を増やすたびにコードが絡み合っていく感覚を味わいました。週13でスクリプトを1チャーム1ファイルに分割し直したことで、追加のコストが目に見えて下がったのが大きな学びです。Cycle 3では、チャーム同士を組み合わせて進化させる仕組みや、使い魔システムなど、企画段階で構想したまま実装できていない要素に取り組みたいと考えています。</p>
+      <p class="lang-en">Implementing the first three charms without much structure taught me how quickly code tangles as features are added on top of each other. Splitting each charm into its own script in Week 13 visibly lowered the cost of every charm added after that — that was the biggest lesson. For Cycle 3, I want to tackle the charm-evolution combination system and the familiar system, both of which were designed on paper but never implemented in this cycle.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= スクリーンショット ================= -->
+    <section id="gallery">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item is-logo">
+          <img src="../assets/images/project-04/logo.jpg" alt="Demontide Cleansing logo, wooden fence background with a sunset sky" loading="lazy" />
+          <figcaption><span class="lang-ja">タイトルロゴ「Demontide Cleansing」</span><span class="lang-en">The &ldquo;Demontide Cleansing&rdquo; title logo</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-04/gameplay-firewall.jpg" alt="In-engine screenshot of the Fire Wall charm surrounded by enemies and currency drops" loading="lazy" />
+          <figcaption><span class="lang-ja">Fire Wallチャームを使った戦闘中の画面</span><span class="lang-en">Mid-combat with the Fire Wall charm active</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-04/shop-screen.jpg" alt="In-engine shop screen with three purchasable item cards" loading="lazy" />
+          <figcaption><span class="lang-ja">日中のショップ画面</span><span class="lang-en">The daytime shop screen</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-04/levelup-cards.jpg" alt="In-engine level-up card selection screen offering three charm upgrades" loading="lazy" />
+          <figcaption><span class="lang-ja">レベルアップ時のチャーム選択画面</span><span class="lang-en">The level-up charm selection screen</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-04/attack-swing.jpg" alt="In-engine screenshot of the player's weapon swing attack" loading="lazy" />
+          <figcaption><span class="lang-ja">プレイヤーの武器スイング攻撃</span><span class="lang-en">The player's weapon-swing attack</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/images/project-04/paper-prototype-flow.jpg" alt="Full paper-prototype storyboard of the entire screen flow" loading="lazy" />
+          <figcaption><span class="lang-ja">紙プロトタイプ:全体の画面遷移ストーリーボード</span><span class="lang-en">Paper prototype: the full screen-flow storyboard</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-03.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yusei. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
