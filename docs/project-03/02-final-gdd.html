@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Final Design Implementation Document | HIT &amp; ROLL | Yusei</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../doc.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="nav-logo" href="../../index.html">YUSEI</a>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="../../projects/project-03.html">HIT &amp; ROLL</a></li>
+        <li><a href="../../index.html#works">Works</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main class="container doc-page">
+  <a class="back-link" href="../../projects/project-03.html#docs">&larr; Back to HIT &amp; ROLL</a>
+  <header class="doc-head">
+    <span class="doc-kind">Final Design Implementation Document</span>
+    <h1>Deepspace Cybercourt</h1>
+    <p class="doc-meta">IGB388 &ndash; Design and Development of Interactive Environments &middot; Team 15 &middot; Submitted May 29, 2026</p>
+  </header>
+  <article class="doc-body">
+
+<h2>1. Introduction</h2>
+<p>Deepspace Cybercourt is a virtual reality (VR) sports experience set in a futuristic, sci-fi world. This VR game combines elements of tennis and racket gameplay, with players competing against AI (NPC) opponents in a fast-paced VR arena. Players score points by hitting the ball into the opponent's wall while defending their own wall.</p>
+<p>This project aimed to create a VR experience that enhances physical immersion through embodied interaction, responsive physics systems, and replayable competitive gameplay. Players can choose between two types of rackets: a conventional tennis racket and a unique paddle racket, each offering slightly different gameplay and interaction styles.</p>
+<p>The core gameplay interaction included a swinging motion of a racket to hit a tennis ball, rallying with an AI agent, and playing matches against it. To enhance player engagement and immersion through gameplay, SFX, VFX, motion systems, and environmental effects were implemented.</p>
+
+<h2>2. Prototype Implementation</h2>
+<p>The prototype of Deepspace Cybercourt was built using Unity version 6000.0.40f1 to present a VR experience with physics-based mechanics. The core gameplay involves players hitting tennis balls towards the opposing NPC's wall using a racket they chose. The goal is to score against the NPC while preventing the NPC from scoring by letting the ball hit the wall on the player's side. Players are able to pick up the rackets using grip-based input, allowing them to swing the racket as they would in real life during gameplay.</p>
+<p>The player's main method of locomotion is through teleportation with the right joystick to blue spots in the environment, with an additional locomotion option using the left joystick to walk. Although initially unintended, players are also able to double jump using the controller buttons.</p>
+<p>Multiple feedback systems were implemented to increase immersion and juice, such as particle effects and audio feedback when the ball interacts with the rackets, racket-swing audio, and ball-bounce audio. The game also implements UI systems &mdash; tutorial posters and onboarding orbs &mdash; to improve player experience and gameplay readability.</p>
+<p>The environment adopted a sci-fi industrial visual style designed to create strong spatial readability while reinforcing immersion and atmosphere. Environmental scale, interaction zones, and object placement were tested in VR to keep interactions comfortable across different player heights and play spaces. The enclosed space was refined with changes to the skybox and environment materials for a more open-space feel.</p>
+<p>The NPC opponent functioned as both a gameplay challenge and an interaction facilitator, continuously returning the ball toward the player to sustain the gameplay loop and reinforce the core racket mechanics.</p>
+<p>Performance optimisation was considered throughout development: simplified geometry, regulated environmental scope, reduced visual complexity, and optimisation-conscious asset usage supported stable VR performance and reduced discomfort from inconsistent frame rates.</p>
+
+<figure><img src="media/final-shot.jpg" alt="In-headset screenshot of the finished Deepspace Cybercourt arena, showing the neon court, NPC opponent, and HUD tutorial panel" /><figcaption>The final prototype: a sci-fi industrial arena, reworked from the original wheelchair-tennis court concept.</figcaption></figure>
+
+<h2>3. Original Concept to Final Prototype</h2>
+<p>The original concept for Deepspace Cybercourt was a seated VR arcade tennis experience where players controlled a wheelchair using physical hand movements while aiming and striking the ball with a racket. The intended player experience was anticipation, competition, thrill, and a new perspective on sports through embodied wheelchair movement and racket gameplay.</p>
+<p>As development progressed, the concept evolved into a broader VR racket-sport prototype set within a sci-fi industrial arena. The final prototype retained the original focus on embodied movement, racket interaction, NPC opposition, and competitive rally gameplay, but several features changed due to technical scope, playtesting outcomes, and implementation constraints.</p>
+
+<div class="table-scroll">
+<table>
+<tr><th>Original Concept</th><th>Final Prototype Implementation</th><th>Reason for Change</th></tr>
+<tr><td>Seated wheelchair tennis experience</td><td>Standing/seated VR racket arena with joystick, teleportation, jump, and double-jump movement</td><td>Wheelchair locomotion was technically complex and difficult to implement reliably within the project timeframe. The final movement system allowed broader testing and more immediate gameplay feedback.</td></tr>
+<tr><td>Players physically push wheelchair wheels to move</td><td>Players move using joystick locomotion, teleportation points, and jump/double-jump mechanics</td><td>Playtesting highlighted the need for comfort options and responsive movement. Jumping also created emergent &ldquo;smash&rdquo; gameplay that players enjoyed.</td></tr>
+<tr><td>Tennis-only gameplay</td><td>Tennis/padel-inspired gameplay with two racket types</td><td>The team expanded racket choice to support experimentation and varied physical gameplay.</td></tr>
+<tr><td>NPC acts as tutorial guide and opponent</td><td>NPC primarily acts as opponent and rally facilitator</td><td>The tutorial-guide role was reduced to focus development effort on core gameplay, scoring, and opponent behaviour.</td></tr>
+<tr><td>Court-based sports setting</td><td>Sci-fi industrial sports arena</td><td>The visual direction shifted to create a more distinctive VR atmosphere and support the team's environmental design goals.</td></tr>
+<tr><td>Wheelchair-based accessibility perspective</td><td>Accessibility shifted toward comfort, multiple movement methods, simple interactions, and readable onboarding</td><td>The final design still considered accessibility, but through VR comfort, interaction clarity, and flexible locomotion rather than wheelchair simulation.</td></tr>
+<tr><td>Core loop: move wheelchair, serve, return ball, score points</td><td>Core loop: choose racket, move/teleport/jump, hit objects, rally with NPC, score points, restart</td><td>The final loop preserved the competitive sports structure while adapting to technical and playtesting constraints.</td></tr>
+</table>
+</div>
+
+<h2>4. Playtesting and Iteration</h2>
+<p>Over the development period, three separate playtesting sessions were conducted to evaluate player interaction, onboarding, usability, comfort, immersion, gameplay replayability, and engagement. Playtesters were assessed through observation, in-session prompts, and post-game questionnaires with follow-up discussions.</p>
+<p>Early playtesting focused on naive interaction discovery. Participants naturally experimented with the environment and quickly understood interactions such as throwing, bouncing, and hitting objects. One of the most significant findings was that players preferred striking and throwing interactions over catching mechanics, which directly influenced the transition toward the final racket-based gameplay loop involving NPC rallies.</p>
+<p>Later testing phases showed significant improvements in gameplay engagement and environmental immersion. Players responded positively to the embodied racket interactions, jump and double-jump mechanics, physics-based gameplay, and environmental atmosphere. Several participants naturally incorporated jump &ldquo;smash&rdquo; gameplay into rallies without instruction, reinforcing the success of the embodied interaction systems.</p>
+<p>Testing also identified technical and usability issues: the NPC opponent frequently failed to consistently return the ball during rallies, and there were inconsistent ball physics behaviour, teleportation discomfort, onboarding problems, and environmental readability concerns. These findings shaped later decisions on NPC behaviour, ball physics tuning, locomotion comfort, and interaction clarity.</p>
+
+<h2>5. Reflection and Development Challenges</h2>
+<p>With the help of playtesters, the team addressed pain points found when naive users interacted with the game, leading to significant changes to the prototype.</p>
+<p>One of the most difficult challenges was balancing and creating a satisfying flow-state experience &mdash; NPC interaction, ball bounciness, racket swing feel, and the scoring system all had to work together. Refining NPC behaviour was a particularly big challenge, since the NPC was one of the main interactions the player experienced: earlier iterations were not able to consistently return or chase the ball, even when they appeared capable of it.</p>
+<p>During production the team also faced a challenge with internal communication &mdash; one member did not engage with the project after the first week, which reduced the team's overall production pace compared to other groups. Despite this, the team continued building on the prototype and shipped the game now known as Deepspace Cybercourt, setting aside some original ideas due to implementation complexity and time constraints.</p>
+<p>The project reinforced the importance of designing VR experiences around player comfort, embodied interaction, intuitive onboarding, and gameplay clarity rather than mechanical complexity alone.</p>
+
+<h2>6. Response to Staff Feedback</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Feedback</th><th>Response</th></tr>
+<tr><td>Consider play space and court layout</td><td>Court dimensions and interaction zones were adjusted through playtesting for comfort across play spaces, resulting in a significantly smaller court than the original design.</td></tr>
+<tr><td>Make hitting the ball feel good</td><td>Fine-tuned the ball's bounce physics.</td></tr>
+<tr><td>Add particle or trail effects</td><td>A trail effect was added to ball movement, emphasising speed, improving trail visibility, and enhancing the visual atmosphere.</td></tr>
+<tr><td>Make gameplay quick and increase replayability</td><td>A restart system accessible directly from the controller lets players quickly replay matches.</td></tr>
+<tr><td>Reference Rocket League Heat Seeker for open-court feel</td><td>The design improved the sense of hitting the ball while enabling wider use of the court and avoiding restrictions on player movement.</td></tr>
+</table>
+</div>
+
+<h2>7. Conclusion</h2>
+<p>The final prototype successfully demonstrated a functional and immersive VR sports experience focused on embodied interaction, competitive gameplay, and player comfort. Through iterative development and playtesting, the project evolved into a more refined and accessible experience aligned with core VR design principles.</p>
+<p>The project highlighted the importance of player-centred design, responsive feedback systems, accessibility-focused interaction design, and iterative refinement within immersive environments. While technical limitations and gameplay bugs remained present in some areas, the prototype effectively achieved its primary goal of creating an engaging, physically interactive, and replayable VR experience.</p>
+
+<h2>8. Appendices</h2>
+<p>Three playtesting sessions were run across the project (Playtesting 1&ndash;3), each contributing individual reports from every team member. My own reports focused on the SFX/VFX artist's perspective &mdash; see <a href="03-sfx-vfx-playtesting.html">SFX/VFX Playtesting Notes</a> for the full write-up, including the issue tables, questionnaires, and fixes that came out of each round.</p>
+<ul>
+<li>Gameplay video: <a href="https://drive.google.com/file/d/1yRd2RCU8fZ7uCgXP8fHp-pnMy3oH34VS/view?usp=drive_link" target="_blank" rel="noopener">Google Drive</a></li>
+<li>Full playtesting report set (all team members): <a href="https://drive.google.com/drive/folders/1nXqphN0QdtoFuXtJwZ69zjpFmzSFmV2X?usp=sharing" target="_blank" rel="noopener">Google Drive folder</a></li>
+</ul>
+
+<h3>Test Build Details</h3>
+<ul>
+<li>Build: Tennis Go Round (working title) &rarr; shipped as Deepspace Cybercourt</li>
+<li>Engine: Unity 6 (6000.0.40f1)</li>
+<li>Platform: Meta Quest 2</li>
+<li>Input device: Meta Touch controllers</li>
+<li>Audio output: Quest 2 built-in speakers, default volume</li>
+<li>Test environment: seated configuration</li>
+</ul>
+  </article>
+  <div class="project-nav">
+    <a href="../../projects/project-03.html#docs">&larr; Back to Documents</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container"><p>&copy; 2026 Yusei. All rights reserved.</p></div>
+</footer>
+</body>
+</html>

@@ -53,11 +53,31 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 ---
 
+---
+
+## projects/project-03.html(HIT & ROLL / Deepspace Cybercourt)
+
+- [x] 新規プロジェクトとして追加済み(project-02とは別作品)
+- [x] タイトル・一言ピッチ・メタ情報(ジャンル/担当/使用ツール)を実際の内容に更新済み
+- [x] 制作期間(2026年2月〜5月)・制作人数(4人)を記載済み
+- [x] 担当を「ラケットのSFX/VFX実装・物理挙動調整・グリップ操作のコーディング」に更新済み
+- [x] 制作プロセス4ステップ(企画→転換→プレイテスト→完成)を実際の流れに更新済み
+- [x] 企画の背景・工夫した点・チームでの役割・学んだことを更新済み
+- [x] Play映像:Google Driveの動画を埋め込み済み
+- [x] スクリーンショット6点を `assets/images/project-03/` に配置し表示済み
+- [x] 資料3点を `docs/project-03/` にHTMLページとして公開済み
+      (企画フィードバック/最終GDD/SFX・VFXプレイテスト記録)
+- [x] index.htmlのWorksに追加、フィルターに「VR Sports」を追加済み
+- [ ] Unity(Meta Quest 2)ビルド:VRヘッドセット向けのためブラウザWebGL版は「準備中」表示のまま
+      (公開する場合はitch.ioのVR対応ページか、動画のみの掲載を検討)
+
+---
+
 ## 残っている作業の進め方の目安
 
 1. **project-02(Project Subject)** の制作期間・制作人数・実際の資料/映像/画像を用意する
    (project-01と同じ手順で対応できます)
-2. Unity WebGLビルドを書き出し、`assets/unity-builds/project-01/` に配置するか
+2. project-01・project-03のUnity/VRビルドを書き出し、`assets/unity-builds/` に配置するか
    itch.ioにアップロードしてリンクを差し替え
 3. X・itch.io・GitHubのアカウントが決まり次第、index.htmlの連絡先リンクを更新
    (未定のままなら、そのリンクは削除したほうが安全)

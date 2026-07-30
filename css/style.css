@@ -84,6 +84,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .thumb-a span { color: #7fd99a; }
 .thumb-b { background: repeating-linear-gradient(135deg, #1a2230, #1a2230 10px, #212c3f 10px, #212c3f 20px); }
 .thumb-b span { color: #7cc8ff; }
+.thumb-c { background: repeating-linear-gradient(135deg, #2a1c30, #2a1c30 10px, #372344 10px, #372344 20px); }
+.thumb-c span { color: #d99aff; }
 .work-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .work-body h3 { margin: 0; font-size: 1.1rem; font-family: var(--font-display); }
 .work-body p { color: var(--text-muted); font-size: 0.9rem; margin: 0; flex: 1; }
