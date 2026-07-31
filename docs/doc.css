@@ -4,7 +4,7 @@
 
 .doc-head { margin: 8px 0 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
 .doc-head .doc-kind {
-  display: inline-block; color: var(--accent-2); font-size: 0.75rem; font-weight: 700;
+  display: inline-block; color: var(--project-accent); font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
 }
 .doc-head h1 {
@@ -22,7 +22,7 @@
 .doc-body h2 {
   font-size: 1.35rem; padding-top: 0.7em; border-top: 1px solid var(--border);
 }
-.doc-body h3 { font-size: 1.12rem; color: var(--accent); }
+.doc-body h3 { font-size: 1.12rem; color: var(--project-accent); }
 .doc-body h4 { font-size: 1rem; color: var(--text-muted); }
 .doc-body > :first-child { margin-top: 0; }
 
@@ -52,7 +52,7 @@
 
 .doc-body blockquote {
   margin: 1.6em 0; padding: 4px 0 4px 20px;
-  border-left: 3px solid var(--accent); color: var(--text-muted);
+  border-left: 3px solid var(--project-accent); color: var(--text-muted);
 }
 
 /* Wide content must scroll inside itself, never the page */
