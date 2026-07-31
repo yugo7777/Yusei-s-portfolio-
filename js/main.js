@@ -5,10 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggle && links) {
     toggle.addEventListener("click", () => {
       links.classList.toggle("open");
+      toggle.classList.toggle("open");
     });
 
     links.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => links.classList.remove("open"));
+      link.addEventListener("click", () => {
+        links.classList.remove("open");
+        toggle.classList.remove("open");
+      });
     });
   }
 
