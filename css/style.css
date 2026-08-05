@@ -124,6 +124,10 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .project-hero h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0 0 14px; letter-spacing: -0.01em; }
 .project-pitch { color: var(--text-muted); font-size: 1.05rem; max-width: 720px; margin: 0 0 28px; }
 
+.my-part { border-left: 3px solid var(--project-accent); background: var(--bg-elevated); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 20px; margin: 0 0 24px; max-width: 720px; }
+.my-part-label { display: block; color: var(--project-accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.my-part p { margin: 0; color: var(--text); font-size: 0.95rem; }
+
 .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 26px; }
 .meta-grid dt { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 4px; }
 .meta-grid dd { margin: 0; font-weight: 600; }
