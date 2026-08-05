@@ -1,7 +1,7 @@
 # Yusei's Game Design Portfolio
 
 ゲームデザイン専攻の学生向けポートフォリオサイトです。
-制作した各ゲームについて、企画書・アイディア書・試作書などの資料、Play映像、
+制作した各ゲームについて、企画書・アイデア書・試作書などの資料、Play映像、
 実際に遊べるUnity WebGLビルドをまとめて公開できる構成になっています。
 
 素のHTML/CSS/JSのみで作られており、ビルド不要でそのままGitHub Pagesに公開できます。
@@ -16,7 +16,7 @@ projects/
   project-01.html                 作品詳細ページ(サンプル)
   project-02.html                 作品詳細ページ(サンプル)
 assets/
-  docs/project-XX/                企画書・アイディア書・試作書(PDF等)
+  docs/project-XX/                企画書・アイデア書・試作書(PDF等)
   videos/project-XX/              Play映像(動画ファイルを直接置く場合)
   unity-builds/project-XX/        Unity WebGLビルドの出力一式
   images/project-XX/              スクリーンショット・サムネイル画像
@@ -37,7 +37,7 @@ assets/
 
 ## コンテンツの置き方まとめ
 
-- **企画書・アイディア書・試作書**: PDFにして `assets/docs/project-XX/` に配置し、
+- **企画書・アイデア書・試作書**: PDFにして `assets/docs/project-XX/` に配置し、
   各詳細ページの「資料」セクションからダウンロード/閲覧リンクを張る
 - **Play映像**: YouTube(限定公開可)にアップロードして `<iframe>` で埋め込むのが手軽。
   短い動画ならファイルを直接 `assets/videos/project-XX/` に置くことも可能
