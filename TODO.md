@@ -16,6 +16,7 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 - [x] 専門分野バッジ、自己紹介、制作スタンス、使用ツール、所属、代表作カード、Works一覧カードA/B、ジャンルフィルターを実内容に更新済み
 - [x] Emailを実際のアドレスに変更済み
 - [x] itch.io(https://yugo589.itch.io)のリンクを設定済み
+- [x] レジュメ(PDF)をHeroボタン・Contact・フッターに追加済み(`assets/docs/Yusei_Nakajima_Resume.pdf`)
 - [ ] X (Twitter)・GitHubのリンク先URLが未定(現在プレースホルダーのまま)。使う場合はURLを、使わない場合はリンクごと削除
 
 ---
