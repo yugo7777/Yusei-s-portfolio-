@@ -40,26 +40,9 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 ---
 
-## projects/project-02.html(Project Subject(仮))
-
-- [x] タイトル・一言ピッチ・メタ情報(ジャンル/担当/使用ツール)を更新済み
-- [x] 制作プロセス4ステップの説明文を更新済み
-- [x] 企画の背景・工夫した点・チームでの役割・学んだこと/今後の課題を更新済み
-- [x] スクリーンショットのキャプション文を更新済み(画像自体は未配置)
-- [ ] 制作期間・制作人数が `[制作期間を入力]` `[チーム人数を入力]` のまま(確定したら差し替え)
-- [ ] Play映像:YouTube動画を埋め込むか `assets/videos/project-02/` に動画ファイルを配置してiframe/videoタグを有効化
-- [ ] Unity WebGLビルド:`assets/unity-builds/project-02/` にビルド一式を配置してiframeを有効化
-- [ ] itch.ioボタンのリンクが `href="#"` のまま
-- [ ] 資料セクションのPDF3点(アイデア書/企画書/試作書)を `assets/docs/project-02/` に配置
-- [ ] スクリーンショット画像本体を `assets/images/project-02/` に配置し、gallery-itemを`<img>`タグに差し替え
-
----
-
----
-
 ## projects/project-03.html(Deepspace Cybercourt、企画名「HIT & ROLL」)
 
-- [x] 新規プロジェクトとして追加済み(project-02とは別作品)
+- [x] 新規プロジェクトとして追加済み
 - [x] タイトル・一言ピッチ・メタ情報(ジャンル/担当/使用ツール)を実際の内容に更新済み
 - [x] 制作期間(2026年2月〜5月)・制作人数(4人)を記載済み
 - [x] 担当を「ラケットのSFX/VFX実装・物理挙動調整・グリップ操作のコーディング」に更新済み
@@ -96,11 +79,9 @@ AIに作業を依頼する場合は、この`TODO.md`をそのまま渡せば「
 
 ## 残っている作業の進め方の目安
 
-1. **project-02(Project Subject)** の制作期間・制作人数・実際の資料/映像/画像を用意する
-   (project-01と同じ手順で対応できます)
-2. project-01・project-03のUnity/VRビルドを書き出し、`assets/unity-builds/` に配置するか
+1. project-01・project-04のUnity/WebGLビルドを書き出し、`assets/unity-builds/` に配置するか
    itch.ioにアップロードしてリンクを差し替え
-3. X・itch.io・GitHubのアカウントが決まり次第、index.htmlの連絡先リンクを更新
+2. X・GitHubのアカウントが決まり次第、index.htmlの連絡先リンクを更新
    (未定のままなら、そのリンクは削除したほうが安全)
 
 ## 資料ページの追加方法(project-01で使った手順)

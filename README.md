@@ -14,7 +14,6 @@ css/style.css                     全体のスタイル
 js/main.js                        モバイルメニューの開閉など
 projects/
   project-01.html                 作品詳細ページ(サンプル)
-  project-02.html                 作品詳細ページ(サンプル)
 assets/
   docs/project-XX/                企画書・アイデア書・試作書(PDF等)
   videos/project-XX/              Play映像(動画ファイルを直接置く場合)
