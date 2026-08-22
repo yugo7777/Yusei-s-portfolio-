@@ -48,14 +48,38 @@
     <!-- ================= Hero / 概要 ================= -->
     <section class="project-hero" style="padding-top:0;">
       <h1><span class="lang-ja">ECO DEFENDERS</span><span class="lang-en">ECO DEFENDERS</span></h1>
+
+      <div class="hero-media" id="video">
+        <div class="media-frame">
+          <iframe src="https://drive.google.com/file/d/1-GinGi_51Gi6i5RDpCqN3zk1QvYQw6EN/preview"
+                  title="ECO DEFENDERS — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="build-actions">
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1-GinGi_51Gi6i5RDpCqN3zk1QvYQw6EN/view" target="_blank" rel="noopener">
+            <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
+          </a>
+        </div>
+      </div>
+
       <div class="my-part">
         <span class="my-part-label lang-ja">私が担当した部分</span>
         <span class="my-part-label lang-en">My Contribution</span>
-        <p class="lang-ja">企画立案からGDD作成、アビリティのアイデア設計、UI/UX設計、C#でのコーディングまで、ゲームの骨組み全体を担当しました。</p>
-        <p class="lang-en">I owned the game's core structure end to end — planning, the GDD, ability design, UI/UX design, and C# implementation.</p>
+        <ul class="lang-ja">
+          <li>アップグレード分岐の設計(4職種 × Tier2の3分岐、コスト・攻撃・パッシブ・出典)</li>
+          <li>UIの情報設計とメニュー改修(価格・説明・敵の弱点表示、予算制約)</li>
+          <li>C#での実装</li>
+          <li>企画立案とGDD作成</li>
+        </ul>
+        <ul class="lang-en">
+          <li>Upgrade branch design — 4 trades × 3 tier-2 branches, with cost, attack, passive, and cited sources</li>
+          <li>UI information architecture and the menu rework — prices, descriptions, enemy weaknesses, budget constraints</li>
+          <li>C# implementation</li>
+          <li>Concept development and GDD authoring</li>
+        </ul>
       </div>
+
       <p class="project-pitch lang-ja">
-        electrician、plumber、gardener、HVAC技術者。実在する建設業の職人をタワーとして配置し、汚染モンスターから家を守るタワーディフェンスです。各職人は「持続可能だが高価な進化」と「安価だが長期的に代償を払う進化」に分岐し、10〜12歳のプレイヤーが説明文ではなく自分の選択を通してサステナビリティを体験します。クライアントはQueenslandの非営利団体CSQで、建設業のキャリアを子どもに伝えることが依頼内容でした。
+        電気工事士、配管工、造園、空調技術者 —— 実在する建設業の職人をタワーとして配置し、汚染モンスターから家を守るタワーディフェンスです。各職人は「持続可能だが高価な進化」と「安価だが長期的に代償を払う進化」に分岐し、10〜12歳のプレイヤーが説明文ではなく自分の選択を通してサステナビリティを体験します。クライアントはQueenslandの非営利団体CSQで、建設業のキャリアを子どもに伝えることが依頼内容でした。
       </p>
       <p class="project-pitch lang-en">
         Electricians, plumbers, gardeners, and HVAC technicians — real construction trades deployed as towers to defend a house from pollution monsters. Each trade branches into sustainable upgrades that cost more, or cheap upgrades that pay a long-term price, so players aged 10–12 experience sustainability through their own decisions rather than through explanatory text. The client was Construction Skills Queensland (CSQ), a non-profit whose brief was to introduce children to careers in the construction industry.
@@ -105,8 +129,8 @@
         <li>
           <span class="process-step">02</span>
           <h4><span class="lang-ja">企画</span><span class="lang-en">Planning</span></h4>
-          <p class="lang-ja">資源の選択を戦略そのものに組み込めるタワーディフェンス形式に転換しました。Eco-Bucks(敵の撃破で得る通貨)、家のHP、職種ごとの基本タワーをGDDで固めたうえで、私はアップグレード設計を担当しました。5職種それぞれにTier2の3分岐を用意し、攻撃・パッシブ・コスト・テーマに加えて、実在職種の出典を各分岐に紐づけています。</p>
-          <p class="lang-en">We pivoted to tower defense, a format where resource decisions are the strategy. Once the GDD locked in Eco-Bucks (currency earned per kill), house HP, and one base tower per trade, I took ownership of the upgrade system: three tier-2 branches for each of the five trades, each with its attack, passive, cost, theme, and a cited real-world source for the profession it represents.</p>
+          <p class="lang-ja">資源の選択を戦略そのものに組み込めるタワーディフェンス形式に転換しました。Eco-Bucks(敵の撃破で得る通貨)、家のHP、職種ごとの基本タワーをGDDで固めたうえで、私はアップグレード設計を担当しました。4職種それぞれにTier2の3分岐を用意し、攻撃・パッシブ・コスト・テーマに加えて、実在職種の出典を各分岐に紐づけています。</p>
+          <p class="lang-en">We pivoted to tower defense, a format where resource decisions are the strategy. Once the GDD locked in Eco-Bucks (currency earned per kill), house HP, and one base tower per trade, I took ownership of the upgrade system: three tier-2 branches for each of the four trades, each with its attack, passive, cost, theme, and a cited real-world source for the profession it represents.</p>
           <a href="#docs"><span class="lang-ja">GDDとスキル設計を見る →</span><span class="lang-en">Read the GDD and skill design →</span></a>
         </li>
         <li>
@@ -121,61 +145,9 @@
           <h4><span class="lang-ja">完成</span><span class="lang-en">Ship</span></h4>
           <p class="lang-ja">最終ビルドでは、目指していたプレイヤー体験 —— 「波を重ねるごとに戦略と緊張が高まり、自分の選択がそのまま次の難易度を決める」 —— を形にできました。教育目的とタワーディフェンスの駆け引きが、別々の要素ではなく一つのシステムとして機能しています。</p>
           <p class="lang-en">The final build delivered the player experience we had targeted: an escalating sense of strategy and tension across waves, where every choice directly shapes the difficulty of the next one. The educational goal and the tension of tower defense ended up as one system rather than two separate features.</p>
-          <a href="#video"><span class="lang-ja">ゲームプレイ映像を見る →</span><span class="lang-en">Watch Gameplay Video →</span></a>
+          <a href="#gallery"><span class="lang-ja">スクリーンショットを見る →</span><span class="lang-en">See the screenshots →</span></a>
         </li>
       </ol>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= ゲームプレイ映像 ================= -->
-    <section id="video">
-      <div class="section-head">
-        <span class="eyebrow">Gameplay Video</span>
-        <h2><span class="lang-ja">ゲームプレイ映像</span><span class="lang-en">Gameplay Video</span></h2>
-        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
-        <p class="lang-en">A video of actual gameplay.</p>
-      </div>
-
-      <div class="media-frame">
-        <iframe src="https://drive.google.com/file/d/1-GinGi_51Gi6i5RDpCqN3zk1QvYQw6EN/preview"
-                title="ECO DEFENDERS — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
-      </div>
-      <div class="build-actions">
-        <a class="btn btn-outline" href="https://drive.google.com/file/d/1-GinGi_51Gi6i5RDpCqN3zk1QvYQw6EN/view" target="_blank" rel="noopener">
-          <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
-        </a>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= Unity WebGL ビルド ================= -->
-    <section id="build">
-      <div class="section-head">
-        <span class="eyebrow">Playable Build</span>
-        <h2><span class="lang-ja">Unity WebGLビルド</span><span class="lang-en">Unity WebGL Build</span></h2>
-        <p class="lang-ja">ブラウザ上で実際に遊べるビルドを準備中です。公開までは、上のゲームプレイ映像をご覧いただけます。</p>
-        <p class="lang-en">A browser-playable build is being prepared. Until it is up, the gameplay video above shows the game in motion.</p>
-      </div>
-
-      <div class="media-frame">
-        <!--
-          EDIT: Unity で File > Build Settings > WebGL でビルドし、出力フォルダ一式を
-          assets/unity-builds/project-01/ に配置したら、下記コメントを外して
-          media-placeholder を削除してください。
-          itch.io を使う場合は iframe ではなく build-actions にリンクを追加します。
-
-          <iframe src="../assets/unity-builds/project-01/index.html"
-                  title="Unity WebGL Build" allowfullscreen></iframe>
-        -->
-        <div class="media-placeholder">
-          <strong class="lang-ja">プレイアブルビルドは準備中です</strong>
-          <strong class="lang-en">Playable build coming soon</strong>
-          <span class="lang-ja">公開までは、上のゲームプレイ映像をご覧ください。</span>
-          <span class="lang-en">In the meantime, please see the gameplay video above.</span>
-        </div>
-      </div>
     </section>
 
     <hr class="divider" />
@@ -238,8 +210,8 @@
           <span class="doc-kind lang-ja">システム設計</span>
           <span class="doc-kind lang-en">System Design</span>
           <h4><span class="lang-ja">アップグレード / スキル設計</span><span class="lang-en">Upgrade &amp; Skill Proposal</span></h4>
-          <p class="lang-ja">私が担当した中心的な資料です。5職種すべてについて、Tier2の3分岐(持続可能な2択と、安価で短期的に強い1択)の攻撃・パッシブ・コスト・テーマ・出典をまとめました。</p>
-          <p class="lang-en">The document I owned. For all five trades it defines three tier-2 branches — two sustainable options and one cheap, short-term-strong option — with attack, passive, cost, theme, and a cited real-world source for each.</p>
+          <p class="lang-ja">私が担当した中心的な資料です。4職種すべてについて、Tier2の3分岐(持続可能な2択と、安価で短期的に強い1択)の攻撃・パッシブ・コスト・テーマ・出典をまとめました。</p>
+          <p class="lang-en">The document I owned. For all four trades it defines three tier-2 branches — two sustainable options and one cheap, short-term-strong option — with attack, passive, cost, theme, and a cited real-world source for each.</p>
           <a class="work-link" href="../docs/project-01/05-upgrade-skill-proposal.html">
             <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
           </a>
@@ -275,10 +247,6 @@
       <p class="lang-ja">環境に優しい選択を常に正解にはしませんでした。安価なルート(例:従来型の電気工事士、PVC配管、除草剤散布)は即座に強力ですが、タワーのHPが徐々に減る、周囲の味方の攻撃力が下がるといった代償を持ちます。「正解を選ばされる」のではなく「安い誘惑に負けるかどうかを自分で決める」構造にしたことで、サステナビリティが説教ではなくプレイヤー自身の判断になりました。</p>
       <p class="lang-en">I deliberately avoided making the sustainable option the automatic right answer. The cheap branches — the conventional electrician, PVC piping, the pesticide sprayer — are immediately powerful, but carry costs: the tower slowly loses HP, or nearby allies lose attack power. Framing it as "will you take the cheap shortcut?" rather than "pick the correct answer" turned sustainability into the player's own judgement call instead of a lecture.</p>
 
-      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">My Role on the Team</span></h3>
-      <p class="lang-ja">4人チーム(IGB200 Group 3.2)で、私は企画・GDD作成・アビリティ設計・UI設計・コーディングを担当しました。特にアップグレード設計は私が資料をまとめてチームに提案し、実装まで持っていきました。プレイテスト後のメニューUI改修も私のタスクとして進めています。</p>
-      <p class="lang-en">On a four-person team (IGB200 Group 3.2) I handled planning, the GDD, ability design, UI design, and programming. The upgrade system in particular was mine end to end: I wrote the proposal, pitched it to the team, and saw it through to implementation. The menu UI rework that came out of playtesting was also assigned to me.</p>
-
       <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
       <p class="lang-ja">プレイテストで一番効いたのは、システムの完成度ではなくフィードバックの不足でした。「Eco-Pointがスコアだと思った」という一言は、私の設計意図がUIを通ってプレイヤーに届いていなかったことを意味します。どれだけ設計資料を書いても、画面上で伝わらなければ存在しないのと同じだと学びました。今後は、各進化ルートの選択率を計測し、意図した葛藤が実際に起きているかを検証したいです。</p>
       <p class="lang-en">The most useful thing playtesting exposed was not a broken system but missing feedback. "I thought Eco-Points were a score" meant my design intent was not surviving the trip through the UI to the player. However thorough the design document, a rule that the screen does not communicate may as well not exist. Next, I would instrument upgrade-path selection rates to check whether the trade-off I designed is actually creating the tension I intended.</p>
@@ -291,6 +259,8 @@
       <div class="section-head">
         <span class="eyebrow">Gallery</span>
         <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+        <p class="lang-ja">私が設計したのは各職種のアップグレード分岐(効果・コスト・トレードオフ)とUIの情報設計です。キャラクターアートはチームの他メンバーが制作しました。</p>
+        <p class="lang-en">What I designed here is each trade's upgrade branches — their effects, costs, and trade-offs — and the UI information structure. The character art was created by other members of the team.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-item">
@@ -299,25 +269,46 @@
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-01/hero-electrician.png" alt="Electrician hero and its upgrade tiers" loading="lazy" />
-          <figcaption><span class="lang-ja">電気工事士:太陽光・エネルギーシステムなどへ分岐</span><span class="lang-en">Electrician — branches into solar and energy-system specialists</span></figcaption>
+          <figcaption><span class="lang-ja">電気工事士:太陽光・エネルギーシステムなどへ分岐。<strong>私の担当:</strong> 分岐の効果・コスト・トレードオフ設計</span><span class="lang-en">Electrician — branches into solar and energy-system specialists. <strong>My work:</strong> the branch effects, costs, and trade-offs</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-01/hero-plumber.png" alt="Plumber hero and its upgrade tiers" loading="lazy" />
-          <figcaption><span class="lang-ja">配管工:雨水利用や配管システムのエンジニアへ分岐</span><span class="lang-en">Plumber — branches into water and pipe-system engineers</span></figcaption>
+          <figcaption><span class="lang-ja">配管工:雨水利用や配管システムのエンジニアへ分岐。<strong>私の担当:</strong> 分岐の効果・コスト・トレードオフ設計</span><span class="lang-en">Plumber — branches into water and pipe-system engineers. <strong>My work:</strong> the branch effects, costs, and trade-offs</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-01/hero-gardener.png" alt="Gardener hero and its upgrade tiers" loading="lazy" />
-          <figcaption><span class="lang-ja">造園:在来種の植栽や景観設計へ分岐</span><span class="lang-en">Gardener — branches into landscape design and native planting</span></figcaption>
+          <figcaption><span class="lang-ja">造園:在来種の植栽や景観設計へ分岐。<strong>私の担当:</strong> 分岐の効果・コスト・トレードオフ設計</span><span class="lang-en">Gardener — branches into landscape design and native planting. <strong>My work:</strong> the branch effects, costs, and trade-offs</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-01/hero-hvac.png" alt="HVAC technician hero and its upgrade tiers" loading="lazy" />
-          <figcaption><span class="lang-ja">空調技術者:省エネ換気やグリーンビルディング設計へ分岐</span><span class="lang-en">HVAC technician — branches into ventilation and green-building engineering</span></figcaption>
+          <figcaption><span class="lang-ja">空調技術者:省エネ換気やグリーンビルディング設計へ分岐。<strong>私の担当:</strong> 分岐の効果・コスト・トレードオフ設計</span><span class="lang-en">HVAC technician — branches into ventilation and green-building engineering. <strong>My work:</strong> the branch effects, costs, and trade-offs</span></figcaption>
         </figure>
         <figure class="gallery-item is-logo">
           <img src="../assets/images/project-01/logo.png" alt="ECO DEFENDERS logo" loading="lazy" />
           <figcaption><span class="lang-ja">チームで決定した最終ロゴ</span><span class="lang-en">The final logo agreed on by the team</span></figcaption>
         </figure>
       </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= チーム・クレジット ================= -->
+    <section id="credits">
+      <div class="section-head">
+        <span class="eyebrow">Team &amp; Credits</span>
+        <h2><span class="lang-ja">チーム・クレジット</span><span class="lang-en">Team &amp; Credits</span></h2>
+        <p class="lang-ja">IGB200 Group 3.2(4人チーム)・クライアント:Construction Skills Queensland (CSQ)</p>
+        <p class="lang-en">IGB200 Group 3.2 — a four-person team. Client: Construction Skills Queensland (CSQ).</p>
+      </div>
+      <ul class="credits-list">
+        <li class="is-me">
+          <span class="credit-name">Yusei Nakajima</span>
+          <span class="credit-role lang-ja">ゲーム企画 / アップグレード設計 / UI・UX設計 / C#実装 / GDD作成</span>
+          <span class="credit-role lang-en">Game Design, Upgrade System Design, UI/UX Design, C# Implementation, GDD</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">キャラクターアート・ロゴを含むビジュアルアセットは、チームの他メンバーが制作しました。</p>
+      <p class="credits-note lang-en">Visual assets, including the character art and the logo, were created by other members of the team.</p>
     </section>
 
     <div class="project-nav">

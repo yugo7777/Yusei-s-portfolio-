@@ -48,17 +48,41 @@
     <!-- ================= Hero / 概要 ================= -->
     <section class="project-hero" style="padding-top:0;">
       <h1><span class="lang-ja">Hollowstead</span><span class="lang-en">Hollowstead</span></h1>
+
+      <div class="hero-media" id="video">
+        <div class="media-frame">
+          <iframe src="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/preview"
+                  title="Hollowstead — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="build-actions">
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/view" target="_blank" rel="noopener">
+            <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
+          </a>
+        </div>
+      </div>
+
       <div class="my-part">
         <span class="my-part-label lang-ja">私が担当した部分</span>
         <span class="my-part-label lang-en">My Contribution</span>
-        <p class="lang-ja">チャーム/スキルのアイデア考案とC#実装を担当し、週次スプリントごとに新しいチャームをショップ・通貨システムと統合しました。</p>
-        <p class="lang-en">I owned the charm/skill ideas and their C# implementation, integrating new charms into the shop and currency systems sprint by sprint.</p>
+        <ul class="lang-ja">
+          <li>チャーム(お守り)のアイデア考案とC#実装 —— Fire Wall、Fire Pillar、Health Recovery、Damage Reduction、EXP Booster、Speed-boost など</li>
+          <li>既存のEXP値を流用した通貨システムの実装</li>
+          <li>チャームとショップ・レベルアップ画面の統合</li>
+          <li>チャーム1つ = 1スクリプト + 共通Levelフィールドという構造への設計整理</li>
+        </ul>
+        <ul class="lang-en">
+          <li>Charm concepts and their C# implementation — Fire Wall, Fire Pillar, Health Recovery, Damage Reduction, EXP Booster, Speed-boost, and others</li>
+          <li>A currency system built on the player's existing EXP value</li>
+          <li>Integrating charms with the shop and level-up screens</li>
+          <li>Restructuring charms into one script each with a shared Level field</li>
+        </ul>
       </div>
+
       <p class="project-pitch lang-ja">
-        高ファンタジー世界を舞台にした2Dトップダウンのローグライト・サバイバルです。夜の間に押し寄せる敵の波を、チャーム(お守り)や使い魔、ステータス強化を組み合わせて生き延び、日中はショップで次の波に備えます。開発中は「Demontide Cleansing」という企画名で進行し、完成にあたって「Hollowstead」という名前に変わりました。8人チームの中で私はチャーム/スキルのアイデア考案とそのC#実装を担当し、週次スプリントごとに新しいチャームを追加してショップ・通貨システムと統合していきました。
+        高ファンタジー世界を舞台にした2Dトップダウンのローグライト・サバイバルです。夜の間に押し寄せる敵の波を、チャーム(お守り)や使い魔、ステータス強化を組み合わせて生き延び、日中はショップで次の波に備えます。開発中は「Demontide Cleansing」という企画名で進行し、完成にあたって「Hollowstead」という名前に変わりました。
       </p>
       <p class="project-pitch lang-en">
-        A 2D top-down rogue-lite survival game set in a high-fantasy world. Players endure escalating nightly waves of enemies using charms, familiars, and stat upgrades, then prepare for the next wave at a daytime shop. It was developed under the pitch name &ldquo;Demontide Cleansing&rdquo; before shipping as &ldquo;Hollowstead.&rdquo; On an eight-person team I owned the ideas behind each charm/skill and its C# implementation, adding new charms sprint by sprint and integrating them with the shop and currency systems.
+        A 2D top-down rogue-lite survival game set in a high-fantasy world. Players endure escalating nightly waves of enemies using charms, familiars, and stat upgrades, then prepare for the next wave at a daytime shop. It was developed under the pitch name &ldquo;Demontide Cleansing&rdquo; before shipping as &ldquo;Hollowstead.&rdquo;
       </p>
 
       <dl class="meta-grid">
@@ -118,55 +142,12 @@
         </li>
         <li>
           <span class="process-step">04</span>
-          <h4><span class="lang-ja">仕上げ・今後の計画</span><span class="lang-en">Polish &amp; Cycle 3 Plans</span></h4>
-          <p class="lang-ja">プレイヤー・敵・武器のステータス表でバランスを調整し、UIは情報の見やすさと画面のすっきりさの2案をプレイテストで比較しました。Cycle 3では、チャームの進化合成やモンスターの移動パターン、使い魔システムなど、企画時点で構想していた要素をさらに深掘りする計画です。</p>
-          <p class="lang-en">We tuned Player/Enemy/Weapon stats via a balance table and playtested two competing UI directions — an information-dense HUD versus a minimal one. Cycle 3 plans call for deepening charm-evolution combinations, enemy movement patterns, and the familiar system envisioned in the original design document.</p>
-          <a href="#video"><span class="lang-ja">ゲームプレイ映像を見る →</span><span class="lang-en">Watch Gameplay Video →</span></a>
+          <h4><span class="lang-ja">仕上げ</span><span class="lang-en">Polish</span></h4>
+          <p class="lang-ja">プレイヤー・敵・武器のステータス表でバランスを調整し、UIは情報の見やすさと画面のすっきりさの2案をプレイテストで比較しました。チャームの進化合成、敵の移動パターン、使い魔システムは企画段階で設計まで進めましたが、このサイクルでは実装に至っていません。</p>
+          <p class="lang-en">We tuned Player/Enemy/Weapon stats via a balance table and playtested two competing UI directions — an information-dense HUD versus a minimal one. Charm-evolution combinations, enemy movement patterns, and the familiar system were designed on paper but did not make it into this cycle.</p>
+          <a href="#gallery"><span class="lang-ja">スクリーンショットを見る →</span><span class="lang-en">See the screenshots →</span></a>
         </li>
       </ol>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= ゲームプレイ映像 ================= -->
-    <section id="video">
-      <div class="section-head">
-        <span class="eyebrow">Gameplay Video</span>
-        <h2><span class="lang-ja">ゲームプレイ映像</span><span class="lang-en">Gameplay Video</span></h2>
-        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
-        <p class="lang-en">A video of actual gameplay.</p>
-      </div>
-
-      <div class="media-frame">
-        <iframe src="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/preview"
-                title="Hollowstead — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
-      </div>
-      <div class="build-actions">
-        <a class="btn btn-outline" href="https://drive.google.com/file/d/1uWhJ5TEmfFkvYF6mnn3p4PnqRxHDdLnW/view" target="_blank" rel="noopener">
-          <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
-        </a>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= Unity WebGL ビルド ================= -->
-    <section id="build">
-      <div class="section-head">
-        <span class="eyebrow">Playable Build</span>
-        <h2><span class="lang-ja">プレイアブルビルド</span><span class="lang-en">Playable Build</span></h2>
-        <p class="lang-ja">ブラウザで遊べるWebGL版は準備中です。公開までは、上のゲームプレイ映像をご覧いただけます。</p>
-        <p class="lang-en">A browser-playable WebGL version is being prepared. Until it is up, the gameplay video above shows the game in motion.</p>
-      </div>
-
-      <div class="media-frame">
-        <div class="media-placeholder">
-          <strong class="lang-ja">プレイアブルビルドは準備中です</strong>
-          <strong class="lang-en">Playable build coming soon</strong>
-          <span class="lang-ja">公開までは、上のゲームプレイ映像をご覧ください。</span>
-          <span class="lang-en">In the meantime, please see the gameplay video above.</span>
-        </div>
-      </div>
     </section>
 
     <hr class="divider" />
@@ -233,13 +214,9 @@
       <p class="lang-ja">私が担当したのはチャーム/スキルのアイデア考案とその実装でした。週11でFire Wall・Happiness・Speed-boostという最初のチャームを作った時点では、まだ場当たり的な実装でしたが、週13でFire Pillar・Health Recovery・Damage Reduction・EXP Boosterを追加する際に、チャームごとに独立したスクリプトを書き、共通のLevelフィールドを持たせる構造に整理しました。この構造にしたことで、新しいチャーム(Lightningなど)を追加してもショップやレベルアップ画面のUIコードには一切手を入れずに済むようになっています。通貨システムも、新しい変数を増やすのではなく既存のEXP値を流用することで、既に動いているレベルアップの仕組みとの整合性を保ちました。</p>
       <p class="lang-en">My part of the project was the charm/skill system — deciding what each charm should do, then building it. In Week 11, the first charms (Fire Wall, Happiness, Speed-boost) were implemented fairly ad hoc. By Week 13, adding Fire Pillar, Health Recovery, Damage Reduction, and EXP Booster pushed me to restructure: each charm became its own script sharing a common Level field. That structure meant a later charm like Lightning could be added without touching any shop or level-up UI code. The currency system reused the player's existing EXP value rather than introducing a new variable, keeping it consistent with the level-up logic that already worked.</p>
 
-      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">My Role on the Team</span></h3>
-      <p class="lang-ja">8人チーム(IGB100 SCRUM Team 8)の中で、私はチャーム/スキルのアイデア考案とそのC#実装を担当しました。週次のスクラムレポートで進捗をチームに共有しながら、ショップシステムや通貨システムを担当するメンバーと連携し、チャームを購入・取得できる形に統合していきました。</p>
-      <p class="lang-en">On an eight-person team (IGB100 SCRUM Team 8), I owned the charm/skill system's design and its C# implementation. I shared progress with the team through weekly Scrum reports and coordinated with the teammates working on the shop and currency systems to get charms purchasable and pickable in-game.</p>
-
       <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
-      <p class="lang-ja">最初の3つのチャームをその場しのぎで実装したことで、後から機能を増やすたびにコードが絡み合っていく感覚を味わいました。週13でスクリプトを1チャーム1ファイルに分割し直したことで、追加のコストが目に見えて下がったのが大きな学びです。Cycle 3では、チャーム同士を組み合わせて進化させる仕組みや、使い魔システムなど、企画段階で構想したまま実装できていない要素に取り組みたいと考えています。</p>
-      <p class="lang-en">Implementing the first three charms without much structure taught me how quickly code tangles as features are added on top of each other. Splitting each charm into its own script in Week 13 visibly lowered the cost of every charm added after that — that was the biggest lesson. For Cycle 3, I want to tackle the charm-evolution combination system and the familiar system, both of which were designed on paper but never implemented in this cycle.</p>
+      <p class="lang-ja">最初の3つのチャームをその場しのぎで実装したことで、後から機能を増やすたびにコードが絡み合っていく感覚を味わいました。週13でスクリプトを1チャーム1ファイルに分割し直したことで、追加のコストが目に見えて下がったのが大きな学びです。もしこの先も開発を続けるなら、設計だけ済ませて実装できなかったチャームの進化合成と使い魔システムから着手します。</p>
+      <p class="lang-en">Implementing the first three charms without much structure taught me how quickly code tangles as features are added on top of each other. Splitting each charm into its own script in Week 13 visibly lowered the cost of every charm added after that — that was the biggest lesson. If developed further, I would start with the charm-evolution system and the familiars: both were designed on paper but never reached implementation.</p>
     </section>
 
     <hr class="divider" />
@@ -249,6 +226,8 @@
       <div class="section-head">
         <span class="eyebrow">Gallery</span>
         <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+        <p class="lang-ja">画面内で私が実装したのはチャームの効果とその表示、通貨システムです。キャラクター・敵・背景のドット絵はチームの他メンバーが用意しました。</p>
+        <p class="lang-en">What I implemented in these screens is the charm effects, how they surface in the UI, and the currency system. The character, enemy, and environment pixel art was prepared by other members of the team.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-item">
@@ -257,15 +236,15 @@
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-04/gameplay-firewall.jpg" alt="In-engine screenshot of the Fire Wall charm surrounded by enemies and currency drops" loading="lazy" />
-          <figcaption><span class="lang-ja">Fire Wallチャームを使った戦闘中の画面</span><span class="lang-en">Mid-combat with the Fire Wall charm active</span></figcaption>
+          <figcaption><span class="lang-ja">戦闘中の画面。<strong>私の実装:</strong> Fire Wallチャームの効果と、左上の通貨カウンター(EXP由来)。<strong>ドット絵:</strong> チームの他メンバー</span><span class="lang-en">Mid-combat. <strong>My implementation:</strong> the Fire Wall charm effect and the EXP-derived currency counter. <strong>Pixel art:</strong> other team members</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-04/shop-screen.jpg" alt="In-engine shop screen with three purchasable item cards" loading="lazy" />
-          <figcaption><span class="lang-ja">日中のショップ画面</span><span class="lang-en">The daytime shop screen</span></figcaption>
+          <figcaption><span class="lang-ja">日中のショップ画面。<strong>私の実装:</strong> チャームとショップの連携、コスト判定、購入処理</span><span class="lang-en">The daytime shop. <strong>My implementation:</strong> the charm/shop integration, cost checks, and purchase flow</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-04/levelup-cards.jpg" alt="In-engine level-up card selection screen offering three charm upgrades" loading="lazy" />
-          <figcaption><span class="lang-ja">レベルアップ時のチャーム選択画面</span><span class="lang-en">The level-up charm selection screen</span></figcaption>
+          <figcaption><span class="lang-ja">レベルアップ時のチャーム選択。<strong>私の実装:</strong> 各カードの名前・説明・レベルはチャームのデータから自動生成されます</span><span class="lang-en">The level-up choice. <strong>My implementation:</strong> each card pulls its name, description, and level straight from the charm data</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-04/attack-swing.jpg" alt="In-engine screenshot of the player's weapon swing attack" loading="lazy" />
@@ -276,6 +255,27 @@
           <figcaption><span class="lang-ja">紙プロトタイプ:全体の画面遷移ストーリーボード</span><span class="lang-en">Paper prototype: the full screen-flow storyboard</span></figcaption>
         </figure>
       </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= チーム・クレジット ================= -->
+    <section id="credits">
+      <div class="section-head">
+        <span class="eyebrow">Team &amp; Credits</span>
+        <h2><span class="lang-ja">チーム・クレジット</span><span class="lang-en">Team &amp; Credits</span></h2>
+        <p class="lang-ja">IGB100 SCRUM Team 8(8人チーム)・Cycle 2ミニゲーム</p>
+        <p class="lang-en">IGB100 SCRUM Team 8 — an eight-person team. Cycle 2 mini-game project.</p>
+      </div>
+      <ul class="credits-list">
+        <li class="is-me">
+          <span class="credit-name">Yusei Nakajima</span>
+          <span class="credit-role lang-ja">チャーム/スキルの企画とC#実装 / 通貨システム / ショップ・レベルアップ画面との統合</span>
+          <span class="credit-role lang-en">Charm &amp; Skill Design and C# Implementation, Currency System, Shop / Level-up Integration</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">キャラクター・敵・背景のドット絵、ロゴ、およびショップ/UIの基盤実装は、チームの他メンバーが担当しました。ゲームデザイン文書はチーム全体で執筆したものです。</p>
+      <p class="credits-note lang-en">Character, enemy, and environment pixel art, the logo, and the underlying shop/UI implementation were handled by other members of the team. The design document was written collaboratively by the whole team.</p>
     </section>
 
     <div class="project-nav">

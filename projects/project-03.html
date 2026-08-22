@@ -48,17 +48,46 @@
     <!-- ================= Hero / 概要 ================= -->
     <section class="project-hero" style="padding-top:0;">
       <h1><span class="lang-ja">Deepspace Cybercourt</span><span class="lang-en">Deepspace Cybercourt</span></h1>
+
+      <div class="hero-media" id="video">
+        <div class="media-frame">
+          <iframe src="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/preview"
+                  title="Deepspace Cybercourt — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="build-actions">
+          <a class="btn btn-primary" href="https://yugo589.itch.io/deepspace-cybercourt" target="_blank" rel="noopener">
+            <span class="lang-ja">itch.ioでプレイする →</span><span class="lang-en">Play on itch.io →</span>
+          </a>
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/view" target="_blank" rel="noopener">
+            <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
+          </a>
+        </div>
+      </div>
+
       <div class="my-part">
         <span class="my-part-label lang-ja">私が担当した部分</span>
         <span class="my-part-label lang-en">My Contribution</span>
-        <p class="lang-ja">ラケットのSFX/VFX実装、物理挙動の調整、グリップ操作のコーディングを担当し、プレイテストのたびに「打った瞬間の手応え」を作り直しました。</p>
-        <p class="lang-en">I owned the racket's SFX/VFX, physics tuning, and grip-input coding, rebuilding the feel of every hit after each playtest round.</p>
+        <ul class="lang-ja">
+          <li>ラケットのSFX実装(多層ヒット音、速度しきい値とクールダウン、3D空間オーディオ)</li>
+          <li>VFX実装(スイートスポットのフラッシュ、ボールのトレイル、イベントごとに専用のパーティクル)</li>
+          <li>コントローラー振動による接触フィードバック</li>
+          <li>グリップ操作(持ち手)のコーディングと物理挙動の調整</li>
+          <li>3回のプレイテストをSFX/VFX観点で設計・実施し、課題表にまとめてチームへ共有</li>
+        </ul>
+        <ul class="lang-en">
+          <li>Racket SFX — layered impact sounds, velocity threshold and cooldown, 3D spatial audio</li>
+          <li>VFX — sweet-spot flash, ball trail, and a distinct particle effect per event type</li>
+          <li>Controller vibration for contact feedback</li>
+          <li>Grip-input coding and physics tuning on the racket</li>
+          <li>Designed and ran three playtest rounds from an SFX/VFX perspective, feeding issue tables back to the team</li>
+        </ul>
       </div>
+
       <p class="project-pitch lang-ja">
-        座ったままラケットを振り、embodied rhythm(身体で刻むリズム)でAIと打ち合うVRスポーツです。当初は「HIT &amp; ROLL」という企画名で、車椅子を手で漕いで動くVRテニスとして提案されましたが、指導教員のフィードバックと3回のプレイテストを経て、テレポート・ジャンプ移動を持つSF産業アリーナ「Deepspace Cybercourt」へと進化しました。私はラケットのSFX・VFX・物理挙動・グリップ操作のコーディングを担当し、プレイテストのたびに「打った瞬間の手応え」を作り直しました。
+        座ったままラケットを振り、embodied rhythm(身体で刻むリズム)でAIと打ち合うVRスポーツです。当初は「HIT &amp; ROLL」という企画名で、車椅子を手で漕いで動くVRテニスとして提案されましたが、指導教員のフィードバックと3回のプレイテストを経て、テレポート・ジャンプ移動を持つSF産業アリーナ「Deepspace Cybercourt」へと進化しました。
       </p>
       <p class="project-pitch lang-en">
-        A seated VR sports game where players swing a racket and rally against an AI opponent through embodied rhythm. It began under the pitch name &ldquo;HIT &amp; ROLL,&rdquo; a wheelchair-controlled VR tennis concept, then evolved — through supervisor feedback and three rounds of playtesting — into Deepspace Cybercourt, a sci-fi industrial arena with teleport and jump-based movement. I owned the racket's SFX, VFX, physics, and grip-input coding, rebuilding the feel of every hit after each playtest round.
+        A seated VR sports game where players swing a racket and rally against an AI opponent through embodied rhythm. It began under the pitch name &ldquo;HIT &amp; ROLL,&rdquo; a wheelchair-controlled VR tennis concept, then evolved — through supervisor feedback and three rounds of playtesting — into Deepspace Cybercourt, a sci-fi industrial arena with teleport and jump-based movement.
       </p>
 
       <dl class="meta-grid">
@@ -121,57 +150,9 @@
           <h4><span class="lang-ja">完成</span><span class="lang-en">Ship</span></h4>
           <p class="lang-ja">最終ビルドでは、ボールにトレイルVFXを追加して速度感を強調し、コントローラーからすぐにリスタートできる仕組みで再挑戦のテンポを上げました。Rocket League Heat Seekerを参考にコートを開けた設計にし、狭い車椅子コートから「打った瞬間が気持ちいい」ことを軸にしたVRスポーツへと仕上がりました。</p>
           <p class="lang-en">The shipped build added a trail VFX to the ball to emphasise speed, and a restart accessible directly from the controller to keep replay tempo high. Referencing Rocket League's Heat Seeker mode, we opened up the court design — turning a cramped wheelchair-court pitch into a VR sports game built around one thing: making the moment of contact feel good.</p>
-          <a href="#video"><span class="lang-ja">ゲームプレイ映像を見る →</span><span class="lang-en">Watch Gameplay Video →</span></a>
+          <a href="#gallery"><span class="lang-ja">スクリーンショットを見る →</span><span class="lang-en">See the screenshots →</span></a>
         </li>
       </ol>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= ゲームプレイ映像 ================= -->
-    <section id="video">
-      <div class="section-head">
-        <span class="eyebrow">Gameplay Video</span>
-        <h2><span class="lang-ja">ゲームプレイ映像</span><span class="lang-en">Gameplay Video</span></h2>
-        <p class="lang-ja">実際のプレイの様子を収めた動画です。</p>
-        <p class="lang-en">A video of actual gameplay.</p>
-      </div>
-
-      <div class="media-frame">
-        <iframe src="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/preview"
-                title="Deepspace Cybercourt — Gameplay Video" allow="autoplay" allowfullscreen></iframe>
-      </div>
-      <div class="build-actions">
-        <a class="btn btn-outline" href="https://drive.google.com/file/d/1WG3pQQxUUFxkMp71w7xLbNL6_EMqpO6b/view" target="_blank" rel="noopener">
-          <span class="lang-ja">別タブで再生する</span><span class="lang-en">Open video in a new tab</span>
-        </a>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ================= Unity WebGL ビルド ================= -->
-    <section id="build">
-      <div class="section-head">
-        <span class="eyebrow">Playable Build</span>
-        <h2><span class="lang-ja">プレイアブルビルド</span><span class="lang-en">Playable Build</span></h2>
-        <p class="lang-ja">本作はMeta Quest 2向けのVRビルドのため、ブラウザ単体では動作しません。itch.ioのページからダウンロードしてプレイできます。</p>
-        <p class="lang-en">This is a Meta Quest 2 VR build, so it doesn't run directly in the browser. Download and play it from the itch.io page below.</p>
-      </div>
-
-      <div class="media-frame">
-        <div class="media-placeholder">
-          <strong class="lang-ja">itch.ioでプレイできます</strong>
-          <strong class="lang-en">Playable on itch.io</strong>
-          <span class="lang-ja">Meta Quest 2向けのVRビルドをダウンロードして遊べます。</span>
-          <span class="lang-en">Download the Meta Quest 2 VR build and play it there.</span>
-        </div>
-      </div>
-      <div class="build-actions">
-        <a class="btn btn-primary" href="https://yugo589.itch.io/deepspace-cybercourt" target="_blank" rel="noopener">
-          <span class="lang-ja">itch.ioでプレイする →</span><span class="lang-en">Play on itch.io →</span>
-        </a>
-      </div>
     </section>
 
     <hr class="divider" />
@@ -238,10 +219,6 @@
       <p class="lang-ja">私が繰り返し直面したのは「プレイヤーは打った瞬間を体感できているか」という一点でした。1回目のプレイテストでは全てのエフェクトが同じに見えると言われ、2回目では「打った実感がない」という一番重い指摘を受けました。そこで、音とエフェクトを1イベント=1表現に固定するというルールを立て、ヒット音を多層化し、ラケットのスイートスポットに光るVFXを追加し、コントローラーの振動も組み合わせました。3回目のプレイテストで見つかった「手を動かしただけで足音が鳴る」というバグは、足音のロジックがコントローラー入力ではなくプレイヤーの実移動(頭・体の並進)に紐づいていなかったことが原因で、スクリプトをメインカメラ側に移すことで解決しています。</p>
       <p class="lang-en">The question I kept coming back to was simple: does the player actually feel the moment of contact? Round 1 playtesting found every effect looked the same; round 2 raised the heaviest note — no real sense of having hit the ball. I responded by fixing a rule: one sound and one visual per event, no reuse. I layered the impact SFX, added a sweet-spot VFX flash on the racket head, and combined it with controller vibration. A bug found in round 3 — footstep sounds firing from hand movement alone — turned out to be footstep logic driven by controller input rather than the player's actual head/body translation; moving the script onto the main camera fixed it.</p>
 
-      <h3><span class="lang-ja">チームでの役割</span><span class="lang-en">My Role on the Team</span></h3>
-      <p class="lang-ja">4人チーム(IGB388 Team 15)で、私はラケットのSFX/VFX実装、物理挙動の調整、グリップ(持ち手)操作のコーディングを担当しました。3回のプレイテストすべてで、SFX/VFXの観点からセッションを設計・実施し、結果を課題表としてまとめてチームにフィードバックする役割も担いました。</p>
-      <p class="lang-en">On a four-person team (IGB388 Team 15) I owned the racket's SFX/VFX implementation, physics tuning, and grip-input coding. Across all three playtesting rounds I also designed and ran the sessions from an SFX/VFX perspective, compiling the results into issue tables and feeding them back to the team.</p>
-
       <h3><span class="lang-ja">学んだこと・今後の課題</span><span class="lang-en">Lessons Learned &amp; Next Steps</span></h3>
       <p class="lang-ja">最も学びが大きかったのは、フィードバックのバグではなく「実装のどこにバグがあるか」を仕様の観点から突き止める作業でした。足音が鳴る原因を「コントローラー入力に紐づいていたから」まで特定できたのは、SFXを単なる装飾ではなく、プレイヤーの状態を表すシステムとして設計していたからです。今後は、エフェクトの持続時間や強度を数値化し、プレイテストのたびに勘ではなく計測で調整できる仕組みを作りたいです。</p>
       <p class="lang-en">The biggest lesson wasn't fixing a feedback bug so much as tracing it back to a specification-level cause. Being able to say precisely why the footstep sound fired — because it was wired to controller input rather than player state — only worked because I had designed SFX as a system representing player state, not as decoration. Next, I'd like to quantify effect duration and intensity so each playtesting round can be tuned by measurement rather than by feel.</p>
@@ -254,11 +231,13 @@
       <div class="section-head">
         <span class="eyebrow">Gallery</span>
         <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+        <p class="lang-ja">私が担当したのは、ラケットのSFX/VFX・振動・物理挙動・グリップ操作です。アリーナの3Dモデルと環境アートはチームの他メンバーが制作しました。</p>
+        <p class="lang-en">My work here is the racket's SFX/VFX, vibration, physics, and grip input. The arena's 3D models and environment art were created by other members of the team.</p>
       </div>
       <div class="gallery-grid">
         <figure class="gallery-item">
           <img src="../assets/images/project-03/final-screenshot.jpg" alt="In-headset screenshot of the finished Deepspace Cybercourt arena" loading="lazy" />
-          <figcaption><span class="lang-ja">最終ビルド:SFアリーナ「Deepspace Cybercourt」</span><span class="lang-en">Final build: the Deepspace Cybercourt sci-fi arena</span></figcaption>
+          <figcaption><span class="lang-ja">最終ビルドのSFアリーナ。<strong>私の担当:</strong> ラケットのヒット音・スイートスポットVFX・ボールのトレイル。<strong>環境アート:</strong> チームの他メンバー</span><span class="lang-en">The finished sci-fi arena. <strong>My work:</strong> racket impact SFX, sweet-spot VFX, and the ball trail. <strong>Environment art:</strong> other team members</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-03/pitch-infographic.jpg" alt="HIT & ROLL pitch infographic covering target experience, core loop, VR affordances, and team roles" loading="lazy" />
@@ -266,7 +245,7 @@
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-03/vfx-prototype.jpg" alt="Early whitebox Unity scene showing placeholder hit VFX with no ball trail" loading="lazy" />
-          <figcaption><span class="lang-ja">初期ホワイトボックス:プレースホルダーのヒットVFX</span><span class="lang-en">Early whitebox scene: placeholder hit VFX before the SFX/VFX rework</span></figcaption>
+          <figcaption><span class="lang-ja">改修前の初期ホワイトボックス。全イベントで同じVFXを使い回し、ボールにトレイルもない状態 —— ここを作り直したのが私の担当範囲です</span><span class="lang-en">The whitebox build before the rework: one VFX reused across every event and no ball trail — rebuilding this was my scope</span></figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-03/concept-sketch-01.jpg" alt="Early paper prototype sketch of the wheelchair tennis court and wheel/leg layout" loading="lazy" />
@@ -278,9 +257,35 @@
         </figure>
         <figure class="gallery-item">
           <img src="../assets/images/project-03/concept-sketch-env.jpg" alt="Environment concept sketches exploring the court and arena shape" loading="lazy" />
-          <figcaption><span class="lang-ja">環境コンセプトスケッチ</span><span class="lang-en">Environment concept sketches</span></figcaption>
+          <figcaption><span class="lang-ja">環境コンセプトスケッチ(チーム作成)</span><span class="lang-en">Environment concept sketches, drawn by the team</span></figcaption>
         </figure>
       </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= チーム・クレジット ================= -->
+    <section id="credits">
+      <div class="section-head">
+        <span class="eyebrow">Team &amp; Credits</span>
+        <h2><span class="lang-ja">チーム・クレジット</span><span class="lang-en">Team &amp; Credits</span></h2>
+        <p class="lang-ja">IGB388 Team 15(4人チーム)・Unity 6 / Meta Quest 2</p>
+        <p class="lang-en">IGB388 Team 15 — a four-person team. Built in Unity 6 for Meta Quest 2.</p>
+      </div>
+      <ul class="credits-list">
+        <li class="is-me">
+          <span class="credit-name">Yusei Nakajima</span>
+          <span class="credit-role lang-ja">SFX / VFX実装 / コントローラー振動 / 物理挙動の調整 / グリップ操作の実装 / プレイテスト設計</span>
+          <span class="credit-role lang-en">SFX, VFX, Controller Vibration, Physics Tuning, Grip-Input Implementation, Playtest Design</span>
+        </li>
+        <li>
+          <span class="credit-name">Kain Tazumi</span>
+          <span class="credit-role lang-ja">初期企画「Tennis Go Round」の立案</span>
+          <span class="credit-role lang-en">Original &ldquo;Tennis Go Round&rdquo; concept pitch</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">アリーナの3Dモデル、環境アート、NPCの挙動実装は、チームの他メンバーが担当しました。</p>
+      <p class="credits-note lang-en">The arena's 3D models, environment art, and NPC behaviour implementation were handled by other members of the team.</p>
     </section>
 
     <div class="project-nav">
