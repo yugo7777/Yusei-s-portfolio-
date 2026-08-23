@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Scrum Progress Reports | Hollowstead | Yusei</title>
+<title>IGB100 SCRUM Team 8 — Weekly Progress | Hollowstead | Yusei</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,32 +25,51 @@
 <main class="container doc-page">
   <a class="back-link" href="../../projects/project-04.html#docs">&larr; Back to Hollowstead</a>
   <header class="doc-head">
-    <span class="doc-kind">Weekly Scrum Reports &middot; Charm/Skill &amp; Coding</span>
-    <h1>Scrum Progress Reports (Week 11&ndash;13)</h1>
-    <p class="doc-meta">Author: Yusei Nakajima &middot; IGB100 SCRUM Team 8 &middot; Hollowstead (working title &ldquo;Demontide Cleansing&rdquo;)</p>
+    <h1>IGB100 SCRUM Team 8 — Weekly Progress</h1>
+    <p class="doc-meta">Source document: Copy_of_IGB100_SCRUM_Team8.pptx</p>
   </header>
   <article class="doc-body">
-
-<p>These are my own weekly Scrum reports for Cycle 2. My part of the eight-person team's workload was the charm/skill system: coming up with what each charm should do, then implementing it in C# and wiring it into the shop and currency systems.</p>
-
-<h2>Week 11 &mdash; Currency and the First Charms</h2>
-<p>This week's work: implementing the first playable charms (<strong>Fire Wall</strong>, <strong>Happiness</strong>, <strong>Speed-boost</strong>, 3&ndash;4 hrs), upgrading the shop system (2&ndash;3 hrs, including a first attempt at a skip button and shop-cost tuning), and adding a currency system based on the player's existing EXP value (2&ndash;3 hrs) &mdash; effectively minting a spendable coin out of a stat the game already tracked.</p>
-<figure><img src="../../assets/images/project-04/gameplay-firewall.jpg" alt="In-engine screenshot of the player using the Fire Wall charm, surrounded by cyan wall effects, enemies, and dropped currency orbs, with a currency counter reading 820" /><figcaption>Fire Wall charm in action mid-run: currency at 820, EXP orbs dropping from defeated enemies.</figcaption></figure>
-
-<h2>Week 12 &mdash; Integrating Charms with the Shop</h2>
-<p>This week's focus shifted to integration: connecting the charm-item system to the shop system (3&ndash;4 hrs) and implementing a more general charm feature covering <strong>speed-up</strong>, <strong>recovery</strong>, and <strong>damage-up</strong> items (5&ndash;6 hrs), plus continued shop-cost tuning and another pass at the skip button.</p>
-<figure><img src="../../assets/images/project-04/shop-screen.jpg" alt="In-engine shop screen with three purchasable item cards priced at 500, 600, and 700 currency, and a currency counter reading 1720" /><figcaption>The shop screen once charm items were wired into it &mdash; three purchasable slots, each showing its cost against the player's current currency.</figcaption></figure>
-
-<h2>Week 13 &mdash; Expanding the Charm Roster</h2>
-<p>By Week 13 the charm system had grown into several distinct, individually scripted effects: <strong>Fire Pillar</strong> (creates pillars orbiting the player), <strong>Health Recovery</strong> (recovers player HP), <strong>Damage Reduction</strong> (reduces damage taken), and <strong>EXP Booster</strong> (increases EXP gained per kill) &mdash; roughly 8&ndash;10 hrs of work changing the underlying code structure to support this many simultaneous effects cleanly.</p>
-<figure><img src="media/charm-scripts-inspector.jpg" alt="Unity Inspector panel showing four attached scripts: Firepillarprotector with orbital pillar amount/radius/speed settings, Health Recovery, Damage Reduction, and Exp Boost, each with a Level field" /><figcaption>The actual component setup behind those charms &mdash; each one is its own script (<code>Firepillarprotector</code>, <code>healthRecovery</code>, <code>DamageReducation</code>, <code>ExpBoost</code>) with a shared <code>Level</code> field so charms can scale as the player collects duplicates.</figcaption></figure>
-<figure><img src="../../assets/images/project-04/levelup-cards.jpg" alt="In-engine level-up card selection screen offering Movement Speed Increase, Recovery health, and Fire Pillar Protector, each showing its effect description and level" /><figcaption>The level-up screen presenting three of those charms as a pick-one choice, each card pulling its name, icon, and description straight from the charm's data.</figcaption></figure>
-<figure><img src="media/levelup-cards-2.jpg" alt="A second in-engine level-up screen offering EXP Boost, Recovery health, and a new Lightning charm" /><figcaption>A later run offering a newly added <strong>Lightning</strong> charm alongside the earlier EXP Boost and Recovery Health &mdash; the level-up screen scales automatically as the charm roster grows.</figcaption></figure>
-<figure><img src="../../assets/images/project-04/attack-swing.jpg" alt="In-engine screenshot of the player character swinging their weapon, shown as a white slashing arc" /><figcaption>The player's base attack &mdash; the area-of-effect slash charms and upgrades layer their own effects on top of.</figcaption></figure>
-
-<h2>Takeaway</h2>
-<p>Structuring every charm as its own small script with a common <code>Level</code> field turned out to be the decision that made Week 13's roster expansion cheap: adding Fire Pillar, Health Recovery, Damage Reduction, and EXP Booster in one sprint was possible because each one only had to implement its own effect, not a shared monolithic &ldquo;charm manager.&rdquo; The same pattern is what let the level-up screen and shop absorb new charms (like Lightning) without any changes to the UI code itself.</p>
-
+    <h2>Week11 Yusei Nakajima</h2>
+    <p>What I was working on for the last week</p>
+    <p>upgraded shop system</p>
+    <p>2-3hr</p>
+    <p>Implemented various charm features</p>
+    <p>3-4hr</p>
+    <p>added currency based on existed EXP</p>
+    <p>2-3hr</p>
+    <p>Fire wall</p>
+    <p>Happiness</p>
+    <p>Speed-boost</p>
+    <p>Attempt to implement skip button</p>
+    <p>enhance shop system such as cost</p>
+    <p>make a kind of coin based on EXP</p>
+    <p><img src="media/slide1-image1.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/slide1-image2.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/slide1-image7.jpg" alt="" loading="lazy" /></p>
+    <h2>Week12 Yusei Nakajima</h2>
+    <p>What I was working on for the last week</p>
+    <p>Integrate charm item and shoop system</p>
+    <p>3-4hr</p>
+    <p>Implemented basic charm feature</p>
+    <p>5-6hr</p>
+    <p>speed up item</p>
+    <p>recovery item</p>
+    <p>damage up</p>
+    <p>Attempt to implement skip button</p>
+    <p>enhance shop system such as cost</p>
+    <p><img src="media/slide2-image2.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/slide2-image3.jpg" alt="" loading="lazy" /></p>
+    <h2>Week13 Yusei Nakajima</h2>
+    <p>What I was working on for the last week</p>
+    <p>change code to Implemented various charms</p>
+    <p>-10hr</p>
+    <p>Fire Pillar (create pillar around the player)</p>
+    <p>Health recovery (recover player’s health)</p>
+    <p>Damage reducation (reduce player’s damage taken)</p>
+    <p>EXP booster (increase in the amount of EXP acquired)</p>
+    <p><img src="media/slide3-image4.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/slide3-image5.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/slide3-image6.jpg" alt="" loading="lazy" /></p>
   </article>
   <div class="project-nav">
     <a href="../../projects/project-04.html#docs">&larr; Back to Documents</a>
