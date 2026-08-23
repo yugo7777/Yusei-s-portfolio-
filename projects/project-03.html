@@ -127,29 +127,29 @@
         <li>
           <span class="process-step">01</span>
           <h4><span class="lang-ja">アイデア</span><span class="lang-en">Idea</span></h4>
-          <p class="lang-ja">最初の一枚企画書「Tennis Go Round」は、車椅子を両手で漕いで移動し、ラケットで打ち返すVRテニスでした。指導教員からは「移動と打つ動作を同時に要求すると初心者には負荷が高い」「車椅子を題材にする以上、ギミック扱いにせず競技として誠実に描くこと」という指摘を受け、移動モデルとNPCの役割を再設計する必要が見えてきました。</p>
-          <p class="lang-en">Our first one-page pitch, &ldquo;Tennis Go Round,&rdquo; had players hand-propel a wheelchair with both hands while swinging a racket. Supervisor feedback flagged that demanding movement and swinging at once would be a high coordination cost for novices, and — since the game used a real assistive device as its premise — warned us to treat it as a legitimate sport rather than a gimmick. That reshaped how we thought about the movement model and the NPC's role.</p>
+          <p class="lang-ja">VRテニスの企画に、移動モデルの見直しを求められました。</p>
+          <p class="lang-en">Our VR tennis pitch was flagged for its movement model.</p>
           <a href="#docs"><span class="lang-ja">企画フィードバックを見る →</span><span class="lang-en">Read the concept feedback →</span></a>
         </li>
         <li>
           <span class="process-step">02</span>
           <h4><span class="lang-ja">企画</span><span class="lang-en">Planning</span></h4>
-          <p class="lang-ja">車椅子の手動移動は技術的な難易度が高く、開発期間内での安定実装が難しいと判断し、テレポート・歩行・ジャンプを組み合わせた移動へ転換しました。舞台もテニスコートからSF産業アリーナへ変更し、ラケットは通常のテニスラケットとパドルラケットの2種類を選べるようにしました。NPCは「チュートリアル役」から「ラリーを続けるための相手」へと役割を絞り込んでいます。</p>
-          <p class="lang-en">We judged hand-propelled wheelchair locomotion too technically complex to implement reliably in the timeframe, and moved to a joystick/teleport/jump movement model instead. The setting shifted from a tennis court to a sci-fi industrial arena, and players could choose between two racket types — a conventional tennis racket and a paddle racket. The NPC's role was narrowed from tutorial guide to rally partner.</p>
+          <p class="lang-ja">車椅子移動をやめ、SF産業アリーナへ舞台を転換しました。</p>
+          <p class="lang-en">We dropped wheelchair movement for a sci-fi arena.</p>
           <a href="#docs"><span class="lang-ja">GDDの企画転換を見る →</span><span class="lang-en">Read the pivot in the GDD →</span></a>
         </li>
         <li>
           <span class="process-step">03</span>
           <h4><span class="lang-ja">試作・検証</span><span class="lang-en">Prototype &amp; Testing</span></h4>
-          <p class="lang-ja">3回のプレイテストで、私はSFX/VFX担当としてセッションを主導しました。1回目は「全部同じエフェクトに見える」、2回目は「打った実感がない」、3回目では「手を動かしただけで足音が鳴る」というバグまで具体的に特定できました。イベントごとに専用の音と専用のエフェクトを1つずつ対応させる、というルールに落とし込み、ラケットの持ち手(グリップ)コーディングと物理挙動の調整もあわせて進めました。</p>
-          <p class="lang-en">Across three playtesting rounds I ran the sessions focused on SFX/VFX. Round 1 surfaced &ldquo;everything looks the same,&rdquo; round 2 surfaced &ldquo;there's no real sense of hitting the ball,&rdquo; and round 3 pinned down a specific bug: a footstep sound firing whenever a hand controller moved, even while standing still. I distilled this into one rule — one distinct sound and one distinct visual per event — and used it alongside grip-input coding and physics tuning on the racket.</p>
+          <p class="lang-ja">3回のプレイテストでSFX/VFXを主導し、バグを解決しました。</p>
+          <p class="lang-en">I led SFX/VFX across three playtests, fixing bugs.</p>
           <a href="#docs"><span class="lang-ja">SFX/VFXプレイテスト記録を見る →</span><span class="lang-en">Read the SFX/VFX playtesting notes →</span></a>
         </li>
         <li>
           <span class="process-step">04</span>
           <h4><span class="lang-ja">完成</span><span class="lang-en">Ship</span></h4>
-          <p class="lang-ja">最終ビルドでは、ボールにトレイルVFXを追加して速度感を強調し、コントローラーからすぐにリスタートできる仕組みで再挑戦のテンポを上げました。Rocket League Heat Seekerを参考にコートを開けた設計にし、狭い車椅子コートから「打った瞬間が気持ちいい」ことを軸にしたVRスポーツへと仕上がりました。</p>
-          <p class="lang-en">The shipped build added a trail VFX to the ball to emphasise speed, and a restart accessible directly from the controller to keep replay tempo high. Referencing Rocket League's Heat Seeker mode, we opened up the court design — turning a cramped wheelchair-court pitch into a VR sports game built around one thing: making the moment of contact feel good.</p>
+          <p class="lang-ja">トレイルVFXを追加し、コートを開けた設計にしました。</p>
+          <p class="lang-en">We added a trail VFX and opened up the court design.</p>
           <a href="#gallery"><span class="lang-ja">スクリーンショットを見る →</span><span class="lang-en">See the screenshots →</span></a>
         </li>
       </ol>
