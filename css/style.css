@@ -29,7 +29,9 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--
 img { max-width: 100%; display: block; }
 a { color: var(--accent-2); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.container { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+/* Horizontal only: a shorthand here would also zero out the vertical padding
+   of any section that carries .container, which is every section on the homepage. */
+.container { max-width: var(--max-width); margin: 0 auto; padding-left: 32px; padding-right: 32px; }
 
 html:not([data-lang="en"]) .lang-en { display: none; }
 html[data-lang="en"] .lang-ja { display: none; }
@@ -49,7 +51,7 @@ html[data-lang="en"] .lang-ja { display: none; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--border-soft); border-radius: 8px; color: var(--text); font-size: 1.2rem; padding: 4px 10px; cursor: pointer; }
 .back-link { display: inline-block; margin-bottom: 20px; color: var(--text-muted); font-size: 0.9rem; }
 
-.hero { padding: 110px 0 72px; text-align: center; }
+.hero { padding-top: 110px; padding-bottom: 72px; text-align: center; }
 .specialty-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-elevated); border: 1px solid var(--border-soft); color: var(--accent); font-weight: 700; font-size: 0.85rem; padding: 8px 18px; border-radius: 999px; margin-bottom: 28px; }
 .specialty-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 .hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.25; margin: 0 0 24px; letter-spacing: -0.01em; }
@@ -63,10 +65,6 @@ html[data-lang="en"] .lang-ja { display: none; }
 .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 section { padding: 80px 0; }
-
-/* Add breathing room whenever a new section begins */
-main section + section { margin-top: 48px; }
-
 .section-head { margin-bottom: 44px; }
 .section-head .eyebrow { color: var(--accent-2); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .section-head h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.4vw, 2.1rem); margin: 10px 0 12px; }
@@ -218,7 +216,7 @@ figure.gallery-item.is-logo img { object-fit: contain; padding: 22px; }
 .back-to-top:hover { color: var(--accent); }
 
 @media (max-width: 760px) {
-  main section + section { margin-top: 28px; }
+  section { padding: 56px 0; }
 
   .nav-toggle { display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
   .nav-toggle.open { transform: rotate(90deg); color: var(--accent); }
