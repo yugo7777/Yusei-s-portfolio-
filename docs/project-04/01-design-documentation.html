@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Design Documentation | Hollowstead | Yusei</title>
+<title>IGB100 Group 8 Cycle 2 Mini-Game Design Document | Hollowstead | Yusei</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,65 +25,145 @@
 <main class="container doc-page">
   <a class="back-link" href="../../projects/project-04.html#docs">&larr; Back to Hollowstead</a>
   <header class="doc-head">
-    <span class="doc-kind">Game Design Document</span>
-    <h1>Hollowstead &mdash; Cycle 2 Mini-Game Design Document</h1>
-    <p class="doc-meta">IGB100 &middot; Team 8 &middot; Feb&ndash;May 2025 &middot; Team-authored GDD, written under the working title &ldquo;Demontide Cleansing&rdquo; (my contribution: charm/skill design and coding, detailed in the Scrum Progress document)</p>
+    <h1>IGB100 Group 8 Cycle 2 Mini-Game Design Document</h1>
+    <p class="doc-meta">Source document: IGB100_Group8_Design_Documentation.docx</p>
   </header>
   <article class="doc-body">
-
-<p>This is a trimmed version of Team 8's Cycle 2 Mini-Game Design Document for <strong>Hollowstead</strong>, written collaboratively by the full eight-person team under the working title &ldquo;Demontide Cleansing.&rdquo; My own role on the project &mdash; charm/skill idea design and its coding implementation &mdash; is documented separately in the <a href="03-scrum-progress.html">Scrum Progress Reports</a>.</p>
-
-<h2>Game Overview</h2>
-<p>Hollowstead (referred to as &ldquo;Demontide Cleansing&rdquo; throughout this design document) is a 2D top-down, rogue-lite survival game set in a high-fantasy medieval world. The player must endure escalating waves of enemies through a high-action gameplay loop that rewards both skill, strategy and creative itemisation. Survival depends on the effective use of item combinations, charms, magical familiars, and stat-based upgrades. Enemies present a growing obstacle to the player's chance of victory: a myriad of enemies, each sporting distinct abilities and behaviours designed to challenge the player. As enemy strength increases over the length of the game, the player is given opportunities to grow in parallel, utilising a system of experience points, gold, a collection of charms and their trusty magical familiars to enhance their capabilities. The game builds toward a climactic encounter with a final boss and their powerful horde.</p>
-
-<h2>Gameplay and Core Mechanics</h2>
-<p><strong>Game objectives:</strong> the key objective is to eliminate enemy waves during the night, acquiring rewards such as gold, experience points and other boons through defeating enemies and completing side quests, in order to acquire upgrades &mdash; skills, equipment, and charms, collectively known as items &mdash; and progress to the next stage. Players fight during the night and rest during a grace period in the daytime, using a shop mechanic to prepare for the next battle.</p>
-<p>Enemy waves span three categories: <strong>common enemies</strong> (simple, strength in numbers), <strong>elite enemies</strong> (more durable, interspersed threats), and <strong>major enemies</strong> (boss-type enemies at the end of rounds or from side quests, offering a greater reward).</p>
-<p><strong>Core challenges:</strong> surviving to the end of each round using positioning, dodging, and mouse-aimed attacks, while avoiding being overwhelmed and keeping a path of escape &mdash; a familiar tension from the survivor genre, sharpened further once boss-type enemies are introduced.</p>
-<p><strong>Core mechanics available to the player:</strong></p>
-<ul>
-<li><strong>Main weapon</strong> &mdash; an always-active ability that attacks in the direction of the cursor. Damage and attack-speed stats scale its effectiveness; the first playable character has an area-of-effect slashing attack.</li>
-<li><strong>Movement</strong> &mdash; the player's freedom of movement on the map.</li>
-<li><strong>Upgrades</strong> &mdash; items and skills that increase stats or grant boon effects. Charms can be upgraded and evolved through specific combinations into new, stronger charms.</li>
-</ul>
-<p><strong>Rewards:</strong> coins (gold), spent in the day-phase shop to acquire new effects or stats, and Exp, which fills a bar to level the player up mid-combat, increasing stats and unlocking new upgrades at certain thresholds &mdash; reinforcing the &ldquo;power-fantasy&rdquo; player-experience goal.</p>
-<p><strong>Penalties:</strong> the player loses hit points on contact with enemies or their projectiles, then enters a brief invincibility window (&ldquo;I-frames&rdquo;). Reaching zero HP ends the run, with all gold, items, experience, and upgrades lost, and returns the player to a game-over screen.</p>
-
-<h3>Player Capabilities &amp; Game Objects</h3>
-<p>The player uses WASD to move and attacks automatically on a timer (attack speed) toward the cursor. The table below is an excerpt from the object/attribute balance sheet used to tune the Cycle 2 prototype.</p>
-<div class="table-scroll">
-<table>
-<tr><th>Object</th><th>Attribute</th><th>Value</th><th>Notes</th></tr>
-<tr><td>Player Character</td><td>Health</td><td>100</td><td>Moves freely with WASD</td></tr>
-<tr><td></td><td>Movement Speed</td><td>2</td><td>Increases up to 4 via upgrades</td></tr>
-<tr><td>Enemy (Goblin)</td><td>Health</td><td>50</td><td>Targets and follows the player</td></tr>
-<tr><td></td><td>Movement Speed</td><td>1</td><td></td></tr>
-<tr><td></td><td>Damage Dealt</td><td>5</td><td></td></tr>
-<tr><td>Player Weapon</td><td>Attack Speed</td><td>1.75</td><td>Decreases to 0.5 with level-ups</td></tr>
-<tr><td></td><td>Damage Dealt</td><td>30</td><td></td></tr>
-<tr><td>Enemy Spawner (Easy)</td><td>Spawn Rate</td><td>5</td><td></td></tr>
-</table>
-</div>
-
-<h2>Potential and Planned Game Designs</h2>
-<p>Planned enemy behaviours explored movement patterns beyond simple chasing: <strong>zigzagging</strong> (sharp diagonal, alternating direction), <strong>sine-wave</strong> (smooth wave-like gliding), and <strong>swirl</strong> (looping, circular paths) &mdash; each meant to test player timing and aim differently on elite/major-tier enemies.</p>
-<p>Planned player abilities included a <strong>Dash/Dodge</strong> (Shift, brief invincibility), a class-tied <strong>Basic Ability</strong> (E, cooldown-based), an <strong>Ultimate Ability</strong> (Q, high-impact, cooldown or combat-charged), and <strong>Active Items</strong> (number keys, mana-gated). <strong>Charms</strong> were planned around an evolution mechanic, combining sets of charms into stronger new ones. <strong>Familiars</strong> would assist the player with their own abilities and progression, selectable at the run's start. <strong>Side quests</strong> would reward optional objectives, and environmental <strong>locales</strong> (quest-giver, familiar-trainer, etc.) were discussed as future expansions of the day-phase shop.</p>
-<p>The player-experience goal balanced three pillars: <strong>power-fantasy</strong> (crushing waves of enemies once sufficiently upgraded), <strong>challenge</strong> (an escalating difficulty curve via enemy tiers), and <strong>creativity</strong> (crafting a rogue-lite build from the available charms). Simplifying the main-weapon input &mdash; an attack-speed timer instead of a click-to-attack &mdash; was a deliberate choice to let players focus on positioning and itemisation instead of input repetition.</p>
-
-<h2>Interface / Visual System Details</h2>
-<p>Two UI directions were prototyped: one prioritising <strong>information clarity</strong> (surfacing more of the game's mechanics on screen) and one prioritising <strong>visual clarity</strong> (minimal HUD, less clutter). Both were shown to playtesters to gather a preference and specific feedback on details like health-bar placement.</p>
-<p>The core UI included a numerical health bar (visually depleting on damage, without resizing as max HP grows), a round/night timer, a sidebar for details like active side quests, and a HUD showing cooldowns for class abilities and acquired items.</p>
-<p>Two menus were planned: a <strong>Main Menu</strong> (Start / Options / Quit) and a <strong>Pause Menu</strong> (Esc to open, fades the background, shows current score, offers Resume or Exit-to-Menu). Additional screens: an <strong>Inventory</strong> screen (I key), a <strong>Shop</strong> screen (opens automatically after each wave), a <strong>Level Up</strong> screen (opens on reaching max Exp, offering one free pick), a <strong>Results</strong> screen (on surviving all waves), and a <strong>Game Over</strong> screen (on reaching 0 HP) &mdash; both showing run stats and a return-to-menu option.</p>
-<figure><img src="media/storyboard-flow.jpg" alt="Full paper-prototype storyboard showing the flow between Main Menu, Character Select, Gameplay, Shop, Pause Menu, Result, and Game Over screens" /><figcaption>The full screen-flow storyboard &mdash; see the <a href="02-storyboard-prototype.html">Storyboard &amp; Paper Prototype</a> document for the individual screen sketches.</figcaption></figure>
-
-<h2>Glossary</h2>
-<ul>
-<li><strong>Charms</strong> &mdash; the game's vanilla upgrade item, granting a unique effect (e.g. a constant damaging area around the player) rather than a raw stat.</li>
-<li><strong>Equipment</strong> &mdash; equippable armour pieces (helmet, chest, legs, boots) that influence stats more directly than charms.</li>
-<li><strong>Familiars</strong> &mdash; magical pets that help defeat enemies, with their own upgrades and abilities, not directly controlled by the player.</li>
-<li><strong>Skills</strong> &mdash; activatable abilities. Class-tied skills are called abilities; Dash is a general skill always available regardless of class or item.</li>
-</ul>
-
+    <p><strong>IGB100 Group 8 Cycle 2 Mini-Game Design Document</strong></p>
+    <p><strong>Game Name: </strong>Demontide Cleansing</p>
+    <p><strong>Logo Image</strong>: (Designed for dark-screen mode or backgrounds)</p>
+    <p><img src="media/1.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Text</strong>: Demontide Cleansing, 22/04/2025</p>
+    <h2><a id="_heading=h.8eeruf73gbj1"></a>Game Overview</h2>
+    <p>Demontide Cleansing is a 2D top-down, rogue-lite survival game set in a high-fantasy medieval world. The player must endure escalating waves of enemies through a high-action gameplay loop that rewards both skill, strategy and creative itemisation. Survival depends on the effective use of item combinations, charms, magical familiars, and stat-based upgrades. Enemies present a growing obstacle to the player’s chance of victory. In the myriad of enemies, each sporting distinct abilities and behaviours designed to challenge the player. As enemy strength increases over the length of the game, the player is given opportunities to grow in parallel, utilising a system of experience points, gold, a collection of charms and their trusty magical familiars to enhance their capabilities. Acquiring these is a matter of interactive gameplay, whether through defeating enemies regularly, purchasing upgrades through a shop, completing side-quests and minigames, or defeating ‘major enemies’, the player is given a flexible amount of options to enhance their abilities and create creative combinations of upgrades to face increasingly difficult enemy waves. The game builds toward a climactic encounter with a final boss and their powerful horde, providing a narrative and mechanical culmination of the player’s progress.</p>
+    <h2><a id="_heading=h.i0565d85w91m"></a>Gameplay and Core Mechanics</h2>
+    <p>The storyboard below presents the basic gameplay premise:</p>
+    <p><img src="media/2.jpg" alt="" loading="lazy" /></p>
+    <p><strong>GAME OBJECTIVES:</strong></p>
+    <p>The key objective of the game is to eliminate enemy waves during the night, acquiring rewards such as gold, experience points and other boons through defeating individual enemies and successfully completing side quests, to acquire the necessary upgrade via skills, as well as equipment and charms - collectively known as items - to progress to the next stage. The player will fight enemies during the night, resting during a grace period in the daytime allowing the player to prepare for the next battle by utilising a shop mechanic and acquiring items.</p>
+    <p>During the night time, enemy waves spawn, constantly looking to attack the player character. These waves progressively increase in strength, numbers, difficulty and enemy archetype as the stage progresses. The night times are tracked by a  timer indicating the remaining duration of the night time or “round”. The collection of enemies will span across three main categories of enemies, “common enemies”, simple enemies that usually utilise their power in numbers, “elite enemies”, more durable and challenging enemies that, interspersed with the common enemies, can pose a greater threat to the player, and finally, “major enemies”, which take on the role of “boss” type enemies, usually appearing at the end of rounds or from generated side quests that can offer the player threaten the player with an additional challenge, but incite them with a great reward if defeated.</p>
+    <p><strong>CORE CHALLENGES:</strong></p>
+    <p>The core challenge of the game is surviving against waves of enemies to the end of the round, overall surviving multiple waves to progress to the following stage. To achieve this, the player must use positioning and dodging via movement actions, and aiming via their mouse cursor to attack enemies with their main weapon. Similarly to other games in the survivor genre, a major obstacle of the game is ensuring that the player is not overwhelmed by surrounding enemies, and ensuring a constant path of escape from oncoming threats. Within this gameplay, another challenge will be the eventual introduction of boss type enemies, which are significantly tougher than regular enemies and will pose a greater threat to the player.</p>
+    <p><strong>CORE MECHANICS:</strong></p>
+    <p>To assist the player in their endeavour, the player is given many tools to their disposal that they can use to survive against the onslaught of enemies:</p>
+    <p>Main weapon - Their main weapon is an always active ability that can be used to attack enemies, dealing damage. Some stats increase its effectiveness, with damage increasing its damage output against enemies, and attack speed decreasing the time it takes for it to cast the attack, in the case of our first playable character, an “area of effect” slashing attacking with their weapon.</p>
+    <p>Movement - Further expanded upon in player capabilities, movement refers to the player’s freedom of movement on the map.</p>
+    <p>Upgrades - Includes items and skills. Increases stats, or grants varying different boonful effects. Charms have the potential to be upgraded and evolved through specific select combinations, creating new charms that have even stronger effects.</p>
+    <p>In addition to mechanics that assist the player, the gameplay has additional mechanics to challenge the player. The aforementioned boss type enemies pose both a challenge and can grant upgrades when defeated. Furthermore, a side quest mechanic allows the player to complete challenge-type minigames ie; defeating one of these boss type enemies, or completing an objective like making it to a location across the map, for a similar reward, which will be expanded on further past this prototype.</p>
+    <p><strong>REWARDS:</strong></p>
+    <p>The player will collect two main rewards as they play. These rewards are <strong>coins </strong>(otherwise known as <strong>gold</strong>) and <strong>Exp</strong>, or experience points. The coins will randomly drop from enemies that the player destroys and will be used during the day phase where the player can purchase items from the shop in order to grow their strength by acquiring new effects, or granting more stats such as hit points, damage, attack speed, movement speed, etc. The Exp will drop from every enemy and reaching a full Exp bar will level up the player during combat, which will increase all of their stats, as well as allowing the player to acquire new upgrades at certain level thresholds. This allows players to have a sense of both progression and fulfil a major aspect of the player experience goal of “power-fantasy”.</p>
+    <p><strong>PENALTIES:</strong></p>
+    <p>The player can take damage from enemies. The main ways this can occur is through contact, whereby an enemy makes contact with the player’s hitbox, or through enemy projectiles and effects, whereby a summoned enemy attack makes contact with the player’s hitbox. In both instances, the player loses hit points and enters a brief duration of invincibility - “I-frames” - allowing the player to phase through enemies without taking further damage during so. Additionally, enemy attacks can leave a short-lasting effect on the player such as slows, stuns, etc.</p>
+    <p>Reaching zero hit points - zero health - the player will “die”, losing their gold, items, experience, and any other upgrades and power ups. They will additionally lose their progress and will be prompted with a game over screen, where the player can return to the main menu, from which the player may choose to restart their “run”.</p>
+    <p><strong>PLAYER CAPABILITIES</strong></p>
+    <p>The player will have a simple move set consisting of the WASD keys to move and an automatic slash in front of the player which attacks on a timer (attack speed) in the direction of the player’s cursor. Additional skills can be acquired through items and further upgrades that can grant the player more actions to undertake.</p>
+    <p><strong>GAME OBJECTS</strong></p>
+    <div class="table-scroll"><table><thead><tr><th><p><strong>Object</strong></p>
+    </th><th><p><strong>Attributes</strong></p>
+    </th><th><p><strong>Value</strong></p>
+    </th><th><p><strong>Player Interaction</strong></p>
+    </th></tr><tr><th rowspan="3"><p><strong>Player Character</strong></p>
+    </th><th><p>Health</p>
+    </th><th><p>100</p>
+    </th><th rowspan="3"><p>Player can move freely in any direction using the WASD keys</p>
+    <p>Movement speed would increase until 4</p>
+    </th></tr><tr><th><p>Movement Speed</p>
+    </th><th><p>2</p>
+    </th></tr><tr><th><p>Attack Frequency</p>
+    </th><th><p>-</p>
+    </th></tr><tr><th rowspan="3"><p><strong>Enemy (Goblin)</strong></p>
+    </th><th><p>Health</p>
+    </th><th><p>50</p>
+    </th><th rowspan="3"><p>Enemy will target the player and follow them </p>
+    </th></tr><tr><th><p>Movement Speed</p>
+    </th><th><p>1</p>
+    </th></tr><tr><th><p>Damage Dealt</p>
+    </th><th><p>5</p>
+    </th></tr><tr><th rowspan="2"><p><strong>Player Weapon</strong></p>
+    </th><th><p>Attack Speed</p>
+    </th><th><p>1.75</p>
+    </th><th rowspan="2"><p>Attack rate would decrease until 0.5 with a level up</p>
+    </th></tr><tr><th><p>Damage Dealt</p>
+    </th><th><p>30</p>
+    </th></tr><tr><th><p><strong>Enemy Spawner (Easy) </strong></p>
+    </th><th><p>Spawn Rate</p>
+    </th><th><p>5</p>
+    </th><th></th></tr></thead></table></div>
+    <h2><a id="_heading=h.w3urzoekevde"></a>Potential and Planned Game Designs </h2>
+    <p><strong>Enemy Behaviours</strong></p>
+    <p>Planned enemy behaviours include exploring enemies’ own abilities over more simplistic designs. Projectiles from enemies are a common exploration of these. Other effects could include summoning environmental hazards like areas of fire or toxins or walls that obstruct player movement. These will be more effectively used on challenging enemies like elite-tier or major-tier enemies and provide the basis of enemy archetypes like artillery enemies, melee enemies, etc.</p>
+    <div class="table-scroll"><table><thead><tr><th><p><strong><img src="media/3.jpg" alt="" loading="lazy" /></strong></p>
+    </th><th><p><strong><img src="media/4.jpg" alt="" loading="lazy" /></strong></p>
+    </th></tr></thead></table></div>
+    <p>As shown above, potential enemy movement patterns are being explored to introduce unique challenges and keep gameplay engaging.</p>
+    <p>Ideas include: zigzagging enemy movement patterns, where enemies move in sharp diagonal lines, alternating directions to create jagged, erratic paths that test the player’s timing and aim. Another is the sine wave pattern, where enemies glide in smooth, wave-like motions across the screen, creating a rhythmic movement that makes it harder to land consistent hits. Finally, another potential pattern is the swirl, where enemies spiral across the screen in looping, circular motions, not necessarily toward the player, but in a sweeping path that increases the chance of collision through unpredictable coverage. </p>
+    <p>These movement styles offer distinct gameplay dynamics and could be used to vary difficulty or enemy behavior in future development.</p>
+    <p><strong>Classes</strong></p>
+    <p>Currently, the player is limited to a single class of character, a swordsman-fighter class of character. More classes are planned for the full design of the game, each with unique weapons and gameplay differences. Ideas include a more magic-focused class and a ranged class like an archer.</p>
+    <p><strong>Abilities/Skills</strong></p>
+    <p>In addition to the potential enemy designs, the player had potential actions for their character that have not been fully explored yet.</p>
+    <p>Dashing/dodging: By using the “Shift” key, the player can dash a short distance and temporarily become invincible - not unlike the aforementioned I-frames - to reposition themselves from a detrimental position.</p>
+    <p>Basic ability (Signature): By using the “E” key, the player can use a unique ability tied to their class of character. This ability will be on a cooldown and scale off upgrades too.</p>
+    <p>Ultimate ability: By using the “Q” key, the player can use an ultimate ability tied to their class of the character. This ability will either be on cooldown or be generated via combat with the enemies allowing for more rewards via fighting the enemy. The ultimate will be very impactful for the gameplay, being crucial in surviving against potential dangerous situations.</p>
+    <p>Active abilities from items: Using the number keys - currently limited to “1” and “2” in design, items or other forms of power ups may be actives that have their own unique effects on activation similarly to basic or ultimate abilities but to a lesser strength without being unique to the class.</p>
+    <p>These active abilities will be at the behest of a mana system that will require mana as a resource to activate.</p>
+    <p><strong>Items (Charm Evolution)</strong></p>
+    <p>Items, specifically charms, are as mentioned beforehand, planned to include a mechanic focused around evolving sets of charms into new charms that will have greater and new effects. This is an important mechanic that allows for greater creative expression from the player.</p>
+    <p><strong><br />Side Quests</strong></p>
+    <p>A potential inclusion to the game will be the side quest mechanic as aforementioned in the core mechanics section of this document. Side quests will reward the player for completing them and is a great addition for greater player interaction.</p>
+    <p><strong>Familiars</strong></p>
+    <p>Familiars are also an important mechanic that is planned to be introduced. These creatures will assist the player in defeating enemies with their own unique abilities. The player will be able to select one at the start of the game and can progressively collect more up to a as-of-now, undetermined maximum. The familiars separate themselves from items via their ability to upgrade as well, potentially having their own experience points gathered from the experience the player gains too.</p>
+    <p><strong>Environmental Locales</strong></p>
+    <p>Environmental Locales have also been discussed. For example, currently, the iteration of the shop will appear at the end of a complete round during the day time. This shop can be moved in the future as a locale, accessible on the map during the day time alongside other locales related to specific other mechanics, eg; quest-giver, familiar-trainer, etc.</p>
+    <p><strong>Summary of thematics and gameplay mechanics into PX and Cycle 3 plans</strong></p>
+    <p><strong>Player experience goal</strong></p>
+    <p>The role the player will take on is that of a heroic survivor in a fantasy setting, attempting to survive against hordes of enemies - monsters, demons, etc. The player experience will focus on giving the player a balance between power-fantasy, building up ungodly strength to take out waves of enemies in an instant through acquiring items and levelling up their stats, sufficient challenge to ensure player interaction in response to difficulty, and creativity, expressed through careful crafting of the rogue-lite build of items presented to the player. </p>
+    <p>To ensure the balance between the three expectations, mechanics like different tiers of enemies and different archetypes are crucial. They ensure that while the player can easily deal with simpler enemies as they acquire the sufficient upgrades and fulfil the power-fantasy aspect, they are still sufficiently challenged by an increasing difficulty that strikes that perfect balance aimed for. Additionally, player freedom and interaction will be a main focus as it complements creative expression of players. Side quests are a major focal point of this, as they are non-mandatory objectives the player can choose to pick up for their own benefit or challenge, while mechanics like dashes and I-frames ensure both freedom of movement and player-friendliness to ensure the player has sufficient means of actionable responses to challenges.</p>
+    <p>In addition to this, simplification of certain player actions to ensure a focus on different parts of the gameplay which will merit more player interaction was built into the mechanics, like the need to not click to use the main weapon, instead being based off an attack speed timer in the direction of the cursor, ensuring the player can focus on other aspects of gameplay.</p>
+    <p><strong>Cycle 3 plans</strong></p>
+    <p>In addition to the potential and planned game designs and mechanics mentioned earlier, exploring deeper into the mechanics that make up the core of the gameplay will be further expanded on. More items to fulfill creative expression of the player will be introduced, more unique effects that elevates the power-fantasy of the player will coincide in these inclusions. The fulfilment of the overarching progression to the overview’s stated finale is the sum goal.</p>
+    <h2><a id="_heading=h.nr4lqm5krzhv"></a>Interface / Visual System Details</h2>
+    <p>The visual interface of Demontide Cleansing is designed to display information for a few notable mechanics within the game while also ensuring visual clarity on the most important parts of the game. To achieve this, two designs have been proposed, one more focused around the player’s information clarity (giving enough information on the notable mechanics of the game), and the other, focused around the player’s visual clarity (reducing visual clutter to ensure a player’s gameplay is undistracted). Both designs have attempted to balance the information and visual clarity of the game with the different iterations leaning towards their respective sides rather than encapsulating only their respective design focuses. The play testers of the game are asked which version they prefer and a few other questions regarding specific parts of the UI, such as the placement of the health bar, and the necessity of certain displayed information.</p>
+    <p>Gathering the feedback, our findings will evolve the user interface system further with specific solutions derived from play tester feedback to balance both iterations into one.</p>
+    <p><strong>UI CORE:</strong></p>
+    <p>The health system will utilise a numerical bar that has an increasing maximum health (as the player acquires stats) - though it will not resize the health bar - and it will visually decrease as the player takes damage.</p>
+    <p>A timer will be displayed which details the round (night time) duration. An additional sidebar would exist for any other details in the game, such as sidequests.</p>
+    <p>The player will have a heads up display (HUD) which details their cooldowns for innate abilities (from the character class themselves), or from acquired items (charms, equipment or familiars). </p>
+    <p><strong>He ads-up UI</strong></p>
+    <p><strong>Information Clarity Model -</strong></p>
+    <p><img src="media/5.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Visual Clarity Model -</strong></p>
+    <p><img src="media/6.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Game Systems Storyboard</strong></p>
+    <p>The storyboard below visually outlines the game's flow, clearly showing the player's interaction with various game states and the conditions for transitions between scenes:</p>
+    <p><strong><img src="media/7.jpg" alt="" loading="lazy" /></strong></p>
+    <p><strong>UI Flow Structure</strong></p>
+    <p>UI Pipeline: Displaying how each UI interacts with each other.</p>
+    <p><img src="media/8.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Menus:</strong></p>
+    <p>The game will possess two menus: a start menu and a pause menu.</p>
+    <p><strong>Main Menu</strong>: The game will start on the main menu, consisting of a ‘Start’ button, to start the game, an ‘Options’ button, to bring up options such as volume or keybinds, and a ‘Quit’, to exit the application. Within the options, the ability to change the volume or keybinds will be shown.</p>
+    <p><img src="media/9.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Pause Menu</strong>: The player can pause the game by pressing the &quot;ESC key&quot;, and can continue by selecting &quot;Resume&quot; or re-entering ESC. The Pause Menu will fade the environment into the background, allowing the player to see the current paused game state but focusing on the menu in the foreground. This menu will be similar to the start menu with two notable differences. The resume button will replace the start game button, and the quit button will be replaced with the exit to menu button, which will exit the game to the start menu without saving the progress of the current game state. Additionally, the pause menu will also display the player’s current score.</p>
+    <p><img src="media/10.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Inventory Screen: </strong>The player can bring up their current inventory of items, charms and further details (like on their character or weapon exp), by pressing the I key.</p>
+    <p><img src="media/11.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Shop Screen</strong>: Automatically opens after the end of a wave, where the player can purchase upgrades in exchange for their acquired coins/gold.</p>
+    <p><img src="media/12.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Level Up Screen</strong>: Automatically opens after acquiring the maximum amount of experience to make it to the next level. Like the shop, allows the player to acquire a specific upgrade, but for free and only limited to a selecting one.</p>
+    <p><img src="media/13.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Results Screen</strong>: Displayed when the player survives all waves allowing the player to return to the main menu, with future plans to have this progress to the next stage instead and display relevant stats for the previous waves ie; amount of enemies and type of enemies defeated.</p>
+    <p><img src="media/14.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Game Over Screen</strong>: When the player's HP reaches 0, the &quot;Game Over&quot; screen is displayed which includes similar stats included in the aforementioned results screen. A message indicating defeat and the player's score are shown, and the player can exit to the main menu using the “Back to Main Menu” button.</p>
+    <p><img src="media/15.jpg" alt="" loading="lazy" /></p>
+    <p><strong>Outliner: </strong>An outliner will be included in the main HUD that notes details such as the current side quest active for the player. (Refer to the main UI to see both information and visual clarity models of the outliner.</p>
+    <p>(Disclaimer: All images of the ‘Interface/Visual System Details’ are prototype images for the game and are subject to both change and introduction into the game.)</p>
+    <h2><a id="_heading=h.m42bamltths2"></a>Glossary</h2>
+    <p>(This section exists to parse the thematic terms used in this document for more legibility)</p>
+    <p><strong>Charms</strong> - Charms are the fanciful, in-game term to refer to items distinct from equipment. They are the game’s vanilla upgrades for unique effects such as adding a constantly damaging area of effect around you as an example.</p>
+    <p><strong>Equipment</strong> - Equipment is the in-game term to refer to equipable items. These will be shown as pieces of armour, such as your helmet, chest piece, leggings and boots. They will influence your stats more so than charms, which usually grant effects to the player rather than stats.</p>
+    <p><strong>Familiars</strong> - Familiars, or magical familiars, are pets that help you defeat enemies. Not unlike the player, familiars will have their own upgrades and abilities, though not controlled by the player.</p>
+    <p><strong>Skills</strong> - Skills are activatable abilities that will cause varying different effects. Innate skills are referred to as abilities, they are class-dependent. Dash is a general skill that will always be available no matter the class or item but can be affected by external effects such as items or enemy debuffing effects. General skills come from items, more so from charms, as unique effects.</p>
   </article>
   <div class="project-nav">
     <a href="../../projects/project-04.html#docs">&larr; Back to Documents</a>

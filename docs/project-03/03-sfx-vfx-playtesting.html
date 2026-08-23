@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SFX/VFX Playtesting Notes | Deepspace Cybercourt | Yusei</title>
+<title>Playtesting Reports 1–3 | Deepspace Cybercourt | Yusei</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,47 +25,19 @@
 <main class="container doc-page">
   <a class="back-link" href="../../projects/project-03.html#docs">&larr; Back to Deepspace Cybercourt</a>
   <header class="doc-head">
-    <span class="doc-kind">Playtesting Report &middot; SFX/VFX Perspective</span>
-    <h1>SFX/VFX Playtesting Notes</h1>
-    <p class="doc-meta">Author: Yusei Nakajima &middot; IGB388 Playtesting Reports 1&ndash;3 &middot; Deepspace Cybercourt</p>
+    <h1>Playtesting Reports 1–3</h1>
+    <p class="doc-meta">Source document: Final_GDD.docx — Appendices, reports authored by Yusei Nakajima</p>
   </header>
   <article class="doc-body">
-
-<p>This report focuses on my own role on the team: the SFX/VFX artist's perspective (audio and visual effects). Across three playtesting rounds I ran sessions focused on how sound and visual effects shape immersion, clarity of feedback, and impact in VR &mdash; and used the findings to redesign the game's hit feedback, ambient audio, and particle system.</p>
-
-<h2>Round 1 &mdash; Establishing the Baseline</h2>
-<figure><img src="media/vfx-placeholder-1.jpg" alt="Early whitebox Unity scene showing the placeholder hit VFX and a tennis ball with no motion trail" /><figcaption>Early build: placeholder hit VFX, and the ball in flight with no trail &mdash; the exact gap the first round of feedback identified.</figcaption></figure>
-<p><strong>Finding:</strong> the same VFX was reused for multiple different game events (hit, miss, bounce), and there was no feedback at all for misses, so players could not distinguish between a successful hit and a miss.</p>
-<p><strong>Solution:</strong> tie each VFX to a single event, recreate duplicate effects as separate and unique ones, and add a dedicated miss-feedback layer.</p>
-
-<h2>Round 2 &mdash; Sweet Spot, HUD, and Contact Feedback</h2>
-<figure><img src="media/issue-table-round2.jpg" alt="Issue table from round 2 playtesting listing sound and visual effect problems, severities, strategies, and notes" /><figcaption>Round 2 issue log: contact feedback, scoring visibility, and audio presence were the three biggest gaps.</figcaption></figure>
-<p>Testers could not tell if a play was good, what score they had, or how long a streak had continued &mdash; solved with a minimal HUD VFX in the player's peripheral vision (a streak counter that flashes on each successful hit, plus small &ldquo;nice hit&rdquo; particles near the ball on a sweet-spot hit).</p>
-<p>The most severe issue: testers reported no real sense of having hit the ball, because feedback at the moment of contact was too weak. This was addressed with layered impact SFX, a brief sweet-spot VFX flash on the racket head, and controller vibration, giving players an intuitive, multi-sense confirmation of contact.</p>
-<p>One tester also removed the headset because the swing SFX triggered too easily and became loud and noisy, while the lack of ambient audio made the world feel &ldquo;empty.&rdquo; <strong>Countermeasure:</strong> tightened the swing SFX trigger with a velocity threshold and cooldown, and added a low-volume ambient layer that fills the space without masking hit sounds.</p>
-
-<h2>Round 3 &mdash; Root-Causing and Final Polish</h2>
-<figure><img src="media/issue-table-round3.jpg" alt="Issue table from round 3 playtesting, split into Playtester 1 and Playtester 2 findings on footstep sound bugs, bounce SFX timing, and particle differentiation" /><figcaption>Round 3 issue log: chasing down a footstep-sound bug and giving every particle effect a distinct meaning.</figcaption></figure>
-<p>By round 3, feedback moved from &ldquo;something feels off&rdquo; to specific, fixable bugs:</p>
-<ul>
-<li><strong>Footstep SFX firing on hand movement</strong> (High severity) &mdash; a footstep sound played whenever the hand controller moved, even while the player stood still, because footstep logic was driven by controller input rather than actual player movement. Fixed by moving the footstep script onto the Main Camera so it's tied to head/body translation instead of hand motion.</li>
-<li><strong>Bounce SFX timing and volume</strong> (Medium) &mdash; the bounce sound for the box object played with a noticeable delay after the visual collision, and was sometimes too quiet to register as a hit. Fixed by triggering the SFX directly on the collision event and rebalancing its base volume against the ambient/background layers.</li>
-<li><strong>Flat, non-directional audio</strong> (Low) &mdash; ball and bounce sounds didn't change with direction or distance, which felt strange even inside VR. Addressed by applying 3D spatial audio to reinforce presence.</li>
-<li><strong>Indistinguishable particle effects</strong> (High) &mdash; &ldquo;all the particles look identical, I can't tell what's what,&rdquo; per one tester. Solved by designing a distinct particle VFX per event type: a sharp spark for a solid hit, a soft puff for a graze, and a different colour/shape per object type, so every effect carries its own meaning.</li>
-<li><strong>Repetitive bounce sound</strong> (Medium) &mdash; a single static sample for the can bounce felt unnatural. Fixed with several SFX variations selected at random per hit.</li>
-</ul>
-
-<h3>Test Build Details</h3>
-<ul>
-<li>Build: Tennis Go Round (working title)</li>
-<li>Engine: Unity 6 (6000.0.40f1)</li>
-<li>Platform: Meta Quest 2, Meta Touch controllers, seated configuration</li>
-<li>Audio: Quest 2 built-in speakers, default volume</li>
-</ul>
-
-<h2>Takeaway</h2>
-<p>The throughline across all three rounds was the same principle: every player action needs one recognizable sound and one recognizable visual, so the audiovisual response always matches what the player just did. That rule &mdash; tie one clear SFX and one clear VFX to every event, and never reuse an effect across different meanings &mdash; became the standard I applied to the racket's hit feedback, the sweet-spot flash, and the ball-trail VFX in the shipped build.</p>
-
+    <h2><a id="_dr557unxjisk"></a>Playtesting 1</h2>
+    <h3><a id="_3dz7tln0dez5"></a>Yusei Nakajima</h3><p><img src="media/30.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/31.jpg" alt="" loading="lazy" /><img src="media/32.jpg" alt="" loading="lazy" /><img src="media/33.jpg" alt="" loading="lazy" /><img src="media/34.jpg" alt="" loading="lazy" /><img src="media/35.jpg" alt="" loading="lazy" /><img src="media/36.jpg" alt="" loading="lazy" /><img src="media/37.jpg" alt="" loading="lazy" /></p>
+    <h2><a id="_h63jrv5wypen"></a><br /><br />Playtesting 2</h2>
+    <h3><a id="_c31ytejpt55x"></a>Yusei Nakajima</h3><p><img src="media/101.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/102.jpg" alt="" loading="lazy" /><img src="media/103.jpg" alt="" loading="lazy" /><img src="media/104.jpg" alt="" loading="lazy" /><img src="media/105.jpg" alt="" loading="lazy" /><img src="media/106.jpg" alt="" loading="lazy" /><img src="media/107.jpg" alt="" loading="lazy" /></p>
+    <h2><a id="_x9o1z5vuhfl9"></a>Playtesting 3</h2>
+    <h3><a id="_9y0h27jq0zcr"></a>Yusei Nakajima</h3><p><img src="media/146.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/147.jpg" alt="" loading="lazy" /><img src="media/148.jpg" alt="" loading="lazy" /><img src="media/149.jpg" alt="" loading="lazy" /><img src="media/150.jpg" alt="" loading="lazy" /><img src="media/151.jpg" alt="" loading="lazy" /><img src="media/152.jpg" alt="" loading="lazy" /></p>
   </article>
   <div class="project-nav">
     <a href="../../projects/project-03.html#docs">&larr; Back to Documents</a>

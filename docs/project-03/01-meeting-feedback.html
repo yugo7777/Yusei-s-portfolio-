@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Concept Feedback &amp; One-Pagers | Deepspace Cybercourt | Yusei</title>
+<title>Meeting Notes and Resources | Deepspace Cybercourt | Yusei</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127918;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,67 +25,36 @@
 <main class="container doc-page">
   <a class="back-link" href="../../projects/project-03.html#docs">&larr; Back to Deepspace Cybercourt</a>
   <header class="doc-head">
-    <span class="doc-kind">Concept Feedback &amp; One-Pagers</span>
-    <h1>Concept Feedback &amp; One-Pagers</h1>
-    <p class="doc-meta">Deepspace Cybercourt (pitched as &ldquo;HIT &amp; ROLL&rdquo;) &middot; IGB388 Team 15 &middot; Feb&ndash;May 2026 &middot; Week 4&ndash;5 meeting notes</p>
+    <h1>Meeting Notes and Resources</h1>
+    <p class="doc-meta">Source document: Meeting_Notes_and_Resources.docx</p>
   </header>
   <article class="doc-body">
-<p>Everyone please put in your one page GDD so we can expand ideas more as well as understand each other's wants/desired for their games.</p>
-
-<h2>Team One-Pagers (Week 4)</h2>
-<p>Each team member pitched their own one-page GDD in Week 4. Teammate Kain Tazumi's pitch, &ldquo;Tennis Go Round,&rdquo; proposed a seated VR arcade tennis experience where players control a wheelchair with their hands to move, aim, and strike the ball. The team selected this concept to develop together &mdash; it became the seed of the project, well before it evolved into the final sci-fi arena prototype.</p>
-<figure><img src="media/meeting-onepager.jpg" alt="One-page GDD titled Tennis Go Round, describing the high concept, audience, core loop, win/lose conditions, and mood board" /><figcaption>Kain Tazumi's Week 4 one-pager: &ldquo;Tennis Go Round&rdquo; &mdash; wheelchair tennis in VR, built around embodied rhythm. The team chose this pitch to build together.</figcaption></figure>
-<figure><img src="media/meeting-sketch-01.jpg" alt="Early paper sketch of the play-tennis interaction and the wheelchair's wheel/leg parts" /><figcaption>Early paper prototype from the same submission: the &ldquo;play tennis&rdquo; interaction and wheelchair part layout.</figcaption></figure>
-<figure><img src="media/meeting-sketch-02.jpg" alt="Early paper sketch showing how to create the racket" /><figcaption>Racket creation sketch from the same paper-prototyping pass.</figcaption></figure>
-
-<h2>Supervisor Feedback (Week 5)</h2>
-<figure><img src="media/meeting-sketch-env.jpg" alt="Environment concept sketches exploring the court and arena shape" /><figcaption>Environment concept sketches explored alongside the feedback below.</figcaption></figure>
-
-<p>Thanks for the one pager. Here are some thoughts.</p>
-<p><strong>What I like...</strong></p>
-<ul>
-<li>Clear hook and novelty &mdash; seated VR tennis with hand-driven wheelchair control is distinctive and easy to pitch.</li>
-<li>VR fit is good &mdash; embodied rhythm (push, reposition, swing) can be very satisfying if tuned well.</li>
-<li>Contained environment helps &mdash; a small enclosed court reduces navigation complexity and keeps play readable.</li>
-<li>NPC role is ok &mdash; tutorial and opponent is a practical way to make it playable without multiplayer.</li>
-</ul>
-
-<p><strong>However, I have some concerns and questions...</strong></p>
-<ol>
-<li>
-<p>Movement and striking at the same time is the main risk. Players will need to push wheels and swing a racket. That is a lot of coordination and could feel tiring or awkward, especially for novices. Decide how you separate these actions: Do players push to reposition, then release and swing? Does the chair coast for a short time after pushing? Do you provide auto-centering or assisted positioning?</p>
-<blockquote>
-<p>Suggestion:<br />
-1. Push chair to reposition but the ball stays at a spot where the player can roll the chair towards it and smash it.<br />
-2. The player is in a more &lsquo;air hockey style&rsquo; gameplay where bounces don't count and only &lsquo;goals&rsquo; count as points.<br />
-3. Provide the player assisted positioning to shift them towards the ball faster to catch the smash.</p>
-</blockquote>
-</li>
-<li>
-<p>Hand-propel movement can be physically demanding and may exclude some players. Perhaps include at least one alternative control mode: &ldquo;Assisted movement&rdquo; (small joystick or auto-drift to target spots), or &ldquo;One-hand mode&rdquo; for movement.</p>
-<blockquote>
-<p>Suggestion: one hand mode for movement, using the left joystick to navigate left and right but still having to do the &ldquo;push wheelchair&rdquo; action to navigate and look for the ball.</p>
-</blockquote>
-</li>
-<li>
-<p>Difficulty options that slow the game down. Ball physics, bounce, spin, and AI that returns reliably are non-trivial. If this is too realistic, it will become hard to ship. Perhaps go arcade first: predictable ball trajectories, simple bounce rules, forgiving hit detection, and AI that returns to fixed zones rather than perfect tracking.</p>
-</li>
-<li>
-<p>Importantly &mdash; this is a real sport with real athletes. Make sure the game is not using the chair as a &ldquo;gimmick&rdquo; and that the framing is positive and competent. Keep the tone focused on skill, flow, and sports excitement, not the novelty of disability.</p>
-</li>
-</ol>
-
-<p><strong>Questions for the team to discuss:</strong></p>
-<ul>
-<li>What is your movement model? How exactly does the player propel the chair &mdash; continuous push, or push to accelerate and coast? How do you stop? (Team answer: hold and push the wheels to move &mdash; push only the right wheel to turn left, only the left wheel to turn right, push both to move forward.)</li>
-<li>How does the player aim a hit? Is it racket direction, timing, a target reticle, or assisted aiming?</li>
-<li>What is the &ldquo;fun skill&rdquo; you are training &mdash; precise timing, positioning, or anticipating bounces? Choose one as the main satisfaction source.</li>
-<li>What is your MVP match format &mdash; first to 5 points, timed rally mode, or best of 3? Keep it short for playtesting.</li>
-<li>How will you prevent fatigue and frustration? What comfort options exist and what is the default?</li>
-<li>What does the NPC do in the first 60 seconds? What is the tutorial flow: move, aim, first successful hit, first point?</li>
-</ul>
-
-<p>This feedback directly shaped the pivot documented in the final GDD: wheelchair locomotion was replaced with joystick/teleport movement, and the tone shifted from a wheelchair-tennis simulation to a sci-fi racket-sport arena &mdash; while keeping the embodied movement-and-swing core the feedback praised.</p>
+    <p><a id="_yuvouf924jq7"></a>Week 4</p>
+    <p><a id="_ykx2e6g8qkkk"></a> Team One Page GDD</p>
+    <p>Everyone please put in your one page gdd so we can expand ideas more as well as understand each others wants/desired for their games.</p>
+    <h2><a id="_wopqfh25kb52"></a>Ereef Hardi:</h2>
+    <p><img src="media/1.jpg" alt="" loading="lazy" /></p>
+    <h2><a id="_x3x7kvu4xogw"></a>Tazumi Kain:<br /><img src="media/2.jpg" alt="" loading="lazy" /></h2>
+    <p><img src="media/3.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/4.jpg" alt="" loading="lazy" /></p>
+    <p><img src="media/5.jpg" alt="" loading="lazy" /></p>
+    <p><a id="_2z3kyhff91xv"></a>Week 5</p>
+    <p><a id="_64trnts33o1j"></a><img src="media/6.jpg" alt="" loading="lazy" /></p>
+    <p>Thanks for the one pager. Here are some thoughts. What I like...</p>
+    <ul><li>Clear hook and novelty -- seated VR tennis with hand-driven wheelchair control is distinctive and easy to pitch.</li><li>VR fit is good -- embodied rhythm (push, reposition, swing) can be very satisfying if tuned well.</li><li>Contained environment help --- a small enclosed court reduces navigation complexity and keeps play readable.</li><li>NPC role is ok --- tutorial and opponent is a practical way to make it playable without multiplayer.</li></ul>
+    <p>However, I have some concerns and questions....</p>
+    <ol><li>Movement and striking at the same time is the main risk. Players will need to push wheels and swing a racket. That is a lot of coordination and could feel tiring or awkward, especially for novices. Decide how you separate these actions: Do players push to reposition, then release and swing? Does the chair coast for a short time after pushing? Do you provide auto-centering or assisted positioning?</li></ol>
+    <p>Suggestion:<br />1. Push chair to reposition but the ball stays at a spot where the player can roll the chair towards it and smash it.<br />2. The player is in a more ‘air hockey style’ gameplay where bounces dont count and only ‘goals’ count as points<br />3. Provide the player assisted positioning to shift them towards the ball faster to catch the smash</p>
+    <ol><li>Hand-propel movement can be physically demanding and may exclude some players. Perhaps include at least one alternative control mode: “Assisted movement” (small joystick or auto-drift to target spots), “One-hand mode” for movement</li></ol>
+    <p>Suggestions:<br />1. One hand mode for movement , using left joystick to navigate left and right but still having to do the “push wheelchair” action to navigate and look for the ball.</p>
+    <ol><li>Difficulty options that slow the game down.</li></ol>
+    <ul><li>Ball physics, bounce, spin, and AI that returns reliably are non-trivial. If this is too realistic, it will become hard to ship. Perhaps go arcade first:<ol><li>predictable ball trajectories</li><li>simple bounce rules</li><li>forgiving hit detection</li><li>AI that returns to fixed zones rather than perfect tracking</li></ol>
+    </li><li>Importantly.... This is a real sport with real athletes. Make sure the game is not using the chair as a “gimmick” and that the framing is positive and competent. So keep tone focused on skill, flow, and sports excitement, not novelty of disability.</li><li>Here are some questions for you to discuss as a team...<ol><li>What is your movement model? How exactly does the player propel the chair? Continuous push? Push to accelerate and coast? How do you stop?</li></ol>
+    </li></ul>
+    <ol><li>Hold and push the wheels to move:<br />only push right wheel to turn left,<br />only push left to turn right,</li></ol>
+    <p>Push both to move forward.</p>
+    <ul><li><ol><li>How does the player aim a hit? Is it racket direction, timing, a target reticle, or assisted aiming?</li><li>What is the “fun skill” you are training? Precise timing? positioning? anticipating bounces? Choose one as the main satisfaction source.</li><li>What is your MVP match format? First to 5 points? timed rally mode? best of 3? Keep it short for playtesting.</li><li>How will you prevent fatigue and frustration? What comfort options exist and what is the default?</li><li>What does the NPC do in the first 60 seconds? What is the tutorial flow: move, aim, first successful hit, first point?</li></ol>
+    </li></ul>
   </article>
   <div class="project-nav">
     <a href="../../projects/project-03.html#docs">&larr; Back to Documents</a>
