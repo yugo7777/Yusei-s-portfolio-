@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psychological Manipulation Simulator | Yusei Game Design Portfolio</title>
+  <meta property="og:title" content="Psychological Manipulation Simulator | Yusei Game Design Portfolio" />
+  <meta property="og:description" content="An idle incremental clicker set in a lab studying games of chance. Sound design, and systems and reward design, for an eight-person team." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yugo7777.github.io/Yusei-s-portfolio-/projects/project-05.html" />
+  <meta property="og:image" content="https://yugo7777.github.io/Yusei-s-portfolio-/assets/images/project-05/title-screen.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-accent="b" data-title-ja="Psychological Manipulation Simulator | Yusei Game Design Portfolio" data-title-en="Psychological Manipulation Simulator | Yusei Game Design Portfolio">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JP</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
+
+    <!-- ================= Hero / 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <h1><span class="lang-ja">Psychological Manipulation Simulator</span><span class="lang-en">Psychological Manipulation Simulator</span></h1>
+
+      <div class="hero-media" id="video">
+        <div class="media-frame">
+          <iframe src="https://www.youtube.com/embed/cm9KGZXe40o"
+                  title="Psychological Manipulation Simulator — Trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <div class="build-actions">
+          <a class="btn btn-outline" href="https://youtu.be/cm9KGZXe40o" target="_blank" rel="noopener">
+            <span class="lang-ja">YouTubeで再生する</span><span class="lang-en">Watch on YouTube</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="my-part">
+        <span class="my-part-label lang-ja">私が担当した部分</span>
+        <span class="my-part-label lang-en">My Contribution</span>
+        <ul class="lang-ja">
+          <li>4種のSurprise Mechanic(コイン、ダイス、プリンコ、ポーカー)とUIの効果音設計・制作</li>
+          <li>効果音の自作(ChipTone・GarageBandでの作成、コイン・カードの実録音、Audacityでの編集)</li>
+          <li>報酬・コスメティックの設計(実績連動の報酬体系、色による階層表現)</li>
+          <li>デザイン基準の策定と背景リサーチ(学術文献に基づく設計方針)</li>
+          <li>トレーラー映像の撮影</li>
+        </ul>
+        <ul class="lang-en">
+          <li>Sound design for all four Surprise Mechanics — coin flip, dice, Plinko, poker — and the UI</li>
+          <li>Original SFX production — created in ChipTone and GarageBand, coin and card sounds recorded myself, edited in Audacity</li>
+          <li>Reward and cosmetic design — achievement-linked reward tiers and a colour hierarchy</li>
+          <li>Design criteria and background research grounding the design in published studies</li>
+          <li>Trailer footage recording</li>
+        </ul>
+      </div>
+
+      <p class="project-pitch lang-ja">
+        プレイヤーは、運任せのゲームが持つ「やめられなさ」を研究する実験室の被験者です。コインを投げ、サイコロを振り、カードを配り、プリンコを落として「エンゲージメント・トークン」を稼ぎます。レアカードを引き当てて獲得量を倍増させ、「ウィナー・クレジット」を貯めて、よりハイリスク・ハイリターンな「サプライズ・メカニクス」を解放します。最後は「ファイナル・カウントダウン」にすべてを賭ける ——「これはギャンブルではありません。Psychological Manipulation Simulatorです!」
+      </p>
+      <p class="project-pitch lang-en">
+        You are a research subject in a lab that is studying the &ldquo;moreishness&rdquo; of games of chance. Earn &lsquo;engagement tokens&rsquo; by flipping coins, rolling dice, dealing cards, and playing plinko. Unbox rare cards and use them to multiply your winnings. Grind for &lsquo;winner credits&rsquo; to purchase higher risk higher reward &lsquo;surprise mechanics&rsquo;. Risk it all on the &lsquo;Final Countdown&rsquo;. It&rsquo;s not gambling; it&rsquo;s Psychological Manipulation Simulator!
+      </p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt><span class="lang-ja">ジャンル</span><span class="lang-en">Genre</span></dt>
+          <dd><span class="lang-ja">アイドル／インクリメンタル・クリッカー</span><span class="lang-en">Idle / Incremental Clicker</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作期間</span><span class="lang-en">Duration</span></dt>
+          <dd><span class="lang-ja">2026年2月〜現在(制作中)</span><span class="lang-en">Feb 2026 – present (in development)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">制作人数</span><span class="lang-en">Team Size</span></dt>
+          <dd><span class="lang-ja">8人</span><span class="lang-en">8 people</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">Role</span></dt>
+          <dd><span class="lang-ja">サウンドデザイン / システム・報酬設計</span><span class="lang-en">Sound Design / Systems and Reward Design</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd><span class="lang-ja">Unity、Audacity、ChipTone、GarageBand、Google Sheets、PureRef</span><span class="lang-en">Unity, Audacity, ChipTone, GarageBand, Google Sheets, and PureRef</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 制作プロセス ================= -->
+    <section id="process">
+      <div class="section-head">
+        <span class="eyebrow">Design Process</span>
+        <h2><span class="lang-ja">制作プロセス</span><span class="lang-en">Design Process</span></h2>
+        <p class="lang-ja">担当が移り変わった順に並べています。各ステップの記録は「資料」セクションからご覧いただけます。</p>
+        <p class="lang-en">The order my responsibilities moved in. Records for each step are in the Documents section below.</p>
+      </div>
+
+      <ol class="process-timeline">
+        <li>
+          <span class="process-step">01</span>
+          <h4><span class="lang-ja">リサーチ</span><span class="lang-en">Research</span></h4>
+          <p class="lang-ja">文献と市場を調査し、デザイン基準を策定しました。</p>
+          <p class="lang-en">I researched studies and the market, then set the design criteria.</p>
+          <a href="#docs"><span class="lang-ja">デザイン基準と背景調査を見る →</span><span class="lang-en">Read the criteria and research →</span></a>
+        </li>
+        <li>
+          <span class="process-step">02</span>
+          <h4><span class="lang-ja">報酬設計</span><span class="lang-en">Reward Design</span></h4>
+          <p class="lang-ja">実績とコスメティックの報酬体系を設計しました。</p>
+          <p class="lang-en">I designed the achievement and cosmetic reward tiers.</p>
+          <a href="#docs"><span class="lang-ja">報酬・コスメ設計の記録を見る →</span><span class="lang-en">Read the reward design notes →</span></a>
+        </li>
+        <li>
+          <span class="process-step">03</span>
+          <h4><span class="lang-ja">サウンド制作</span><span class="lang-en">Sound Production</span></h4>
+          <p class="lang-ja">効果音を自作し、Unityに実装しました。</p>
+          <p class="lang-en">I produced the SFX myself and implemented them in Unity.</p>
+          <a href="#docs"><span class="lang-ja">サウンド制作の記録を見る →</span><span class="lang-en">Read the sound design notes →</span></a>
+        </li>
+        <li>
+          <span class="process-step">04</span>
+          <h4><span class="lang-ja">検証・改善</span><span class="lang-en">Testing &amp; Iteration</span></h4>
+          <p class="lang-ja">プレイテストで音量・音程・間隔を調整しました。</p>
+          <p class="lang-en">Playtesting drove tuning of volume, pitch, and timing.</p>
+          <a href="#gallery"><span class="lang-ja">スクリーンショットを見る →</span><span class="lang-en">See the screenshots →</span></a>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 資料(ワークブック・GDD抜粋) ================= -->
+    <section id="docs">
+      <div class="section-head">
+        <span class="eyebrow">Documents</span>
+        <h2><span class="lang-ja">資料</span><span class="lang-en">Documents</span></h2>
+        <p class="lang-ja">私が実際に書いた週次ワークブックとGDDの担当章です。要約せず原文のまま掲載しています。</p>
+        <p class="lang-en">My own weekly workbooks and the GDD sections I wrote, reproduced as written rather than summarised.</p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">GDD抜粋</span>
+          <span class="doc-kind lang-en">GDD Extract</span>
+          <h4><span class="lang-ja">デザイン基準と背景調査</span><span class="lang-en">Design Criteria &amp; Research</span></h4>
+          <p class="lang-ja">文献調査をもとに策定した設計方針です。</p>
+          <p class="lang-en">The design criteria I set from published research.</p>
+          <a class="work-link" href="../docs/project-05/01-design-criteria-research.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">ワークブック</span>
+          <span class="doc-kind lang-en">Workbook</span>
+          <h4><span class="lang-ja">リサーチ・企画</span><span class="lang-en">Research &amp; Planning</span></h4>
+          <p class="lang-ja">コンセプト案、市場調査、ムードボードの記録です。</p>
+          <p class="lang-en">Records of the concept pitches, market research, and mood boards.</p>
+          <a class="work-link" href="../docs/project-05/02-research-planning.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">ワークブック</span>
+          <span class="doc-kind lang-en">Workbook</span>
+          <h4><span class="lang-ja">報酬・コスメティック設計</span><span class="lang-en">Reward &amp; Cosmetic Design</span></h4>
+          <p class="lang-ja">実績に紐づく報酬と、色による階層表現の記録です。</p>
+          <p class="lang-en">Records of the achievement-linked rewards and the colour hierarchy.</p>
+          <a class="work-link" href="../docs/project-05/03-reward-cosmetic-design.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+        <div class="doc-card">
+          <span class="doc-kind lang-ja">ワークブック</span>
+          <span class="doc-kind lang-en">Workbook</span>
+          <h4><span class="lang-ja">サウンドデザイン</span><span class="lang-en">Sound Design</span></h4>
+          <p class="lang-ja">効果音の自作・実装・プレイテストの記録です。</p>
+          <p class="lang-en">Records of producing, implementing, and testing the SFX.</p>
+          <a class="work-link" href="../docs/project-05/04-sound-design.html">
+            <span class="lang-ja">資料を読む →</span><span class="lang-en">Read document →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= スクリーンショット ================= -->
+    <section id="gallery">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2><span class="lang-ja">スクリーンショット</span><span class="lang-en">Screenshots</span></h2>
+        <p class="lang-ja">環境・UI・3Dアセットはチームの他メンバーが制作しました。私はこの画面で鳴る効果音と、実績に紐づく報酬体系を担当しています。</p>
+        <p class="lang-en">The environment, UI, and 3D assets were created by other members of the team. My work here is the sound these screens play, and the achievement-linked reward tiers.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="../assets/images/project-05/title-screen.jpg" alt="Psychological Manipulation Simulator title screen" loading="lazy" />
+          <figcaption><span class="lang-ja">タイトル画面。<strong>私の担当:</strong> メニューのボタン音・遷移音</span><span class="lang-en">The title screen. <strong>My work:</strong> the menu button and transition sounds</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= チーム・クレジット ================= -->
+    <section id="credits">
+      <div class="section-head">
+        <span class="eyebrow">Team &amp; Credits</span>
+        <h2><span class="lang-ja">チーム・クレジット</span><span class="lang-en">Team &amp; Credits</span></h2>
+        <p class="lang-ja">IGB300 / IGB301 Team Omega(8人チーム)<br />スタジオ名:Sunking Studios</p>
+        <p class="lang-en">IGB300 / IGB301 Team Omega — Eight-Person Team<br />Studio: Sunking Studios</p>
+      </div>
+      <ul class="credits-list">
+        <li class="is-me">
+          <span class="credit-name">Yusei Nakajima</span>
+          <span class="credit-role lang-ja">サウンドデザイン / 報酬・コスメティック設計 / デザイン基準策定 / 背景リサーチ</span>
+          <span class="credit-role lang-en">Sound Design / Reward and Cosmetic Design / Design Criteria / Background Research</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 1</span>
+          <span class="credit-role lang-ja">プロデューサー</span>
+          <span class="credit-role lang-en">Producer</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 2</span>
+          <span class="credit-role lang-ja">プレゼンテーションチームリード</span>
+          <span class="credit-role lang-en">Presentation Team Lead</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 3</span>
+          <span class="credit-role lang-ja">3Dアーティスト</span>
+          <span class="credit-role lang-en">3D Artist</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 4</span>
+          <span class="credit-role lang-ja">環境デザイナー</span>
+          <span class="credit-role lang-en">Environment Designer</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 5</span>
+          <span class="credit-role lang-ja">システムチームリード</span>
+          <span class="credit-role lang-en">Systems Team Lead</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 6</span>
+          <span class="credit-role lang-ja">システムデザイナー</span>
+          <span class="credit-role lang-en">Systems Designer</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 7</span>
+          <span class="credit-role lang-ja">UI/UXデザイナー</span>
+          <span class="credit-role lang-en">UI/UX Designer</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">環境、UI、3Dアセットを含むビジュアル面は、上記のチームメンバーが制作しました。</p>
+      <p class="credits-note lang-en">The visual side of the project, including the environment, UI, and 3D assets, was created by the team members credited above.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ================= 外部アセット・ライセンス ================= -->
+    <section id="external-assets">
+      <div class="section-head">
+        <span class="eyebrow">External Assets &amp; Licences</span>
+        <h2><span class="lang-ja">外部アセット・ライセンス</span><span class="lang-en">External Assets &amp; Licences</span></h2>
+      </div>
+      <ul class="credits-list">
+        <li>
+          <span class="credit-name">Kenney — Interface Sounds</span>
+          <span class="credit-role lang-ja">クリック音・ホバー音・確定音など、UIの基礎レイヤーに使用しました。CC0ライセンスで公開されています。<br /><a href="https://kenney.nl/assets/interface-sounds" target="_blank" rel="noopener noreferrer" style="word-break:break-all;">https://kenney.nl/assets/interface-sounds</a></span>
+          <span class="credit-role lang-en">Used for the basic UI interaction layer — click, hover, and confirmation sounds. Released under a CC0 licence.<br /><a href="https://kenney.nl/assets/interface-sounds" target="_blank" rel="noopener noreferrer" style="word-break:break-all;">https://kenney.nl/assets/interface-sounds</a></span>
+        </li>
+        <li>
+          <span class="credit-name">Pixabay</span>
+          <span class="credit-role lang-ja">コイン、ダイス、ポーカーの効果音の素材として使用し、音程・音量・速度を調整したうえで実装しました。</span>
+          <span class="credit-role lang-en">Used as source material for the coin, dice, and poker sound effects, then edited for pitch, volume, and speed before implementation.</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">これらの外部アセットは中島悠成が制作したものではありません。私はこれらを編集・調整したうえで実装し、あわせてコイン・カードの効果音を自分で録音し、ChipToneとGarageBandで効果音を制作しました。</p>
+      <p class="credits-note lang-en">These third-party assets were not created by Yusei Nakajima. I edited and implemented them, and alongside them recorded the coin and card sounds myself and produced further sound effects in ChipTone and GarageBand.</p>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-04.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Yusei. All rights reserved.</p>
+      <a class="back-to-top" href="#"><span class="lang-ja">↑ トップに戻る</span><span class="lang-en">↑ Back to top</span></a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
