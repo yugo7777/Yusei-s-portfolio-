@@ -4,29 +4,30 @@
 
 .doc-head { margin: 8px 0 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
 .doc-head .doc-kind {
-  display: inline-block; color: var(--project-accent); font-size: 0.75rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;
+  display: inline-block; color: var(--text-faint); font-size: 0.8rem; font-weight: 700;
+  margin-bottom: 12px;
 }
 .doc-head h1 {
-  font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.7rem);
-  line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em;
+  font-size: clamp(1.7rem, 3.6vw, 2.3rem);
+  line-height: 1.35; margin: 0 0 14px; font-weight: 700;
 }
 .doc-head .doc-meta { color: var(--text-faint); font-size: 0.88rem; margin: 0; }
 
-.doc-body { max-width: 760px; }
+/* Source documents contain bare reference URLs, which are single unbreakable
+   tokens and push the page sideways on narrow screens if left alone. */
+.doc-body { max-width: 760px; overflow-wrap: break-word; }
 .doc-body h1, .doc-body h2, .doc-body h3, .doc-body h4 {
-  font-family: var(--font-display); line-height: 1.35; margin: 2.2em 0 0.6em;
-  letter-spacing: -0.01em;
+  line-height: 1.45; margin: 2.2em 0 0.6em; font-weight: 700;
 }
 .doc-body h1 { font-size: 1.7rem; }
 .doc-body h2 {
   font-size: 1.35rem; padding-top: 0.7em; border-top: 1px solid var(--border);
 }
-.doc-body h3 { font-size: 1.12rem; color: var(--project-accent); }
+.doc-body h3 { font-size: 1.1rem; color: var(--text); }
 .doc-body h4 { font-size: 1rem; color: var(--text-muted); }
 .doc-body > :first-child { margin-top: 0; }
 
-.doc-body { line-height: 1.7; }
+.doc-body { line-height: 1.8; }
 .doc-body p { color: var(--text-muted); margin: 0 0 0.75em; }
 .doc-body p:empty { display: none; }
 .doc-body strong { color: var(--text); }
@@ -37,8 +38,8 @@
 .doc-body a { word-break: break-word; }
 
 .doc-body img {
-  width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border);
-  background: var(--bg-elevated); margin: 1.6em 0;
+  width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--bg-subtle); margin: 1.6em 0;
 }
 
 .doc-body table {
@@ -48,11 +49,11 @@
 .doc-body th, .doc-body td {
   border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top;
 }
-.doc-body th { background: var(--bg-elevated); color: var(--text); font-weight: 700; }
+.doc-body th { background: var(--bg-subtle); color: var(--text); font-weight: 700; }
 
 .doc-body blockquote {
   margin: 1.6em 0; padding: 4px 0 4px 20px;
-  border-left: 3px solid var(--project-accent); color: var(--text-muted);
+  border-left: 4px solid var(--accent); color: var(--text-muted);
 }
 
 /* Wide content must scroll inside itself, never the page */
