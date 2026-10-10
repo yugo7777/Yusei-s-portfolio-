@@ -176,6 +176,14 @@ hr.divider { display: none; }
 .step-num { display: block; font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--accent); margin-bottom: var(--space-1); }
 .step-card h3 { margin: 0 0 var(--space-1); font-size: 20px; line-height: 1.5; font-weight: 700; }
 .step-card p { margin: 0; color: var(--text-muted); }
+.subhead { font-size: 20px; font-weight: 700; margin: 0 0 var(--space-3); }
+.subhead + .principle-grid, .subhead + .step-grid { margin-top: 0; }
+.principle-grid + .subhead { margin-top: var(--space-5); }
+/* Principles are the claims; the steps below are how they are carried out. */
+.principle-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-3); }
+.principle { border-top: 4px solid var(--accent); padding-top: var(--space-2); }
+.principle h4 { margin: 0 0 var(--space-1); font-size: 20px; line-height: 1.5; font-weight: 700; }
+.principle p { margin: 0; color: var(--text-muted); }
 
 /* ---------- Project detail page ---------- */
 
@@ -272,6 +280,8 @@ figure.gallery-item.is-logo img { object-fit: contain; padding: var(--space-3); 
 .contact-band .contact-links a:hover { background: var(--accent-hover); color: #fff; }
 .contact-band .contact-links a.contact-primary { background: #fff; color: var(--accent); }
 .contact-band .contact-links a.contact-primary:hover { background: var(--accent-tint); }
+.contact-band--compact { padding: var(--space-5) 0; margin-top: var(--space-4); }
+.contact-band--compact h2 { font-size: clamp(22px, 2.6vw, 28px); }
 
 .site-footer { border-top: 1px solid var(--border); padding: var(--space-3) 0; color: var(--text-muted); font-size: 14px; }
 .site-footer .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
