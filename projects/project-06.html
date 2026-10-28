@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaotic Journey | Yusei Game Design Portfolio</title>
+  <meta property="og:title" content="Chaotic Journey | Yusei Game Design Portfolio" />
+  <meta property="og:description" content="A level design project in Unreal Engine 5: a third-person action-puzzle level through an asteroid base, planned in top-down diagrams and built as a blockout." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yugo7777.github.io/Yusei-s-portfolio-/projects/project-06.html" />
+  <meta property="og:image" content="https://yugo7777.github.io/Yusei-s-portfolio-/assets/images/project-06/06-exploration.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%230017c1%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 font-weight=%22bold%22 fill=%22white%22>Y</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-title-ja="Chaotic Journey | Yusei Game Design Portfolio" data-title-en="Chaotic Journey | Yusei Game Design Portfolio">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI NAKAJIMA</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#works"><span class="lang-ja">作品</span><span class="lang-en">Works</span></a></li>
+          <li><a href="../index.html#about"><span class="lang-ja">自己紹介</span><span class="lang-en">About</span></a></li>
+          <li><a href="../index.html#contact"><span class="lang-ja">連絡先</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JP</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
+
+    <!-- ================= Hero / 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <p class="status-label"><span class="lang-ja">制作中</span><span class="lang-en">In development</span></p>
+      <h1>Chaotic Journey<span class="title-note"><span class="lang-ja">(仮)</span><span class="lang-en"> (working title)</span></span></h1>
+
+      <!-- ★編集ポイント: プレイ映像ができたら、ここを .media-frame + iframe に差し替える -->
+      <figure class="hero-media hero-figure">
+        <a href="../assets/images/project-06/06-exploration.png" target="_blank" rel="noopener">
+          <img src="../assets/images/project-06/06-exploration.png" alt="Top-down level diagram of the asteroid base, version 3, with exploration elements" width="895" height="533" />
+        </a>
+        <figcaption><span class="lang-ja">最新のトップダウン図(v3:探索要素を追加)。クリックで拡大します。</span><span class="lang-en">The latest top-down diagram (v3, with exploration elements added). Click to enlarge.</span></figcaption>
+      </figure>
+
+      <div class="my-part">
+        <span class="my-part-label lang-ja">私が担当している部分</span>
+        <span class="my-part-label lang-en">My Contribution</span>
+        <ul class="lang-ja">
+          <li>レベル設計(Figmaでのトップダウン図、進行ルート・ランドマーク・緊張度の設計)</li>
+          <li>Unreal Engine 5でのブロックアウト</li>
+          <li>ギミックの実装(Blueprint)</li>
+          <li>環境アセットの配置・調整</li>
+        </ul>
+        <ul class="lang-en">
+          <li>Level design — top-down diagrams in Figma, critical path, landmarks, and tension curve</li>
+          <li>Blockout in Unreal Engine 5</li>
+          <li>Gimmick implementation in Blueprint</li>
+          <li>Placing and tuning environment assets</li>
+        </ul>
+      </div>
+
+      <p class="project-pitch lang-ja">
+        小惑星に建設された基地を抜けて、終点の発着場をめざす三人称視点のアクション・パズルです。プレイヤーは仲間を救出し、仲間を「持つ・投げる・召喚する」ことで障害や仕掛けを突破します。足場渡り、戦闘、ルート選択を組み合わせ、周囲を観察して進み方を考えてもらうレベルを目指しています。
+      </p>
+      <p class="project-pitch lang-en">
+        A third-person action-puzzle level set in a base built on an asteroid, where the goal is to reach the launch pad at the far end. The player rescues companions, then carries, throws, and summons them to get past obstacles and mechanisms. Platforming, combat, and route choice are combined so that players read the space and work out how to move through it.
+      </p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt><span class="lang-ja">ジャンル</span><span class="lang-en">Genre</span></dt>
+          <dd><span class="lang-ja">三人称視点 3Dアクション・パズル/プラットフォーマー</span><span class="lang-en">Third-person 3D action-puzzle / platformer</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">状況</span><span class="lang-en">Status</span></dt>
+          <dd><span class="lang-ja">制作中(ブロックアウト・環境制作)</span><span class="lang-en">In development (blockout and environment)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">Role</span></dt>
+          <dd><span class="lang-ja">レベルデザイン / ブロックアウト / ギミック実装 / 環境配置</span><span class="lang-en">Level Design / Blockout / Gimmick Implementation / Environment Dressing</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd><span class="lang-ja">Unreal Engine 5.8、Blueprint、Figma</span><span class="lang-en">Unreal Engine 5.8, Blueprint, and Figma</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ================= 設計のポイント ================= -->
+    <section id="design">
+      <div class="section-head">
+        <h2><span class="lang-ja">設計のポイント</span><span class="lang-en">Design Decisions</span></h2>
+        <p class="lang-ja">基地の中を進むルートを、どの順番で何を体験させるかから組み立てています。</p>
+        <p class="lang-en">The route through the base is built around what the player should experience, and in what order.</p>
+      </div>
+      <ul class="principle-grid">
+        <li class="principle">
+          <h4><span class="lang-ja">基本操作から応用へ</span><span class="lang-en">From basics to combinations</span></h4>
+          <p class="lang-ja">序盤で足場渡りや仕掛けに一つずつ触れ、後半で戦闘や複数の要素を組み合わせる構成にしています。</p>
+          <p class="lang-en">Early rooms introduce platforming and mechanisms one at a time; later rooms combine them with combat.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">リスクの異なる分岐</span><span class="lang-en">Routes with different risks</span></h4>
+          <p class="lang-ja">リング状の通路では、敵がいる側と、壊せる障害物がある側に道を分け、どちらを通るかをプレイヤーに選ばせます。</p>
+          <p class="lang-en">The ring corridor splits into a side guarded by enemies and a side blocked by breakable obstacles, and the player chooses which to take.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">危険を引き受ける寄り道</span><span class="lang-en">Optional detours with risk</span></h4>
+          <p class="lang-ja">浮遊パッドで渡る脇道を設け、リスクを取って探索する選択肢を用意しています。</p>
+          <p class="lang-en">A side path across floating pads gives players the option to take a risk in exchange for exploration.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">ランドマークで位置を伝える</span><span class="lang-en">Landmarks for orientation</span></h4>
+          <p class="lang-ja">電波塔(L1)、観測ドーム(L2)、発着場の光の柱(L3)を、離れた区画からも見える目印として配置しています。</p>
+          <p class="lang-en">A radio tower (L1), an observation dome (L2), and the launch pad's pillar of light (L3) are placed so they can be seen from distant areas.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">屋内と屋外の切り替え</span><span class="lang-en">Alternating inside and outside</span></h4>
+          <p class="lang-ja">宇宙に開けた外部デッキと基地内部を交互に通り、景観と空間の圧迫感に変化をつけています。</p>
+          <p class="lang-en">The route alternates between open decks facing space and the enclosed base, varying both the view and how confined the space feels.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">緊張度を図で管理する</span><span class="lang-en">Planning the tension curve</span></h4>
+          <p class="lang-ja">エリア01〜12ごとに緊張度を数値にしてグラフ化しました。戦闘が続いた後に休める区画(06)を挟み、終盤の回転バーの難所(11)を山場にしています。</p>
+          <p class="lang-en">Each of areas 01–12 has a tension score on a chart. A rest area (06) follows the opening fights, and the rotating-bar gauntlet (11) is the peak near the end.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= マップの変遷 ================= -->
+    <section id="iterations">
+      <div class="section-head">
+        <h2><span class="lang-ja">マップの変遷</span><span class="lang-en">How the Map Evolved</span></h2>
+        <p class="lang-ja">Figmaのトップダウン図を、部屋の配置から進行・分析・テーマ・探索要素の順に描き直してきました。画像はクリックで拡大できます。</p>
+        <p class="lang-en">The top-down diagram in Figma was redrawn in stages: room layout, then flow, analysis, theme, and exploration. Click any image to enlarge it.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/01-first-layout.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/01-first-layout.png" alt="First top-down layout with rooms, enemies, and gimmick legend" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>v0 部屋の配置:</strong>部屋と敵・ギミックの位置だけを置いた最初の図。</span><span class="lang-en"><strong>v0 Room layout:</strong> the first pass, placing only rooms, enemies, and mechanisms.</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/02-flow.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/02-flow.png" alt="Top-down layout with arrows showing the player's route" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>v1 進行方向:</strong>プレイヤーが進む向きを矢印で書き加えました。</span><span class="lang-en"><strong>v1 Flow:</strong> arrows added to show which way the player moves.</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/03-analysis.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/03-analysis.png" alt="Level analysis sheet with area notes, landmark sightlines, tension graph, and gimmick table" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>分析:</strong>エリア別のメモ、ランドマークの見える範囲、緊張度の推移、ギミックが出る部屋の表。</span><span class="lang-en"><strong>Analysis:</strong> notes per area, landmark sightlines, the tension curve, and where each mechanism appears.</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/04-asteroid-base.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/04-asteroid-base.png" alt="Map draft themed as an asteroid base" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>v2 小惑星の基地:</strong>前半を基地の中、後半を小惑星の岩場としてテーマを分けた案。</span><span class="lang-en"><strong>v2 Asteroid base:</strong> the first half set inside the base, the second half on the asteroid's rocks.</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/05-outside-route.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/05-outside-route.png" alt="Map draft with an outdoor route along the asteroid surface" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>v2.1 外を進む:</strong>ほぼ全体を小惑星の外側に通した通路で進む案。照明で道筋を示しています。</span><span class="lang-en"><strong>v2.1 Outside route:</strong> most of the route runs along walkways outside the asteroid, with lights marking the path.</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <a href="../assets/images/project-06/06-exploration.png" target="_blank" rel="noopener"><img src="../assets/images/project-06/06-exploration.png" alt="Map version 3 with hidden routes, coins, records, and checkpoints" loading="lazy" /></a>
+          <figcaption><span class="lang-ja"><strong>v3 探索要素:</strong>隠し通路・コイン・記録データ・チェックポイントを追加。</span><span class="lang-en"><strong>v3 Exploration:</strong> hidden routes, coins, collectible records, and checkpoints added.</span></figcaption>
+        </figure>
+      </div>
+      <div class="build-actions">
+        <a class="btn btn-outline" href="https://www.figma.com/design/F4XyZP6EtrKTBVdjEDqihc/Level-design-top-down?node-id=134-2" target="_blank" rel="noopener">
+          <span class="lang-ja">Figmaで設計資料を見る</span><span class="lang-en">Open the design file in Figma</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= 確認と修正 ================= -->
+    <section id="testing">
+      <div class="section-head">
+        <h2><span class="lang-ja">動作確認と修正</span><span class="lang-en">Checks &amp; Fixes</span></h2>
+        <p class="lang-ja">現時点では、私自身による動作確認と技術的なチェックの結果です。第三者によるプレイテストはこれから行います。</p>
+        <p class="lang-en">So far these come from my own playthroughs and technical checks. Playtests with other players are still to come.</p>
+      </div>
+      <ul class="credits-list">
+        <li>
+          <span class="credit-name"><span class="lang-ja">操作の整理</span><span class="lang-en">Controls</span></span>
+          <span class="credit-role lang-ja">持った物を置く操作と投げる操作が混同されていたため、Eで置く・Bで投げる操作に分けました。</span>
+          <span class="credit-role lang-en">Putting down and throwing a held object were easy to confuse, so I split them: E to put down, B to throw.</span>
+        </li>
+        <li>
+          <span class="credit-name"><span class="lang-ja">投げる方向</span><span class="lang-en">Throw aim</span></span>
+          <span class="credit-role lang-ja">投げる方向をカメラの向きに合わせ、予測軌道を表示する実装を進めています。</span>
+          <span class="credit-role lang-en">Throws now follow the camera direction, and I am implementing a predicted trajectory line.</span>
+        </li>
+        <li>
+          <span class="credit-name"><span class="lang-ja">意図しない近道</span><span class="lang-en">Unintended shortcut</span></span>
+          <span class="credit-role lang-ja">リング中央に旧通路の床が残り、分岐を通らずに近道できる箇所が見つかったため、接続部分を短くしました。</span>
+          <span class="credit-role lang-en">Floor left over from an old corridor in the middle of the ring let players skip the branch, so I shortened the connecting section.</span>
+        </li>
+        <li>
+          <span class="credit-name"><span class="lang-ja">基本動作</span><span class="lang-en">Basics</span></span>
+          <span class="credit-role lang-ja">Play起動、開始地点への出現、主要な床と穴の当たり判定を確認しました。全ルートの通しプレイと落下後の復帰は今後確認します。</span>
+          <span class="credit-role lang-en">Verified play start, spawning at the start point, and collision on the main floors and pits. A full run of every route and recovery after falling are still to be checked.</span>
+        </li>
+      </ul>
+      <p class="note lang-ja">次は、初めて遊ぶプレイヤーが「次の目的地」「操作できる物」「分岐のリスク」をどう理解するかを観察し、誘導と配置を調整する予定です。</p>
+      <p class="note lang-en">Next, I will watch first-time players to see how they read the next destination, what they can interact with, and the risk of each branch, then adjust guidance and placement.</p>
+    </section>
+
+    <!-- ================= 外部アセット・ライセンス ================= -->
+    <section id="external-assets">
+      <div class="section-head">
+        <h2><span class="lang-ja">外部アセット・ライセンス</span><span class="lang-en">External Assets &amp; Licences</span></h2>
+      </div>
+      <!-- ★編集ポイント: RP_Vol_01 と ModularScifiHallways の正式な商品名・作者・配布元が分かったら追記する -->
+      <ul class="credits-list">
+        <li>
+          <span class="credit-name">Stack O Bot — Epic Games</span>
+          <span class="credit-role lang-ja">Epic Gamesのサンプルプロジェクト。キャラクター、基本システム、一部の環境とギミックに使用しています。</span>
+          <span class="credit-role lang-en">An Epic Games sample project, used for the character, core systems, and some environment pieces and mechanisms.</span>
+        </li>
+        <li>
+          <span class="credit-name">RP_Vol_01</span>
+          <span class="credit-role lang-ja">小惑星の岩のアセットとして使用しています。</span>
+          <span class="credit-role lang-en">Used for the asteroid rocks.</span>
+        </li>
+        <li>
+          <span class="credit-name">ModularScifiHallways (StarterBundle)</span>
+          <span class="credit-role lang-ja">SFの通路・設備のアセットとして使用しています。</span>
+          <span class="credit-role lang-en">Used for the sci-fi corridors and fixtures.</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">これらの外部アセットは中島悠成が制作したものではありません。私はレベルの設計、ブロックアウト、ギミックの実装、アセットの配置と調整を担当しています。</p>
+      <p class="credits-note lang-en">These third-party assets were not created by Yusei Nakajima. My work is the level design, blockout, gimmick implementation, and the placement and tuning of these assets.</p>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-05.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
+    </div>
+  </main>
+
+  <section class="contact-band contact-band--compact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></h2>
+        <a class="contact-email" href="mailto:yugo59077@gmail.com">yugo59077@gmail.com</a>
+      </div>
+      <div class="contact-links">
+        <a class="contact-primary" href="../assets/docs/Yusei_Nakajima_Resume.pdf" download><span class="lang-ja">レジュメ(PDF)</span><span class="lang-en">Resume (PDF)</span></a>
+        <a href="../index.html#works"><span class="lang-ja">ほかの作品を見る</span><span class="lang-en">See other work</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Yusei Nakajima</p>
+      <a class="back-to-top" href="#"><span class="lang-ja">↑ トップに戻る</span><span class="lang-en">↑ Back to top</span></a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
