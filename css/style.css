@@ -202,6 +202,17 @@ hr.divider { display: none; }
 .my-part li:last-child { margin-bottom: 0; }
 .my-part li::marker { color: var(--accent); }
 
+/* Work still in progress says so before the title, not in small print. */
+.status-label { display: inline-block; margin: 0 0 var(--space-2); padding: 2px var(--space-1); border: 1px solid var(--accent); border-radius: var(--radius-sm); color: var(--accent); font-size: 14px; font-weight: 700; }
+.title-note { font-size: 0.5em; font-weight: 500; color: var(--text-muted); margin-left: var(--space-1); }
+.hero-figure { margin: 0 0 var(--space-4); }
+.hero-figure img { width: 100%; height: auto; border-radius: var(--radius-lg); background: #111; }
+.hero-figure figcaption { margin-top: var(--space-1); font-size: 14px; color: var(--text-muted); }
+/* Diagrams are drawn on a dark canvas; letterbox them rather than crop. */
+.thumb-map { background: #111; }
+.thumb-map img { object-fit: contain; }
+figure.gallery-item a { display: block; }
+
 /* ---------- Team & credits ---------- */
 
 .credits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); }
