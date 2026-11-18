@@ -152,31 +152,105 @@
       </div>
 
       <figure class="diagram-figure">
-        <a href="../assets/images/project-06/level-overview-full.webp" target="_blank" rel="noopener">
-          <img src="../assets/images/project-06/level-overview.webp" alt="Top-down level diagram of Chaotic Journey with route arrows, recharge points C1 to C4, movable rocks, heights, and a design memo split into three turns" width="1600" height="1082" />
+        <a href="../assets/images/project-06/06a-level-design-full.webp" target="_blank" rel="noopener">
+          <img src="../assets/images/project-06/06a-level-design.webp" alt="Current top-down level design of Chaotic Journey with floors coloured by height, orange route arrows, and area IDs A01 to A11" width="1600" height="1086" />
         </a>
         <figcaption>
-          <span class="lang-ja">レベル全体のトップダウン図(Figma)。進行ルート、充電地点(C1〜C4)、動かせる岩、高さの仮設定を示し、右のメモに「ターン1 基礎/ターン2 応用/ターン3 複合」の区間構成をまとめています。この図は継続送風の仕様で作成したもので、「長噴射・短噴射」「容量100」などは変更前の仮仕様です。単発パルスへの変更は図には反映されていません。</span>
-          <span class="lang-en">Top-down diagram of the whole level, drawn in Figma. It marks the route, recharge points C1–C4, movable rocks, and provisional heights; the memo on the right sets out the sections as Turn 1 (basics), Turn 2 (application), and Turn 3 (combination). The diagram was drawn for the earlier continuous-wind design, so its "long burst / short burst" and "capacity 100" notes are the provisional values from before the change. The switch to a single pulse is not reflected in it.</span>
+          <span class="lang-ja">現行のレベル設計図(Figma)。床の色で高さを、橙の矢印で進行方向を示し、各区間に A01〜A11 の区間IDを付けています。図面は計画を表すもので、全区間の到達可能性はまだ検証していません。図中のメモには仲間を使っていた時期の記述が残っており、現在のパルス操作との整合は、図の中でも確認事項として挙げています。</span>
+          <span class="lang-en">The current level design, drawn in Figma. Floor colour shows height, orange arrows show the route, and each section carries an area ID from A01 to A11. The diagram is a plan: whether every section can actually be reached has not been tested. Some notes on it still date from when the player used companions, and bringing them in line with the pulse controls is listed on the diagram itself as an open item.</span>
         </figcaption>
       </figure>
       <div class="build-actions">
-        <a class="btn btn-outline" href="../assets/images/project-06/level-overview-full.webp" target="_blank" rel="noopener">
-          <span class="lang-ja">全体図を拡大して見る</span><span class="lang-en">Open the full-size diagram</span>
+        <a class="btn btn-outline" href="../assets/images/project-06/06a-level-design-full.webp" target="_blank" rel="noopener">
+          <span class="lang-ja">設計図を拡大して見る</span><span class="lang-en">Open the full-size diagram</span>
         </a>
       </div>
 
+      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">区間ごとのメモ</span><span class="lang-en">Notes for each area</span></h3>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間ID(A番号)ごとに、決めた内容(やること)と、まだ詰めたい内容(次に詰めること)を分けて整理しました。いずれも図面上の設計で、実機での検証はこれからです。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">For each area ID, what has been decided (what the player does) is kept apart from what still needs settling. Both are design on paper; testing in engine is still to come.</p>
+      <figure class="diagram-figure">
+        <a href="../assets/images/project-06/06b-area-spec-full.webp" target="_blank" rel="noopener">
+          <img src="../assets/images/project-06/06b-area-spec.webp" alt="Table of area notes from A01 to A11 with each area's height, what the player does, and what is still to settle" width="1600" height="694" loading="lazy" />
+        </a>
+        <figcaption>
+          <span class="lang-ja">区間ごとのメモ(Figma)。左から区間と高さ、やること、次に詰めること。</span>
+          <span class="lang-en">The area notes, drawn in Figma. Columns, left to right: area and height, what the player does, what is still to settle.</span>
+        </figcaption>
+      </figure>
+
+      <details class="text-version">
+        <summary><span class="lang-ja">区間ごとのメモをテキストで読む</span><span class="lang-en">Read the area notes as text</span></summary>
+        <ul class="finding-list">
+          <li><h4><span class="lang-ja">A01 開始(Z 0 m)</span><span class="lang-en">A01 Start (Z 0 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">正面の足場区間へ進む。</span><span class="lang-en">Head for the platforms ahead.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">開始地点から−10 mの床へどう降りるか。</span><span class="lang-en">How the player gets down from the start to the −10 m floor.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A02 足場・ファン(Z −10 m)</span><span class="lang-en">A02 Platforms and fan (Z −10 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">足場を渡り、ファンを使う。</span><span class="lang-en">Cross the platforms and use the fan.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">足場の間隔と、風で上がれる高さ。</span><span class="lang-en">Platform spacing, and how high the air lifts the player.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A03 制御室・通路(Z +10 m)</span><span class="lang-en">A03 Control room and passage (Z +10 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を壊し、通路から屋外へ出る。</span><span class="lang-en">Break the rock and leave the passage for the outside.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">仲間で壊す旧案と、現在のパルス操作を合わせる。</span><span class="lang-en">Reconcile the earlier idea of breaking it with a companion with the current pulse controls.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A04 戦闘広場(Z +5 / +15 m)</span><span class="lang-en">A04 Combat yard (Z +5 / +15 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">敵に対処し、上段通路へ進む。</span><span class="lang-en">Deal with the enemies and move up to the upper walkway.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">敵の配置と、段差を越える場所。</span><span class="lang-en">Enemy placement, and where the height change is climbed.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A05 電波塔(Z +20 m)</span><span class="lang-en">A05 Radio tower (Z +20 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">橋を起動し、崩れた階段を越える。</span><span class="lang-en">Raise the bridge and get past the collapsed stairs.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">仲間を投げる操作を残すか。橋の起動条件。</span><span class="lang-en">Whether to keep throwing a companion; what raises the bridge.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A06 足場・小部屋(Z +30 / +40 m)</span><span class="lang-en">A06 Platforms and small room (Z +30 / +40 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">動く足場を乗り継ぎ、ファンで上段へ進む。</span><span class="lang-en">Ride the moving platforms, then use the fan to reach the upper level.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">小部屋の下段の高さと、足場の移動範囲。</span><span class="lang-en">The height of the room's lower level, and the platforms' range.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A07 ドーム(Z +40 m)</span><span class="lang-en">A07 Dome (Z +40 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">障害物を抜けて、リングの入口へ進む。</span><span class="lang-en">Get past the obstacles to the ring entrance.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">回転バーを見て待てる場所。岩を壊す手順。</span><span class="lang-en">A place to wait and watch the rotating bars; the steps for breaking the rock.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A08 リング(Z +40 m)</span><span class="lang-en">A08 Ring (Z +40 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">左右どちらかを通り、出口で合流する。</span><span class="lang-en">Take the left or right side; both rejoin at the exit.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">左右で何が違うか。各スイッチの接続先。</span><span class="lang-en">What differs between the sides; what each switch connects to.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A09 回転バー(Z +40 m)</span><span class="lang-en">A09 Rotating bars (Z +40 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を除去し、スイッチでバーを止める。</span><span class="lang-en">Clear the rock and stop the bars with a switch.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">片方を止めればよいか、両方必要か。</span><span class="lang-en">Whether stopping one bar is enough, or both are needed.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A10 高所へ(Z +40 → +50 m)</span><span class="lang-en">A10 Up high (Z +40 → +50 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">浮遊パッドを起動し、近づいてから跳ぶ。</span><span class="lang-en">Start the floating pad, ride it close, then jump.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">+30 mのボタンへの道と、パッドが運ぶ高さ。</span><span class="lang-en">The route to the button at +30 m, and how high the pad carries the player.</span></dd>
+            </dl></li>
+          <li><h4><span class="lang-ja">A11 最後の移動(Z +50 m)</span><span class="lang-en">A11 Final move (Z +50 m)</span></h4>
+            <dl>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を前へ動かして乗り、パルスでゴールへ渡る。</span><span class="lang-en">Push a rock forward, ride it, and pulse across to the goal.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">岩に乗れるか。撃つときに着地点が見えるか。</span><span class="lang-en">Whether the player can stand on the rock, and see the landing spot while firing.</span></dd>
+            </dl></li>
+        </ul>
+      </details>
+
       <!-- 差し替え: 同じ区間の「Figma拡大図」と「Unreal Engineの画面」を左右に並べる。
-           1. 比較する区間を決める(例: 図の区間番号 01〜12 のどれか)
-           2. Figma側: その区間を書き出した画像を assets/images/project-06/compare-figma.webp に置く
+           1. 比較する区間を区間ID(A01〜A11)で決める
+           2. Figma側: 06A のその区間を書き出した画像を assets/images/project-06/compare-figma.webp に置く
            3. Unreal側: 同じ区間を同じ向きで撮った画面を assets/images/project-06/compare-unreal.webp に置く
            4. 下の各 <div class="slot"> を
               <a href="../assets/images/project-06/compare-○○.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/compare-○○.webp" alt="(画像の内容)" loading="lazy" /></a>
-              に置き換え、figcaption の区間名を実際の区間に書き換える -->
+              に置き換え、figcaption に区間ID と区間名を書く -->
       <div class="compare-pair" data-placeholder="figma-unreal-pair">
         <figure>
           <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
-          <figcaption><strong><span class="lang-ja">Figma:区間の拡大図</span><span class="lang-en">Figma: section close-up</span></strong><span class="lang-ja">トップダウン図のうち、比較する区間の部分。</span><span class="lang-en">The part of the top-down diagram covering this section.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">Figma:区間の拡大図</span><span class="lang-en">Figma: section close-up</span></strong><span class="lang-ja">設計図のうち、比較する区間の部分。</span><span class="lang-en">The part of the design diagram covering this section.</span></figcaption>
         </figure>
         <figure>
           <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
@@ -215,6 +289,66 @@
           <p class="lang-en">Rock breaking, recoil movement, and the shot limit come together, and the player works out their own approach. Rather than prescribing one answer, the aim is for solutions to come from the rules they have learned.</p>
         </li>
       </ul>
+
+      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">緊張度の推移(想定)</span><span class="lang-en">Planned tension curve</span></h3>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間IDごとに、想定する緊張度を相対5段階で置きました。現時点の想定で、プレイ後に実際の反応と比べて見直します。プレイテストの測定結果ではありません。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">The intended tension for each area ID, on a relative five-point scale. It is the current assumption, to be revisited against how players actually react; it is not a playtest measurement.</p>
+      <figure class="diagram-figure">
+        <a href="../assets/images/project-06/06c-pacing-full.webp" target="_blank" rel="noopener">
+          <img src="../assets/images/project-06/06c-pacing.webp" alt="Line chart of planned tension from A01 to the goal, rising to peaks at A06, A09, and A11 with dips at A05, A07, and A10" width="1600" height="526" loading="lazy" />
+        </a>
+        <figcaption>
+          <span class="lang-ja">緊張度の推移(Figma)。横軸は進行順で、区間の長さや所要時間は表していません。A06・A09で上げ、A05・A07・A10で下げて、A11を山場にしています。</span>
+          <span class="lang-en">The planned tension curve, drawn in Figma. The horizontal axis is route order, not section length or time taken. Tension rises at A06 and A09, drops at A05, A07, and A10, and peaks at A11.</span>
+        </figcaption>
+      </figure>
+      <h4 class="lang-ja" style="font-size:16px;margin:var(--space-3) 0 var(--space-1);">緩急のつけ方(案)</h4>
+      <h4 class="lang-en" style="font-size:16px;margin:var(--space-3) 0 var(--space-1);">How the pacing is built (proposal)</h4>
+      <ul class="plain-list lang-ja">
+        <li>戦闘・動く足場・回転バーで緊張を上げ、観察やスイッチ操作の区間で一息つける流れにする。</li>
+        <li>A07を休める区間にするには、バーの手前に安全に待てる場所が必要。</li>
+        <li>最後の岩移動は、その場で初めて操作を覚える課題にしない。</li>
+      </ul>
+      <ul class="plain-list lang-en">
+        <li>Combat, moving platforms, and rotating bars raise the tension; sections for observing and operating switches give a breather.</li>
+        <li>For A07 to work as a rest, there has to be a safe place to wait in front of the bars.</li>
+        <li>The final rock ride must not be the first time the player learns how to do it.</li>
+      </ul>
+    </section>
+
+    <!-- ================= レベル図の変遷 ================= -->
+    <section id="process">
+      <div class="section-head">
+        <h2><span class="lang-ja">レベル図の変遷</span><span class="lang-en">How the Level Diagram Evolved</span></h2>
+        <p class="lang-ja">Figmaのトップダウン図を、初期配置 → テーマとギミックの検討 → 高さの整理 → 現在の全体図・制作メモ、の順に作り直してきました。初期は仲間を持つ・投げる操作を前提にしていた図が、高さと区間IDを持つ現在の全体図へ移っていきます。画像をクリックすると原寸で開きます。</p>
+        <p class="lang-en">I reworked the top-down diagram in Figma in stages: first layout, then theme and mechanics, then heights, then the current overall map with its working notes. Early versions assume the player carries and throws companions; the later ones become the current map with heights and area IDs. Click any image to open it at full size.</p>
+      </div>
+      <div class="diagram-grid">
+        <figure>
+          <a href="../assets/images/project-06/process-01-initial-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-01-initial.webp" alt="First layout with grey rooms, floating pads, enemies, companions, a fan, and a legend" width="1000" height="622" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">01 初期配置</span><span class="lang-en">01 First layout</span></strong><span class="lang-ja">移動の順序と地形の大枠を検討。</span><span class="lang-en">Working out the order of movement and the broad shape of the terrain.</span></figcaption>
+        </figure>
+        <figure>
+          <a href="../assets/images/project-06/process-02-space-theme-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-02-space-theme.webp" alt="Map themed as an asteroid base with landmarks, exploration points, checkpoints, and coins" width="1000" height="661" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">02 宇宙テーマへの展開</span><span class="lang-en">02 Space theme</span></strong><span class="lang-ja">小惑星と施設の構成を検討。</span><span class="lang-en">Working out how the asteroid and the facility fit together.</span></figcaption>
+        </figure>
+        <figure>
+          <a href="../assets/images/project-06/process-03-companion-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-03-companion.webp" alt="Earlier proposal reorganising sections 01 to 06 around carrying, throwing, and recovering a companion" width="1000" height="783" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">03 仲間ギミックの検討</span><span class="lang-en">03 Companion mechanics</span></strong><span class="lang-ja">配置・投げ・回収の使い方を検討。</span><span class="lang-en">Working out how placing, throwing, and retrieving a companion would be used.</span></figcaption>
+        </figure>
+        <figure>
+          <a href="../assets/images/project-06/process-04-v11-revised-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-04-v11-revised.webp" alt="Revised map with heights and widths written on each floor and turn-by-turn notes on the right" width="1000" height="478" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">04 下書きの更新</span><span class="lang-en">04 Updating the draft</span></strong><span class="lang-ja">区間の課題と高さを書き込む。</span><span class="lang-en">Writing each section's challenge and height onto the map.</span></figcaption>
+        </figure>
+        <figure>
+          <a href="../assets/images/project-06/process-05-height-colour-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-05-height-colour.webp" alt="Presentation version with floors coloured by height, a symbol key, and design notes" width="1000" height="679" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">05 高さの整理</span><span class="lang-en">05 Organising heights</span></strong><span class="lang-ja">床色・凡例と高さを対応させる。</span><span class="lang-en">Matching floor colours and the key to the heights.</span></figcaption>
+        </figure>
+        <figure>
+          <a href="../assets/images/project-06/06a-level-design-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/06a-level-design.webp" alt="Current level design with area IDs A01 to A11" width="1600" height="1086" loading="lazy" /></a>
+          <figcaption><strong><span class="lang-ja">06 現在の全体図</span><span class="lang-en">06 Current overall map</span></strong><span class="lang-ja">区間IDから下の制作メモを参照する(<a href="#level">上で詳しく紹介</a>)。</span><span class="lang-en">Area IDs lead to the working notes beneath it (<a href="#level">shown in detail above</a>).</span></figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ================= 5. 改善の経緯と現在の課題 ================= -->
