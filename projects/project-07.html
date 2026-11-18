@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var lang = localStorage.getItem("lang") || "ja";
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Delivery | Yusei Game Design Portfolio</title>
+  <meta property="og:title" content="Special Delivery | Yusei Game Design Portfolio" />
+  <meta property="og:description" content="A three-level team project in Unreal Engine: top-down level diagrams, playtesting, and the changes it fed into." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yugo7777.github.io/Yusei-s-portfolio-/projects/project-07.html" />
+  <meta property="og:image" content="https://yugo7777.github.io/Yusei-s-portfolio-/assets/images/project-07/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%230017c1%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22 font-weight=%22bold%22 fill=%22white%22>Y</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-title-ja="Special Delivery | Yusei Game Design Portfolio" data-title-en="Special Delivery | Yusei Game Design Portfolio">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-logo" href="../index.html">YUSEI NAKAJIMA</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="../index.html#works"><span class="lang-ja">作品</span><span class="lang-en">Works</span></a></li>
+          <li><a href="../index.html#about"><span class="lang-ja">自己紹介</span><span class="lang-en">About</span></a></li>
+          <li><a href="../index.html#contact"><span class="lang-ja">連絡先</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button data-lang-btn="ja" class="active">JP</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">≡</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html#works">
+      <span class="lang-ja">← 作品一覧に戻る</span><span class="lang-en">← Back to Works</span>
+    </a>
+
+    <!-- ================= 1. 概要 ================= -->
+    <section class="project-hero" style="padding-top:0;">
+      <h1>Special Delivery</h1>
+
+      <p class="project-pitch lang-ja">郵便ロボットのPostbotが、浮遊島が離れ離れになる前に最後の荷物を配達する、3つのレベルで構成された三人称視点のゲームです。プレイヤーは荷物を運び、投げて、配達パッドまで届けます。</p>
+      <p class="project-pitch lang-en">A third-person game in three levels. As Postbot, a postal robot, the player carries and throws the last parcels of a floating-island route to their delivery pads before the islands drift apart.</p>
+
+      <dl class="meta-grid">
+        <div>
+          <dt><span class="lang-ja">制作形態</span><span class="lang-en">Format</span></dt>
+          <dd><span class="lang-ja">3人チーム(大学の授業課題 IGB321)</span><span class="lang-en">Team of three (university coursework, IGB321)</span></dd>
+        </div>
+        <!-- 差し替え: 制作期間が確定したら、この位置に次の項目を追加する
+        <div>
+          <dt><span class="lang-ja">制作期間</span><span class="lang-en">Period</span></dt>
+          <dd><span class="lang-ja">2026年X月〜X月</span><span class="lang-en">Month–Month 2026</span></dd>
+        </div>
+        -->
+        <div>
+          <dt><span class="lang-ja">使用ツール</span><span class="lang-en">Tools</span></dt>
+          <dd>Unreal Engine</dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">担当</span><span class="lang-en">My role</span></dt>
+          <dd><span class="lang-ja">トップダウン図の作成(チームと協力)、草案レベルの改善、プレイテストと改善提案、レベルアートの改善、サウンド・音楽の改善、動画制作</span><span class="lang-en">Top-down level diagrams (with the team); improving the draft levels; playtesting and change proposals; level art refinement; sound and music refinement; video</span></dd>
+        </div>
+      </dl>
+      <p class="note lang-ja">Epic Gamesのサンプルプロジェクト「Stack O Bot」をベースに、チームで制作しました。システムやBlueprint、敵AIの実装は、主に他のメンバーが担当しています。</p>
+      <p class="note lang-en">Built by the team on Epic Games' sample project Stack O Bot. The systems, Blueprints, and enemy AI were mainly implemented by other team members.</p>
+    </section>
+
+    <!-- ================= 2. プレイ動画と基本ルール ================= -->
+    <section id="play">
+      <div class="section-head">
+        <h2><span class="lang-ja">プレイ動画と基本ルール</span><span class="lang-en">Gameplay and Core Rules</span></h2>
+      </div>
+
+      <!-- 差し替え: プレイ動画を受け取ったら、下の <div class="media-placeholder">…</div> を次のように置き換える。
+           YouTubeの場合:
+           <iframe src="https://www.youtube.com/embed/動画ID" title="Special Delivery — gameplay" allowfullscreen></iframe>
+           Google Driveの場合:
+           <iframe src="https://drive.google.com/file/d/ファイルID/preview" title="Special Delivery — gameplay" allow="autoplay" allowfullscreen></iframe>
+           置き換えたら、</div> の直後にキャプションを追加し、映像に実際に映っている内容に合わせて書く。
+           <figcaption class="note" style="margin-top:var(--space-1);"><span class="lang-ja">(映像の内容)</span><span class="lang-en">(what the video shows)</span></figcaption> -->
+      <figure class="hero-media" style="margin:0 0 var(--space-4);" data-placeholder="play-video">
+        <div class="media-frame">
+          <div class="media-placeholder">
+            <strong><span class="lang-ja">プレイ動画は準備中です</span><span class="lang-en">Gameplay video in preparation</span></strong>
+          </div>
+        </div>
+      </figure>
+
+      <ul class="rule-list">
+        <li>
+          <div class="rule-head"><h4><span class="lang-ja">荷物を配達パッドへ運ぶ</span><span class="lang-en">Carry parcels to delivery pads</span></h4></div>
+          <p class="lang-ja">どのレベルでも繰り返す中心の行動です。配達パッドは受け取る荷物が決まっていて、違う荷物を置くと弾かれます。</p>
+          <p class="lang-en">The action repeated in every level. Each pad accepts only its own parcel; the wrong one is knocked off.</p>
+        </li>
+        <li>
+          <div class="rule-head"><h4><span class="lang-ja">運搬中はジャンプできない</span><span class="lang-en">No jumping while carrying</span></h4></div>
+          <p class="lang-ja">荷物を持っている間は、ジャンプもジェットパックも使えません。荷物を上へ運ぶにはスロープやリフトなどを使い、隙間は荷物を投げて越えます。下りの段差は一方通行で、高い位置から投げるほど遠くへ届きます。</p>
+          <p class="lang-en">Holding a parcel disables jumping and the jetpack. A parcel goes up only by ramps, lifts, and similar routes, and crosses a gap only when thrown. Drops are one-way, and a throw reaches further from height.</p>
+        </li>
+        <li>
+          <div class="rule-head"><h4><span class="lang-ja">敵に当たると荷物を落とす</span><span class="lang-en">Enemies knock the parcel loose</span></h4></div>
+          <p class="lang-ja">敵(Mite)の攻撃を受けると、持っている荷物を落とします。落ちた荷物は、数秒後に元の置き場へ戻ります。</p>
+          <p class="lang-en">A hit from an enemy (a Mite) makes Postbot drop the parcel. A parcel that falls returns to its starting depot after a few seconds.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= 3. トップダウン図 ================= -->
+    <section id="diagrams">
+      <div class="section-head">
+        <h2><span class="lang-ja">トップダウン図</span><span class="lang-en">Top-Down Diagrams</span></h2>
+        <p class="lang-ja">3つのレベルそれぞれについて、目的の違う3種類の図を作りました(チームと協力して作成)。いずれもLDD(レベルデザインドキュメント)に掲載した、提出時点のレベルの図です。画像をクリックすると原寸で開きます。</p>
+        <p class="lang-en">For each of the three levels I drew three kinds of diagram, each with a different job (made together with the team). All show the levels as they stood when the level design document was submitted. Click any diagram to open it at full size.</p>
+      </div>
+
+      <div class="diagram-set">
+        <h3><span class="lang-ja">区間の役割と運搬ルート</span><span class="lang-en">Section roles and the carry route</span></h3>
+        <p class="lang-ja">各モジュールを役割(learn/develop/twist/finale/support/rest)で色分けし、荷物を運ぶルートを線で示しました。</p>
+        <p class="lang-en">Each module is coloured by its role (learn, develop, twist, finale, support, rest), and the route the parcel travels is drawn as a line.</p>
+        <div class="diagram-grid">
+          <figure>
+            <a href="../assets/images/project-07/td-plan-l1-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-plan-l1.webp" alt="Level 1 Stepped Terraces section plan with modules coloured by role and a yellow carry route" width="1000" height="939" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル1 Stepped Terraces</span><span class="lang-en">Level 1, Stepped Terraces</span></strong><span class="lang-ja">黄色い線が運搬ルート。</span><span class="lang-en">The yellow line is the carry route.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-plan-l2-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-plan-l2.webp" alt="Level 2 Windy Cliffs section plan with a purple dashed side loop" width="913" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル2 Windy Cliffs</span><span class="lang-en">Level 2, Windy Cliffs</span></strong><span class="lang-ja">紫の破線が寄り道のループ。</span><span class="lang-en">The purple dashed line is the side loop.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-plan-l3-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-plan-l3.webp" alt="Level 3 Sinking Quarter section plan with three branches and the final dock" width="876" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル3 Sinking Quarter</span><span class="lang-en">Level 3, Sinking Quarter</span></strong><span class="lang-ja">ハブから分かれる3本の分岐と、最後の発着場。</span><span class="lang-en">Three branches off a hub, and the final dock.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="diagram-set">
+        <h3><span class="lang-ja">高さとオブジェクトの配置</span><span class="lang-en">Heights and every object</span></h3>
+        <p class="lang-ja">床の高さをグレーの濃淡で示し、スタンプ、荷物、敵、NPC、仕掛けなどの配置をすべて記号で書き込みました。</p>
+        <p class="lang-en">Floor height is shaded in grey, and every stamp, parcel, enemy, NPC, and mechanism is marked with a symbol.</p>
+        <div class="diagram-grid">
+          <figure>
+            <a href="../assets/images/project-07/td-objects-l1-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-objects-l1.webp" alt="Level 1 top view shaded by height with object markers and legend" width="697" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル1 Stepped Terraces</span><span class="lang-en">Level 1, Stepped Terraces</span></strong></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-objects-l2-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-objects-l2.webp" alt="Level 2 top view shaded by height with object markers and legend" width="661" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル2 Windy Cliffs</span><span class="lang-en">Level 2, Windy Cliffs</span></strong></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-objects-l3-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-objects-l3.webp" alt="Level 3 top view shaded by height with object markers and legend" width="643" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル3 Sinking Quarter</span><span class="lang-en">Level 3, Sinking Quarter</span></strong></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="diagram-set">
+        <h3><span class="lang-ja">ビート(体験の区切り)</span><span class="lang-en">Beats</span></h3>
+        <p class="lang-ja">高さの図に、プレイヤーが体験する順番を番号で重ねました。</p>
+        <p class="lang-en">The height view again, overlaid with numbered beats in the order the player meets them.</p>
+        <div class="diagram-grid">
+          <figure>
+            <a href="../assets/images/project-07/td-beats-l1-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-beats-l1.webp" alt="Level 1 top view with numbered beats" width="858" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル1 Stepped Terraces</span><span class="lang-en">Level 1, Stepped Terraces</span></strong></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-beats-l2-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-beats-l2.webp" alt="Level 2 top view with numbered beats" width="854" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル2 Windy Cliffs</span><span class="lang-en">Level 2, Windy Cliffs</span></strong></figcaption>
+          </figure>
+          <figure>
+            <a href="../assets/images/project-07/td-beats-l3-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/td-beats-l3.webp" alt="Level 3 top view with numbered beats" width="844" height="1000" loading="lazy" /></a>
+            <figcaption><strong><span class="lang-ja">レベル3 Sinking Quarter</span><span class="lang-en">Level 3, Sinking Quarter</span></strong></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 差し替え: 同じ区間の「トップダウン図の拡大」と「ゲーム画面」を左右に並べる。
+           1. 比較する区間を決める(例: レベル1の P05 Junction など)
+           2. 図側: その区間を書き出して assets/images/project-07/compare-diagram.webp に置く
+           3. ゲーム側: 同じ区間を、図と近い向きで撮影して assets/images/project-07/compare-ingame.webp に置く
+           4. 下の各 <div class="slot"> を
+              <a href="../assets/images/project-07/compare-○○.webp" target="_blank" rel="noopener"><img src="../assets/images/project-07/compare-○○.webp" alt="(画像の内容)" loading="lazy" /></a>
+              に置き換え、figcaption の区間名を実際の区間に書き換える -->
+      <div class="compare-pair" data-placeholder="diagram-ingame-pair">
+        <figure>
+          <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
+          <figcaption><strong><span class="lang-ja">トップダウン図:区間の拡大</span><span class="lang-en">Diagram: section close-up</span></strong><span class="lang-ja">図のうち、比較する区間の部分。</span><span class="lang-en">The part of the diagram covering this section.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
+          <figcaption><strong><span class="lang-ja">Unreal Engine:同じ区間の画面</span><span class="lang-en">Unreal Engine: the same section</span></strong><span class="lang-ja">図の配置をゲーム内に作った状態。</span><span class="lang-en">The same layout as built in the game.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 4. チームの設計方針とレイアウトの変遷 ================= -->
+    <section id="approach">
+      <div class="section-head">
+        <h2><span class="lang-ja">設計の土台とレイアウトの変遷</span><span class="lang-en">Design Foundations and Layout History</span></h2>
+        <p class="lang-ja">以下はチームで決めた、LDD提出時点の設計の土台です。私はこの方針のもとで、草案レベルの改善とトップダウン図の作成を担当しました。</p>
+        <p class="lang-en">These are the team's design foundations as of the level design document. Within them, my part was improving the draft levels and drawing the top-down diagrams.</p>
+      </div>
+
+      <ul class="principle-grid">
+        <li class="principle">
+          <h4><span class="lang-ja">上りは手間、下りは自由</span><span class="lang-en">Up costs, down is free</span></h4>
+          <p class="lang-ja">運搬中はジャンプできないため、荷物を上げる手段は限られます。下りは一方通行で自由に降りられ、高い位置からの投げはより遠くへ届きます。</p>
+          <p class="lang-en">Without a jump while carrying, there are only a few ways to raise a parcel. Drops are free and one-way, and throwing from height reaches further.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">樽にはそれぞれ役割がある</span><span class="lang-en">Every barrel has a role</span></h4>
+          <p class="lang-ja">レベル内の樽は、ドアの押さえ、足場、重り、投げる物のどれか一つに使います。どの順番で使うかがパズルになります。</p>
+          <p class="lang-en">Each barrel is spent on one role: doorstop, step, counterweight, or projectile. The order you spend them in is the puzzle.</p>
+        </li>
+        <li class="principle">
+          <h4><span class="lang-ja">12個のモジュールの使い回し</span><span class="lang-en">One kit, reused</span></h4>
+          <p class="lang-ja">3つのレベルすべてを、崖沿いの町を構成する12個のモジュールから組み立てています。</p>
+          <p class="lang-en">All three levels are built from one kit of twelve cliff-side town modules.</p>
+        </li>
+      </ul>
+
+      <h3 class="subhead-sm"><span class="lang-ja">レイアウトは4回作り直しました</span><span class="lang-en">Four layouts</span></h3>
+      <p class="lang-ja" style="max-width:40em;color:var(--text-muted);margin:0 0 var(--space-2);">アート作業に入ってからの大きな変更は手間がかかるため、変更しやすいうちにチームでレイアウトを作り直しました。</p>
+      <p class="lang-en" style="max-width:40em;color:var(--text-muted);margin:0 0 var(--space-2);">Large changes are costly once art is in, so the team reworked the layout while it was still cheap to do so.</p>
+      <ol class="next-list">
+        <li class="lang-ja"><strong>平らなモジュール</strong>:通路のような空間になった。</li>
+        <li class="lang-en"><strong>Flat modules.</strong> They produced corridors.</li>
+        <li class="lang-ja"><strong>モジュール内に高低差を追加</strong>:それでもレベルは一直線の連なりだった。</li>
+        <li class="lang-en"><strong>Height inside each module.</strong> The levels were still straight chains.</li>
+        <li class="lang-ja"><strong>モジュールを小さくし、1つずつ仕掛けを追加</strong>:1レベルあたりのアイデアが多すぎた。</li>
+        <li class="lang-en"><strong>Smaller modules, one gimmick each.</strong> Too many ideas per level.</li>
+        <li class="lang-ja"><strong>各レベルに1つの特徴を持たせ、モジュールを角度をつけて配置</strong>:木の通路か飛び石の島でつないだ。</li>
+        <li class="lang-en"><strong>One signature per level, modules set at angles.</strong> Joined by timber gangways or hop islands.</li>
+      </ol>
+    </section>
+
+    <!-- ================= 5. プレイテスト1回目 ================= -->
+    <section id="playtest-1">
+      <div class="section-head">
+        <h2><span class="lang-ja">プレイテスト1回目と、チームの改修計画</span><span class="lang-en">First Playtest and the Team's Revision Plan</span></h2>
+        <p class="lang-ja">2026年10月3日のビルドを、私が通しでプレイして記録しました。チームメンバーとしてのプレイで、初見のプレイヤーによるテストではありません。</p>
+        <p class="lang-en">I played the 3 October 2026 build end to end and recorded what I found. This was my own play as a team member, not a test with first-time players.</p>
+      </div>
+
+      <dl class="meta-grid" style="margin-bottom:var(--space-2);">
+        <div>
+          <dt><span class="lang-ja">1回目の通しプレイ</span><span class="lang-en">First run</span></dt>
+          <dd><span class="lang-ja">計25分(L1 5分・L2 8分・L3 12分)</span><span class="lang-en">25 min (L1 5, L2 8, L3 12)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">2回目の通しプレイ</span><span class="lang-en">Repeat run</span></dt>
+          <dd><span class="lang-ja">計約17分(L1 約2分・L2 約6分・L3 約9分)</span><span class="lang-en">About 17 min (L1 ~2, L2 ~6, L3 ~9)</span></dd>
+        </div>
+        <div>
+          <dt><span class="lang-ja">LDDで目標とした通しプレイ</span><span class="lang-en">Target in the design document</span></dt>
+          <dd><span class="lang-ja">11〜13分</span><span class="lang-en">11–13 min</span></dd>
+        </div>
+      </dl>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-4);">LDDの進捗報告にも同じ所要時間が記載され、「ビルドはできているが長すぎる」として改修計画(LDD 表4.1)が立てられました。以下では、私の指摘と提案を、改修計画の対応する項目と並べています。「改修計画の項目」は計画であり、実装の記録ではありません。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-4);">The design document's progress report gives the same times and concludes the build "runs too long", which led to the team's revision plan (Table 4.1). Below, each of my findings and proposals sits next to the matching plan item. The plan items are what was planned, not a record of what was implemented.</p>
+
+      <!-- 差し替え: 最終版で実装された項目が分かったら、該当する「改修計画」の行末に
+           <span class="state"><span class="lang-ja">実装済み</span><span class="lang-en">Implemented</span></span> を追加する -->
+      <ul class="finding-list">
+        <li>
+          <h4><span class="lang-ja">道に迷う</span><span class="lang-en">Getting lost</span></h4>
+          <p class="observed lang-ja">L3では地図がなく、どこへ行くべきか分かるまでに約5〜10分かかった(私の推定)。L1でも序盤で脇道に入れてしまい、進む方向が分かりにくかった。</p>
+          <p class="observed lang-en">With no map in L3, I estimate I spent 5–10 minutes working out where to go. In L1, a side route open at the start made the intended direction unclear.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">目印、標識、目的地の見通しで分岐を見分けやすくし、完了した配達や分岐を示す。L1序盤の脇道は塞ぐ。</span><span class="lang-en">Make branches distinguishable with landmarks, signs, and clear views of objectives, and show which deliveries are done. Block the early side route in L1.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><ul class="lang-ja"><li>配達先へ導く案内表示を追加</li><li>配達先に、レベルの各所から見える光の柱を設置</li><li>次の配達先へ導く「黄色いペイント」を追加</li></ul><ul class="lang-en"><li>More signage guiding players to deliveries</li><li>Light beacons at delivery destinations, visible across the level</li><li>"Yellow paint" leading to the next delivery</li></ul></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">同じ道の往復が多い</span><span class="lang-en">Backtracking</span></h4>
+          <p class="observed lang-ja">L2ではT. Okaforへの配達後、来た道を戻る必要があった。L3でも、タスクの合間に何度もレベルを横断した。</p>
+          <p class="observed lang-en">In L2, after the delivery to T. Okafor I had to walk back the way I came. In L3 I crossed the level repeatedly between tasks.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">次の荷物を最初の配達先の近くに置くか、短い帰り道を用意する。L3では分岐を終えたらハブへ戻る近道を設ける。</span><span class="lang-en">Place the next parcel near the first destination or add a shorter return; in L3, add shortcuts back to the hub after each branch.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><span class="lang-ja">荷物の受け取り場所を配達先の近くへ移す</span><span class="lang-en">Move parcel pickups closer to their destinations</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">後半で荷物を落とすと、やり直しの負担が大きい</span><span class="lang-en">Losing a later parcel hurts</span></h4>
+          <p class="observed lang-ja">L2・L3で、2つ目以降の荷物を落としたときに、それまでの手間が無駄になったように感じた。</p>
+          <p class="observed lang-en">In L2 and L3, dropping the second or a later parcel felt like losing a lot of effort.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">荷物の戻り先と復帰にかかる時間を確認し、近い戻り先か早い回収ルートを用意する。戻り先を分かりやすくする。</span><span class="lang-en">Check where parcels return and how long recovery takes; add a nearer return point or faster route, and make the return location clear.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><span class="lang-ja">各リスポーン地点に、荷物の回収ポストを追加</span><span class="lang-en">A parcel recovery mailbox at every respawn checkpoint</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">荷物を持つと狭い</span><span class="lang-en">Too narrow while carrying</span></h4>
+          <p class="observed lang-ja">階段の入口(L1〜L3)や一部の通路(L2)が、荷物を持って進むには狭かった。</p>
+          <p class="observed lang-en">Stair entrances (L1–L3) and some paths (L2) felt too narrow to move through with a parcel.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">入口や踊り場を広げ、荷物を持った状態で確かめる。精度を試す区間は残す。</span><span class="lang-en">Widen entrances and landings and test them while carrying, keeping the sections meant to test precision.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><span class="lang-ja">一部のモジュールで、階段の踊り場と通路を広げる</span><span class="lang-en">Widen stair landings and paths on some modules</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">敵の巣が見分けにくい</span><span class="lang-en">Nests were hard to identify</span></h4>
+          <p class="observed lang-ja">L2・L3で、どれが巣なのか分かりにくく、目標の対象を見つけづらかった。</p>
+          <p class="observed lang-en">In L2 and L3 it was hard to tell which objects were nests, so the objective's targets were hard to find.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">巣の見た目を統一し、目標表示の名前・記号と合わせる。</span><span class="lang-en">Give nests a consistent look and use the same name and symbol in the objective display.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><span class="lang-ja">敵の巣を削除し、巣の撃破を目標から外す</span><span class="lang-en">Remove the nests, and drop clearing them as an objective</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">探索する理由がない</span><span class="lang-en">No reason to explore</span></h4>
+          <p class="observed lang-ja">L1の下層エリアの奥には報酬が見当たらず、敵も避けて通れたため、入る動機を感じなかった。</p>
+          <p class="observed lang-en">The back of L1's lower area offered no visible reward and its enemies could be avoided, so I had no reason to go in.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">奥にスタンプを置き、戦闘は任意のまま、危険を取る理由をつくる。</span><span class="lang-en">Put a stamp at the back so there is a reason to take the risk, while keeping the fight optional.</span></dd>
+            <dt><span class="lang-ja">改修計画の項目</span><span class="lang-en">Plan item</span></dt>
+            <dd><span class="lang-ja">本筋から外れた探索を促す位置へ、スタンプを配置し直す</span><span class="lang-en">Move stamps to encourage exploration off the critical path</span></dd>
+          </dl>
+        </li>
+      </ul>
+
+      <h3 class="subhead-sm"><span class="lang-ja">そのほかの指摘</span><span class="lang-en">Other findings</span></h3>
+      <ul class="plain-list lang-ja">
+        <li>L2のジャンプ台の軌道上に建物の出っ張りがあり、ぶつかってジャンプが中断された。</li>
+        <li>岩や花の装飾に登って壁を越えられ、パズルを解かずに先へ進めた(L1〜L3)。</li>
+        <li>L3では荷物を配達先へ直接投げ込めるため、スロープのルートを通る必要がなかった。</li>
+        <li>ファンのような装置の力が強く、運んでいた荷物が落ちた。</li>
+        <li>荷物の周りの柵で、どこから取ればよいか分かりにくかった(L1〜L3)。</li>
+        <li>L2では、ルート上で近い配達先と荷物の順番が合っていなかった。</li>
+      </ul>
+      <ul class="plain-list lang-en">
+        <li>In L2, a protruding part of a building sat in the jump pad's trajectory and interrupted the jump.</li>
+        <li>Players could climb rocks and flower props to get over a wall and skip a puzzle (L1–L3).</li>
+        <li>In L3 the parcel could be thrown straight onto the pad, making the ramp route unnecessary.</li>
+        <li>A fan-like device pushed hard enough to knock the carried parcel off.</li>
+        <li>The fence around the parcel made it unclear how to reach it (L1–L3).</li>
+        <li>In L2, the order of the parcels did not match the order of their destinations along the route.</li>
+      </ul>
+
+      <div class="evidence-grid">
+        <figure>
+          <img src="../assets/images/project-07/pt1-prop-bypass.webp" alt="Postbot standing on rocks and flower props next to a wall it can climb over" width="813" height="592" loading="lazy" />
+          <figcaption><span class="lang-ja">プレイテスト中の画面:装飾に登って壁を越えられる箇所。</span><span class="lang-en">From the playtest: props that let the player climb over a wall.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/project-07/pt1-narrow-stair.webp" alt="Postbot at a narrow stair entrance on a timber walkway" width="832" height="468" loading="lazy" />
+          <figcaption><span class="lang-ja">プレイテスト中の画面:荷物を持って進むには狭い階段の入口。</span><span class="lang-en">From the playtest: a stair entrance too narrow to approach with a parcel.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 6. プレイテスト2回目 ================= -->
+    <section id="playtest-2">
+      <div class="section-head">
+        <h2><span class="lang-ja">プレイテスト2回目と、残った課題</span><span class="lang-en">Second Playtest and What Remained</span></h2>
+        <p class="lang-ja">その後のビルドを、私がもう一度通しでプレイしました。1回目と同じく、レベルを知っている私自身のプレイなので、所要時間は単純には比べられません。</p>
+        <p class="lang-en">I played a later build end to end again. As before, this was my own play with prior knowledge of the levels, so the times are not a like-for-like comparison.</p>
+      </div>
+
+      <dl class="meta-grid" style="margin-bottom:var(--space-4);">
+        <div>
+          <dt><span class="lang-ja">通しプレイ</span><span class="lang-en">Full run</span></dt>
+          <dd><span class="lang-ja">計13.5分(L1 2.5分・L2 5分・L3 6分)</span><span class="lang-en">13.5 min (L1 2.5, L2 5, L3 6)</span></dd>
+        </div>
+      </dl>
+
+      <!-- 差し替え: 修正された項目が分かったら、該当する <h4> の後ろに
+           <span class="state"><span class="lang-ja">修正済み</span><span class="lang-en">Fixed</span></span> を追加する -->
+      <ul class="finding-list">
+        <li>
+          <h4><span class="lang-ja">目立つ近道で、本来のルートを飛ばせる</span><span class="lang-en">An obvious shortcut skips the main route</span></h4>
+          <p class="observed lang-ja">目的地の手前の近道で、荷物を隙間越しに投げられる。地図がないと、より目立つこちらを選び、本来のルートの多くを飛ばしてしまう。</p>
+          <p class="observed lang-en">A shortcut in front of the objective lets the parcel be thrown across a gap. Without a map, players are likely to take this more obvious route and skip much of the main path.</p>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">本来のルートを見やすくし、近道は危険か難しいものにする。</span><span class="lang-en">Make the main route more visible, and the shortcut riskier or harder.</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">荷物を高台に投げると、パズルを解かずに配達できる</span><span class="lang-en">Throwing to a ledge bypasses a puzzle</span></h4>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">足場の配置を調整して、迂回できないようにする。</span><span class="lang-en">Adjust the platform layout to prevent the bypass.</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">敵に会わずに手紙が取れ、リスクとリワードが弱い</span><span class="lang-en">The letter can be taken without facing the enemy</span></h4>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">敵と手紙の位置を入れ替える。</span><span class="lang-en">Swap the positions of the enemy and the letter.</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">ファンがあるので、階段を使う理由がない</span><span class="lang-en">The fan makes the stairs pointless</span></h4>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">ファンは速いが危険、階段は遅いが安全、という違いをつくる。</span><span class="lang-en">Make the fan faster but riskier, and the stairs slower but safer.</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">荷物を運びながらファンに入ると操作しにくい</span><span class="lang-en">The fan fights parcel carrying</span></h4>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">ファンを弱めるか外す。または、迂回できるルートをはっきり示す。</span><span class="lang-en">Weaken or remove the fan, or provide a clear route around it.</span></dd>
+          </dl>
+        </li>
+        <li>
+          <h4><span class="lang-ja">次の荷物が遠い</span><span class="lang-en">The next parcel is far away</span></h4>
+          <dl>
+            <dt><span class="lang-ja">私の提案</span><span class="lang-en">My proposal</span></dt>
+            <dd><span class="lang-ja">移動を短くするか、道中にジェットパックを使う課題を置く。</span><span class="lang-en">Shorten the journey, or add jetpack challenges along it.</span></dd>
+          </dl>
+        </li>
+      </ul>
+
+      <h3 class="subhead-sm"><span class="lang-ja">うまく機能していた点</span><span class="lang-en">What worked</span></h3>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0;">周囲より高い位置にあるゴールが目印になり、一本道を強制しなくても進む方向が分かった。主要な地点からゴールが見える状態を維持することを提案しました。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0;">The elevated goal, visible above its surroundings, worked as a landmark: it gave a clear sense of direction without forcing a single corridor. I proposed keeping it visible from key locations.</p>
+
+      <div class="evidence-grid">
+        <figure>
+          <img src="../assets/images/project-07/pt2-shortcut.webp" alt="Postbot on a timber walkway with a shortcut toward the objective ahead" width="1000" height="556" loading="lazy" />
+          <figcaption><span class="lang-ja">プレイテスト中の画面:本来のルートを飛ばせる近道。</span><span class="lang-en">From the playtest: the shortcut that skips the main route.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/project-07/pt2-landmark.webp" alt="Postbot carrying a parcel with the elevated goal structure visible above" width="641" height="854" loading="lazy" />
+          <figcaption><span class="lang-ja">プレイテスト中の画面:周囲より高い位置にあるゴール。</span><span class="lang-en">From the playtest: the elevated goal used as a landmark.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 7. そのほかの担当とクレジット ================= -->
+    <section id="credits">
+      <div class="section-head">
+        <h2><span class="lang-ja">そのほかの担当とクレジット</span><span class="lang-en">Other Work and Credits</span></h2>
+      </div>
+
+      <h3 class="subhead-sm" style="margin-top:0;"><span class="lang-ja">そのほかの担当</span><span class="lang-en">Other work</span></h3>
+      <ul class="plain-list lang-ja" style="margin-bottom:var(--space-4);">
+        <li>レベルアートの改善、サウンド・音楽の改善、動画制作</li>
+        <li>建物・環境アセット8点と、BGM 3点の候補を調査し、チームに提案</li>
+      </ul>
+      <ul class="plain-list lang-en" style="margin-bottom:var(--space-4);">
+        <li>Level art refinement, sound and music refinement, and the video</li>
+        <li>Researched and recommended eight building and environment asset packs and three background music options to the team</li>
+      </ul>
+
+      <h3 class="subhead-sm"><span class="lang-ja">チーム</span><span class="lang-en">Team</span></h3>
+      <ul class="credits-list">
+        <li class="is-me">
+          <span class="credit-name">Yusei Nakajima</span>
+          <span class="credit-role lang-ja">トップダウン図(チームと協力)/草案レベルの改善/プレイテスト/レベルアート/サウンド・音楽/動画</span>
+          <span class="credit-role lang-en">Top-down diagrams (with the team) / draft level improvements / playtesting / level art / sound and music / video</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 1</span>
+          <span class="credit-role lang-ja">レベル形状の調整/オブジェクト配置の調整/案内表示</span>
+          <span class="credit-role lang-en">Level geometry / object placement / signage</span>
+        </li>
+        <li>
+          <span class="credit-name">Team Member 2</span>
+          <span class="credit-role lang-ja">レベルの物理挙動/敵AI/Blueprint/ナラティブ/ビルド/プロジェクト整理</span>
+          <span class="credit-role lang-en">Level physics / enemy AI / Blueprints / narrative / builds / project cleanup</span>
+        </li>
+      </ul>
+      <p class="credits-note lang-ja">プレイテストは全員で行いました。分担はLDDの作業表(表4.2)にもとづきます。</p>
+      <p class="credits-note lang-en">Playtesting was shared by the whole team. Roles follow the task table in the design document (Table 4.2).</p>
+
+      <h3 class="subhead-sm"><span class="lang-ja">使用アセット</span><span class="lang-en">Assets</span></h3>
+      <!-- 差し替え: 実際に使用した外部アセット(アセット調査の候補を含む)が分かったら、名称・制作者・配布元を <li> で追加する -->
+      <ul class="credits-list">
+        <li>
+          <span class="credit-name"><span class="lang-ja">ベースプロジェクト</span><span class="lang-en">Base project</span></span>
+          <span class="credit-role lang-ja">Stack O Bot(Epic Games)— キャラクター、基本システム、UIなどの土台として使用しています。</span>
+          <span class="credit-role lang-en">Stack O Bot (Epic Games) — the base for the character, core systems, UI, and more.</span>
+        </li>
+        <li>
+          <span class="credit-name"><span class="lang-ja">その他の外部アセット</span><span class="lang-en">Other third-party assets</span></span>
+          <span class="credit-role lang-ja">名称・制作者・配布元を確認のうえ、追記します。</span>
+          <span class="credit-role lang-en">To be listed once each name, creator, and source is confirmed.</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="project-nav">
+      <a href="project-06.html"><span class="lang-ja">← 前の作品を見る</span><span class="lang-en">← View Previous Project</span></a>
+      <a href="../index.html#works"><span class="lang-ja">作品一覧に戻る →</span><span class="lang-en">Back to Works →</span></a>
+    </div>
+  </main>
+
+  <section class="contact-band contact-band--compact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></h2>
+        <a class="contact-email" href="mailto:yugo59077@gmail.com">yugo59077@gmail.com</a>
+      </div>
+      <div class="contact-links">
+        <a class="contact-primary" href="../assets/docs/Yusei_Nakajima_Resume.pdf" download><span class="lang-ja">レジュメ(PDF)</span><span class="lang-en">Resume (PDF)</span></a>
+        <a href="../index.html#works"><span class="lang-ja">ほかの作品を見る</span><span class="lang-en">See other work</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Yusei Nakajima</p>
+      <a class="back-to-top" href="#"><span class="lang-ja">↑ トップに戻る</span><span class="lang-en">↑ Back to top</span></a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
