@@ -166,91 +166,78 @@
         </a>
       </div>
 
-      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">区間ごとの仕様と検証事項</span><span class="lang-en">Area specifications and open questions</span></h3>
-      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間IDごとに、図面上の課題、成立条件、まだ決まっていないことを整理しました。成立条件はレビュー用の提案で、実装済み・検証済みという意味ではありません。</p>
-      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">For each area ID I set out what the diagram asks of the player, a proposed condition for it to work, and what is still undecided. The conditions are proposals for review, not a claim that anything is implemented or tested.</p>
+      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">区間ごとのメモ</span><span class="lang-en">Notes for each area</span></h3>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間ID(A番号)ごとに、決めた内容(やること)と、まだ詰めたい内容(次に詰めること)を分けて整理しました。いずれも図面上の設計で、実機での検証はこれからです。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">For each area ID, what has been decided (what the player does) is kept apart from what still needs settling. Both are design on paper; testing in engine is still to come.</p>
       <figure class="diagram-figure">
         <a href="../assets/images/project-06/06b-area-spec-full.webp" target="_blank" rel="noopener">
-          <img src="../assets/images/project-06/06b-area-spec.webp" alt="Area specification sheet with eleven cards, A01 to A11, each listing the design task, a proposed success condition, and open questions" width="1600" height="1398" loading="lazy" />
+          <img src="../assets/images/project-06/06b-area-spec.webp" alt="Table of area notes from A01 to A11 with each area's height, what the player does, and what is still to settle" width="1600" height="694" loading="lazy" />
         </a>
         <figcaption>
-          <span class="lang-ja">区間仕様シート(Figma)。下部には「実機で測り、図面へ戻す値」をまとめ、測定するまでは図面上の高さ・距離だけで到達可能と判断しない、としています。</span>
-          <span class="lang-en">The area specification sheet, drawn in Figma. At the bottom it lists the values to measure in engine and carry back into the diagram, and states that nothing is judged reachable from the drawn heights and distances alone until they are measured.</span>
+          <span class="lang-ja">区間ごとのメモ(Figma)。左から区間と高さ、やること、次に詰めること。</span>
+          <span class="lang-en">The area notes, drawn in Figma. Columns, left to right: area and height, what the player does, what is still to settle.</span>
         </figcaption>
       </figure>
 
       <details class="text-version">
-        <summary><span class="lang-ja">区間仕様をテキストで読む</span><span class="lang-en">Read the area specifications as text</span></summary>
+        <summary><span class="lang-ja">区間ごとのメモをテキストで読む</span><span class="lang-en">Read the area notes as text</span></summary>
         <ul class="finding-list">
-          <li><h4><span class="lang-ja">A01|開始地点(Z 0 m)</span><span class="lang-en">A01 | Start (Z 0 m)</span></h4>
+          <li><h4><span class="lang-ja">A01 開始(Z 0 m)</span><span class="lang-en">A01 Start (Z 0 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">開始位置から、正面の足場区間へ進む。</span><span class="lang-en">From the start, head for the platforms ahead.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">A02への進行方向と、安全な最初の着地点が分かる。</span><span class="lang-en">The way to A02 and a safe first landing spot are clear.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">開始直後の操作説明。0 → −10 mの降下方法と復帰位置。</span><span class="lang-en">How controls are explained at the start; how the player descends from 0 to −10 m, and where they recover.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">正面の足場区間へ進む。</span><span class="lang-en">Head for the platforms ahead.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">開始地点から−10 mの床へどう降りるか。</span><span class="lang-en">How the player gets down from the start to the −10 m floor.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A02|足場・ファン(Z −10 m)</span><span class="lang-en">A02 | Platforms and fan (Z −10 m)</span></h4>
+          <li><h4><span class="lang-ja">A02 足場・ファン(Z −10 m)</span><span class="lang-en">A02 Platforms and fan (Z −10 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">足場を渡り、ファンの働きを確認する。</span><span class="lang-en">Cross the platforms and see what the fan does.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">足場から次の足場を発見でき、ファンの効果が観察できる。</span><span class="lang-en">Each next platform can be spotted from the last, and the fan's effect can be observed.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">足場の直径・間隔・周期。ファンの到達高度。落下後の復帰。</span><span class="lang-en">Platform diameter, spacing, and cycle; the height the fan reaches; recovery after a fall.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">足場を渡り、ファンを使う。</span><span class="lang-en">Cross the platforms and use the fan.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">足場の間隔と、風で上がれる高さ。</span><span class="lang-en">Platform spacing, and how high the air lifts the player.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A03|制御室・トンネル(Z +10 m)</span><span class="lang-en">A03 | Control room and tunnel (Z +10 m)</span></h4>
+          <li><h4><span class="lang-ja">A03 制御室・通路(Z +10 m)</span><span class="lang-en">A03 Control room and passage (Z +10 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">破壊ポイントを通過し、屋外へ進む。</span><span class="lang-en">Get through the breakable point and out into the open.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">壊せる岩と背景岩を見分けられる。進行先が破壊後に明確になる。</span><span class="lang-en">Breakable rocks read differently from background rock, and the way on is clear once it is broken.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">仲間による破壊という旧注記と、現在のパルス仕様の統一。</span><span class="lang-en">Reconciling an old note about companions breaking things with the current pulse design.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を壊し、通路から屋外へ出る。</span><span class="lang-en">Break the rock and leave the passage for the outside.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">仲間で壊す旧案と、現在のパルス操作を合わせる。</span><span class="lang-en">Reconcile the earlier idea of breaking it with a companion with the current pulse controls.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A04|戦闘広場・上段通路(Z +5 / +15 m)</span><span class="lang-en">A04 | Combat yard and upper walkway (Z +5 / +15 m)</span></h4>
+          <li><h4><span class="lang-ja">A04 戦闘広場(Z +5 / +15 m)</span><span class="lang-en">A04 Combat yard (Z +5 / +15 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">モブへ対処し、次の高さの通路へ進む。</span><span class="lang-en">Deal with the enemies and move up to the next walkway.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">戦闘中に移動の余地があり、終了後に進行先を見つけられる。</span><span class="lang-en">There is room to move during the fight, and the way on can be found after it.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">敵の挙動と配置。高さ差を越える操作。各寸法の測定軸。</span><span class="lang-en">Enemy behaviour and placement; how the height change is climbed; the axes each dimension is measured on.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">敵に対処し、上段通路へ進む。</span><span class="lang-en">Deal with the enemies and move up to the upper walkway.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">敵の配置と、段差を越える場所。</span><span class="lang-en">Enemy placement, and where the height change is climbed.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A05|電波塔(Z +20 m)</span><span class="lang-en">A05 | Radio tower (Z +20 m)</span></h4>
+          <li><h4><span class="lang-ja">A05 電波塔(Z +20 m)</span><span class="lang-en">A05 Radio tower (Z +20 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">感圧盤で橋を起動し、崩れた階段を越える。</span><span class="lang-en">Raise the bridge with a pressure plate and get past the collapsed stairs.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">スイッチと動く対象が対応して見える。次の区間へ進める。</span><span class="lang-en">The switch visibly corresponds to what it moves, and the player can move on.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">仲間を投げる操作を残すか。橋の起動保持。+15 → +20 mの経路。</span><span class="lang-en">Whether to keep throwing a companion; how the bridge stays raised; the route from +15 to +20 m.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">橋を起動し、崩れた階段を越える。</span><span class="lang-en">Raise the bridge and get past the collapsed stairs.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">仲間を投げる操作を残すか。橋の起動条件。</span><span class="lang-en">Whether to keep throwing a companion; what raises the bridge.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A06|動く足場・ファン小部屋(Z +30 / +40 m)</span><span class="lang-en">A06 | Moving platforms and fan room (Z +30 / +40 m)</span></h4>
+          <li><h4><span class="lang-ja">A06 足場・小部屋(Z +30 / +40 m)</span><span class="lang-en">A06 Platforms and small room (Z +30 / +40 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">動く足場を乗り継ぎ、ファンから段差を越える。</span><span class="lang-en">Ride the moving platforms, then use the fan to clear the step.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">待機場所から足場の動きを観察でき、着地先が確認できる。</span><span class="lang-en">From a waiting spot the platforms' movement and the landing point can be seen.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">小部屋の下段高度と上段+40 mの関係。パッドの移動範囲・速度。</span><span class="lang-en">How the room's lower level relates to the +40 m upper level; the pads' range and speed.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">動く足場を乗り継ぎ、ファンで上段へ進む。</span><span class="lang-en">Ride the moving platforms, then use the fan to reach the upper level.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">小部屋の下段の高さと、足場の移動範囲。</span><span class="lang-en">The height of the room's lower level, and the platforms' range.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A07|ドーム(Z +40 m)</span><span class="lang-en">A07 | Dome (Z +40 m)</span></h4>
+          <li><h4><span class="lang-ja">A07 ドーム(Z +40 m)</span><span class="lang-en">A07 Dome (Z +40 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">ドーム内の障害を抜けて、リング入口へ進む。</span><span class="lang-en">Get past the hazards inside the dome to the ring entrance.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">障害の予兆と待機できる位置が分かる。出口を見失わない。</span><span class="lang-en">Hazards telegraph themselves, there is a clear place to wait, and the exit stays in view.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">回転バーの導入方法。旧注記の「仲間を投げて岩破壊」の更新。</span><span class="lang-en">How the rotating bars are introduced; updating the old note "throw a companion to break the rock".</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">障害物を抜けて、リングの入口へ進む。</span><span class="lang-en">Get past the obstacles to the ring entrance.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">回転バーを見て待てる場所。岩を壊す手順。</span><span class="lang-en">A place to wait and watch the rotating bars; the steps for breaking the rock.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A08|リング分岐(Z +40 m)</span><span class="lang-en">A08 | Ring junction (Z +40 m)</span></h4>
+          <li><h4><span class="lang-ja">A08 リング(Z +40 m)</span><span class="lang-en">A08 Ring (Z +40 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">左右の経路を選び、下側の出口で合流する。</span><span class="lang-en">Choose the left or right path; both rejoin at the lower exit.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">分岐前に左右の課題の違いが読める。どちらからも合流できる。</span><span class="lang-en">The difference between the two sides can be read before choosing, and either side rejoins.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">左右のスイッチが動かす対象。所要手順・リスク・消費の違い。</span><span class="lang-en">What each side's switch moves; how the two differ in steps, risk, and cost.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">左右どちらかを通り、出口で合流する。</span><span class="lang-en">Take the left or right side; both rejoin at the exit.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">左右で何が違うか。各スイッチの接続先。</span><span class="lang-en">What differs between the sides; what each switch connects to.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A09|回転バー(Z +40 m)</span><span class="lang-en">A09 | Rotating bars (Z +40 m)</span></h4>
+          <li><h4><span class="lang-ja">A09 回転バー(Z +40 m)</span><span class="lang-en">A09 Rotating bars (Z +40 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">岩を排除し、スイッチで回転バーを止める。</span><span class="lang-en">Clear the rock and stop the rotating bars with a switch.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">岩・スイッチ・バーの因果関係を確認でき、安全に操作できる。</span><span class="lang-en">The link between rock, switch, and bar can be checked, and operated safely.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">どのスイッチがどのバーを止めるか。片側/両側停止の必要条件。</span><span class="lang-en">Which switch stops which bar; whether one or both must be stopped.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を除去し、スイッチでバーを止める。</span><span class="lang-en">Clear the rock and stop the bars with a switch.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">片方を止めればよいか、両方必要か。</span><span class="lang-en">Whether stopping one bar is enough, or both are needed.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A10|浮遊パッド・高所移動(出発 +40 m / ボタン +30 m / 到着 +50 m)</span><span class="lang-en">A10 | Floating pad and high traverse (start +40 m / button +30 m / arrival +50 m)</span></h4>
+          <li><h4><span class="lang-ja">A10 高所へ(Z +40 → +50 m)</span><span class="lang-en">A10 Up high (Z +40 → +50 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">浮遊パッドを起動して接近し、高い床へ移る。</span><span class="lang-en">Start the floating pad, ride it close, and cross to the higher floor.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">起動地点へ到達でき、パッド上から着地場所を確認できる。</span><span class="lang-en">The activation point is reachable, and the landing spot can be seen from the pad.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">+30 mのボタンへの経路。パッドの始終点と上昇量。残りの跳躍量。</span><span class="lang-en">The route to the button at +30 m; the pad's start, end, and rise; the jump still needed after it.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">浮遊パッドを起動し、近づいてから跳ぶ。</span><span class="lang-en">Start the floating pad, ride it close, then jump.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">+30 mのボタンへの道と、パッドが運ぶ高さ。</span><span class="lang-en">The route to the button at +30 m, and how high the pad carries the player.</span></dd>
             </dl></li>
-          <li><h4><span class="lang-ja">A11|最終区間・ゴール(Z +50 m)</span><span class="lang-en">A11 | Final section and goal (Z +50 m)</span></h4>
+          <li><h4><span class="lang-ja">A11 最後の移動(Z +50 m)</span><span class="lang-en">A11 Final move (Z +50 m)</span></h4>
             <dl>
-              <dt><span class="lang-ja">図面の課題</span><span class="lang-en">Task</span></dt><dd><span class="lang-ja">岩を前に動かして乗り、パルスでゴールへ渡る。</span><span class="lang-en">Push a rock forward, ride it, and pulse across to the goal.</span></dd>
-              <dt><span class="lang-ja">成立条件(レビュー提案)</span><span class="lang-en">Condition (proposed)</span></dt><dd><span class="lang-ja">移動する岩に乗れる。着地面を見ながら操作でき、失敗から再試行できる。</span><span class="lang-en">The player can stand on the moving rock, see the landing surface while controlling, and retry after failing.</span></dd>
-              <dt><span class="lang-ja">未確定・検証事項</span><span class="lang-en">Open</span></dt><dd><span class="lang-ja">岩へ乗って運ばれる挙動の実装。初登場なら前半に安全な練習が必要。</span><span class="lang-en">Implementing being carried on the rock; if it first appears here, a safe practice earlier in the level is needed.</span></dd>
+              <dt><span class="lang-ja">やること</span><span class="lang-en">What the player does</span></dt><dd><span class="lang-ja">岩を前へ動かして乗り、パルスでゴールへ渡る。</span><span class="lang-en">Push a rock forward, ride it, and pulse across to the goal.</span></dd>
+              <dt><span class="lang-ja">次に詰めること</span><span class="lang-en">Still to settle</span></dt><dd><span class="lang-ja">岩に乗れるか。撃つときに着地点が見えるか。</span><span class="lang-en">Whether the player can stand on the rock, and see the landing spot while firing.</span></dd>
             </dl></li>
         </ul>
-        <p class="note lang-ja"><strong>実機で測り、図面へ戻す値:</strong>通常ジャンプの最高到達点/パルス1発の上昇量と水平到達距離/連続使用回数/充電時間/動く足場の始点・終点・速度・起動条件/各区間の失敗時復帰地点。これらを測定するまでは、図面上の高さ・距離だけで到達可能と判断しない。</p>
-        <p class="note lang-en"><strong>Values to measure in engine and carry back into the diagram:</strong> the peak of a normal jump; the rise and horizontal reach of one pulse; shots in a row; recharge time; the moving platforms' start, end, speed, and trigger; the recovery point after failing in each section. Until these are measured, nothing is judged reachable from the drawn heights and distances alone.</p>
       </details>
 
       <!-- 差し替え: 同じ区間の「Figma拡大図」と「Unreal Engineの画面」を左右に並べる。
@@ -303,82 +290,63 @@
         </li>
       </ul>
 
-      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">緊張度の推移(設計上の想定)</span><span class="lang-en">Planned tension curve</span></h3>
-      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間IDごとに、想定する緊張度を相対5段階で置きました。プレイテストの測定結果ではなく、図面をもとにした設計上の想定です。</p>
-      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">The intended tension for each area ID, on a relative five-point scale. This is a design assumption drawn from the diagram, not a playtest measurement.</p>
+      <h3 class="subhead-sm" style="margin-top:var(--space-5);"><span class="lang-ja">緊張度の推移(想定)</span><span class="lang-en">Planned tension curve</span></h3>
+      <p class="lang-ja" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">区間IDごとに、想定する緊張度を相対5段階で置きました。現時点の想定で、プレイ後に実際の反応と比べて見直します。プレイテストの測定結果ではありません。</p>
+      <p class="lang-en" style="max-width:44em;color:var(--text-muted);margin:0 0 var(--space-3);">The intended tension for each area ID, on a relative five-point scale. It is the current assumption, to be revisited against how players actually react; it is not a playtest measurement.</p>
       <figure class="diagram-figure">
         <a href="../assets/images/project-06/06c-pacing-full.webp" target="_blank" rel="noopener">
-          <img src="../assets/images/project-06/06c-pacing.webp" alt="Line chart of planned tension from A01 to the goal, rising to peaks at A06, A09, and A11 with dips at A05, A07, and A10" width="1600" height="704" loading="lazy" />
+          <img src="../assets/images/project-06/06c-pacing.webp" alt="Line chart of planned tension from A01 to the goal, rising to peaks at A06, A09, and A11 with dips at A05, A07, and A10" width="1600" height="526" loading="lazy" />
         </a>
         <figcaption>
-          <span class="lang-ja">緊張度の推移(Figma)。横軸は進行順で、区間の長さやプレイ時間の比率は表していません。A06・A09で上げ、A05・A07・A10で下げて、A11を山場にしています。</span>
-          <span class="lang-en">The planned tension curve, drawn in Figma. The horizontal axis is route order, not section length or play time. Tension rises at A06 and A09, drops at A05, A07, and A10, and peaks at A11.</span>
+          <span class="lang-ja">緊張度の推移(Figma)。横軸は進行順で、区間の長さや所要時間は表していません。A06・A09で上げ、A05・A07・A10で下げて、A11を山場にしています。</span>
+          <span class="lang-en">The planned tension curve, drawn in Figma. The horizontal axis is route order, not section length or time taken. Tension rises at A06 and A09, drops at A05, A07, and A10, and peaks at A11.</span>
         </figcaption>
       </figure>
-      <details class="text-version">
-        <summary><span class="lang-ja">曲線の理由と成立条件をテキストで読む</span><span class="lang-en">Read the reasoning and conditions as text</span></summary>
-        <h4 class="lang-ja">上げ下げの理由</h4>
-        <h4 class="lang-en">Why it rises and falls</h4>
-        <ul class="plain-list lang-ja">
-          <li>A01〜A03:操作と仕掛けを理解する導入。失敗の圧力を抑える想定。</li>
-          <li>A04:敵と段差への対応で上げる。A05では観察・スイッチ操作へ切り替える。</li>
-          <li>A06:動く足場のタイミングと着地で上げる。A07では次の課題を観察できる間をつくる。</li>
-          <li>A08〜A09:経路選択から、岩・スイッチ・回転バーの処理へ。</li>
-          <li>A10:浮遊パッドの待ち時間を挟み、A11の最終移動へ。ゴール到達後は緊張を下げる。</li>
-        </ul>
-        <ul class="plain-list lang-en">
-          <li>A01–A03: an introduction to the controls and mechanisms, with little pressure from failure.</li>
-          <li>A04: enemies and a height change raise it. A05 switches to observing and operating switches.</li>
-          <li>A06: timing and landing on moving platforms raise it. A07 leaves room to study the next challenge.</li>
-          <li>A08–A09: from choosing a route to handling rocks, switches, and rotating bars.</li>
-          <li>A10: a wait on the floating pad before the final move in A11. Tension drops once the goal is reached.</li>
-        </ul>
-        <h4 class="lang-ja">この曲線を成立させるために</h4>
-        <h4 class="lang-en">What the curve depends on</h4>
-        <ul class="plain-list lang-ja">
-          <li>A05・A07・A10の低下は目標。安全に止まって観察できる位置があるか確認する。</li>
-          <li>A11の高まりを「操作が分からない」「初めての仕組み」で作らない。岩に乗る操作は事前の練習が必要。</li>
-          <li>落下後の戻り距離や弾切れが長い停滞を生む場合は、曲線より復帰設計を先に修正する。</li>
-        </ul>
-        <ul class="plain-list lang-en">
-          <li>The dips at A05, A07, and A10 are goals: check that each has a safe place to stop and look.</li>
-          <li>The peak at A11 must not come from unclear controls or a mechanism seen for the first time. Riding the rock needs practice earlier.</li>
-          <li>If the walk back after a fall, or running out of shots, causes long stalls, fix recovery before adjusting the curve.</li>
-        </ul>
-      </details>
+      <h4 class="lang-ja" style="font-size:16px;margin:var(--space-3) 0 var(--space-1);">緩急のつけ方(案)</h4>
+      <h4 class="lang-en" style="font-size:16px;margin:var(--space-3) 0 var(--space-1);">How the pacing is built (proposal)</h4>
+      <ul class="plain-list lang-ja">
+        <li>戦闘・動く足場・回転バーで緊張を上げ、観察やスイッチ操作の区間で一息つける流れにする。</li>
+        <li>A07を休める区間にするには、バーの手前に安全に待てる場所が必要。</li>
+        <li>最後の岩移動は、その場で初めて操作を覚える課題にしない。</li>
+      </ul>
+      <ul class="plain-list lang-en">
+        <li>Combat, moving platforms, and rotating bars raise the tension; sections for observing and operating switches give a breather.</li>
+        <li>For A07 to work as a rest, there has to be a safe place to wait in front of the bars.</li>
+        <li>The final rock ride must not be the first time the player learns how to do it.</li>
+      </ul>
     </section>
 
     <!-- ================= レベル図の変遷 ================= -->
     <section id="process">
       <div class="section-head">
         <h2><span class="lang-ja">レベル図の変遷</span><span class="lang-en">How the Level Diagram Evolved</span></h2>
-        <p class="lang-ja">Figmaのトップダウン図を、最初の配置から現在の設計図まで段階ごとに作り直してきました。初期は仲間を持つ・投げる操作を前提にしていた図が、高さと区間IDを持つ現在の設計図へ移っていきます。画像をクリックすると原寸で開きます。</p>
-        <p class="lang-en">I redrew the top-down diagram in Figma in stages, from the first layout to the current design. Early versions assume the player carries and throws companions; the later ones become the current diagram with heights and area IDs. Click any image to open it at full size.</p>
+        <p class="lang-ja">Figmaのトップダウン図を、初期配置 → テーマとギミックの検討 → 高さの整理 → 現在の全体図・制作メモ、の順に作り直してきました。初期は仲間を持つ・投げる操作を前提にしていた図が、高さと区間IDを持つ現在の全体図へ移っていきます。画像をクリックすると原寸で開きます。</p>
+        <p class="lang-en">I reworked the top-down diagram in Figma in stages: first layout, then theme and mechanics, then heights, then the current overall map with its working notes. Early versions assume the player carries and throws companions; the later ones become the current map with heights and area IDs. Click any image to open it at full size.</p>
       </div>
       <div class="diagram-grid">
         <figure>
           <a href="../assets/images/project-06/process-01-initial-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-01-initial.webp" alt="First layout with grey rooms, floating pads, enemies, companions, a fan, and a legend" width="1000" height="622" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">01 初期配置</span><span class="lang-en">01 First layout</span></strong><span class="lang-ja">部屋と足場の配置に、仲間・敵・ボタン・ファン・ジャンプパッド・橋を記号で置いた最初の図。</span><span class="lang-en">Rooms and platforms, with companions, enemies, buttons, a fan, a jump pad, and bridges marked as symbols.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">01 初期配置</span><span class="lang-en">01 First layout</span></strong><span class="lang-ja">移動の順序と地形の大枠を検討。</span><span class="lang-en">Working out the order of movement and the broad shape of the terrain.</span></figcaption>
         </figure>
         <figure>
           <a href="../assets/images/project-06/process-02-space-theme-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-02-space-theme.webp" alt="Map themed as an asteroid base with landmarks, exploration points, checkpoints, and coins" width="1000" height="661" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">02 宇宙テーマへの展開</span><span class="lang-en">02 Space theme</span></strong><span class="lang-ja">小惑星の岩、基地の内部、金属の通路を描き分け、ランドマーク(電波塔・観測ドーム・発着場の光の柱)、探索要素、チェックポイント、コインを追加。</span><span class="lang-en">Asteroid rock, base interiors, and metal walkways drawn apart, with landmarks (radio tower, observation dome, launch-pad light), exploration points, checkpoints, and coins added.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">02 宇宙テーマへの展開</span><span class="lang-en">02 Space theme</span></strong><span class="lang-ja">小惑星と施設の構成を検討。</span><span class="lang-en">Working out how the asteroid and the facility fit together.</span></figcaption>
         </figure>
         <figure>
           <a href="../assets/images/project-06/process-03-companion-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-03-companion.webp" alt="Earlier proposal reorganising sections 01 to 06 around carrying, throwing, and recovering a companion" width="1000" height="783" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">03 仲間ギミックの検討(旧案)</span><span class="lang-en">03 Companion mechanics (earlier proposal)</span></strong><span class="lang-ja">仲間を持つ・投げる・回収する前提で、区間01〜06を組み直した案。</span><span class="lang-en">Sections 01–06 reorganised around carrying, throwing, and recovering a companion.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">03 仲間ギミックの検討</span><span class="lang-en">03 Companion mechanics</span></strong><span class="lang-ja">配置・投げ・回収の使い方を検討。</span><span class="lang-en">Working out how placing, throwing, and retrieving a companion would be used.</span></figcaption>
         </figure>
         <figure>
           <a href="../assets/images/project-06/process-04-v11-revised-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-04-v11-revised.webp" alt="Revised map with heights and widths written on each floor and turn-by-turn notes on the right" width="1000" height="478" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">04 改訂版(区間別)</span><span class="lang-en">04 Revised, by section</span></strong><span class="lang-ja">床ごとに高さ(Z値)と幅を書き込み、ターン1〜3でプレイヤーが経験することを右側に整理。</span><span class="lang-en">Height (Z) and width written onto each floor, with what the player experiences in Turns 1–3 set out on the right.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">04 下書きの更新</span><span class="lang-en">04 Updating the draft</span></strong><span class="lang-ja">区間の課題と高さを書き込む。</span><span class="lang-en">Writing each section's challenge and height onto the map.</span></figcaption>
         </figure>
         <figure>
           <a href="../assets/images/project-06/process-05-height-colour-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/process-05-height-colour.webp" alt="Presentation version with floors coloured by height, a symbol key, and design notes" width="1000" height="679" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">05 高さ別カラー</span><span class="lang-en">05 Coloured by height</span></strong><span class="lang-ja">床を高さ別に色分けし、記号の意味と設計メモをまとめた版。高さが未記入の床に、推測の数値は加えていません。</span><span class="lang-en">Floors coloured by height, with a symbol key and design notes. No guessed values were added to floors without a recorded height.</span></figcaption>
+          <figcaption><strong><span class="lang-ja">05 高さの整理</span><span class="lang-en">05 Organising heights</span></strong><span class="lang-ja">床色・凡例と高さを対応させる。</span><span class="lang-en">Matching floor colours and the key to the heights.</span></figcaption>
         </figure>
         <figure>
           <a href="../assets/images/project-06/06a-level-design-full.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/06a-level-design.webp" alt="Current level design with area IDs A01 to A11" width="1600" height="1086" loading="lazy" /></a>
-          <figcaption><strong><span class="lang-ja">06 現行の設計図</span><span class="lang-en">06 Current design</span></strong><span class="lang-ja">区間ID A01〜A11 を付け、区間仕様と緊張度の想定に対応させた版(<a href="#level">上で詳しく紹介</a>)。</span><span class="lang-en">Area IDs A01–A11 added and tied to the area specifications and the tension curve (<a href="#level">shown in detail above</a>).</span></figcaption>
+          <figcaption><strong><span class="lang-ja">06 現在の全体図</span><span class="lang-en">06 Current overall map</span></strong><span class="lang-ja">区間IDから下の制作メモを参照する(<a href="#level">上で詳しく紹介</a>)。</span><span class="lang-en">Area IDs lead to the working notes beneath it (<a href="#level">shown in detail above</a>).</span></figcaption>
         </figure>
       </div>
     </section>
