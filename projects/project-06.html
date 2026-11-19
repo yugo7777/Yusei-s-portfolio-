@@ -143,10 +143,10 @@
       </ul>
     </section>
 
-    <!-- ================= 3. Figmaのレベル図とUnreal画面 ================= -->
+    <!-- ================= 3. レベル設計図 ================= -->
     <section id="level">
       <div class="section-head">
-        <h2><span class="lang-ja">レベル図からUnrealの空間へ</span><span class="lang-en">From Level Diagram to Unreal Space</span></h2>
+        <h2><span class="lang-ja">レベル設計図</span><span class="lang-en">Level Design</span></h2>
         <p class="lang-ja">Figmaでレベル全体のトップダウン図を作り、進行経路、障害物の配置、高低差、ギミックの位置を検討しています。図では行動や仕掛けを色と記号で区別し、各区間でどのような行動や判断を求めるのかを整理しています。その後、Unreal Engineで実際の空間を作り、距離感、障害物の見え方、移動のしやすさを確かめながら調整しています。</p>
         <p class="lang-en">I plan the whole level as a top-down diagram in Figma, working out the route, obstacle placement, changes in height, and where each mechanism sits. Colours and symbols mark what the player does and what they interact with, so each section's intended action or decision is laid out. I then build the space in Unreal Engine and adjust it while checking distances, how obstacles read, and how easy it is to move through.</p>
       </div>
@@ -240,23 +240,6 @@
         </ul>
       </details>
 
-      <!-- 差し替え: 同じ区間の「Figma拡大図」と「Unreal Engineの画面」を左右に並べる。
-           1. 比較する区間を区間ID(A01〜A11)で決める
-           2. Figma側: 06A のその区間を書き出した画像を assets/images/project-06/compare-figma.webp に置く
-           3. Unreal側: 同じ区間を同じ向きで撮った画面を assets/images/project-06/compare-unreal.webp に置く
-           4. 下の各 <div class="slot"> を
-              <a href="../assets/images/project-06/compare-○○.webp" target="_blank" rel="noopener"><img src="../assets/images/project-06/compare-○○.webp" alt="(画像の内容)" loading="lazy" /></a>
-              に置き換え、figcaption に区間ID と区間名を書く -->
-      <div class="compare-pair" data-placeholder="figma-unreal-pair">
-        <figure>
-          <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
-          <figcaption><strong><span class="lang-ja">Figma:区間の拡大図</span><span class="lang-en">Figma: section close-up</span></strong><span class="lang-ja">設計図のうち、比較する区間の部分。</span><span class="lang-en">The part of the design diagram covering this section.</span></figcaption>
-        </figure>
-        <figure>
-          <div class="slot"><span class="lang-ja">画像準備中</span><span class="lang-en">Image in preparation</span></div>
-          <figcaption><strong><span class="lang-ja">Unreal Engine:同じ区間の画面</span><span class="lang-en">Unreal Engine: the same section</span></strong><span class="lang-ja">図の配置を3D空間に作った状態。</span><span class="lang-en">The same layout built as a 3D space.</span></figcaption>
-        </figure>
-      </div>
     </section>
 
     <!-- ================= 4. 基礎 → 応用 → 複合 ================= -->
